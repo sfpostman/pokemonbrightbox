@@ -1,0 +1,6 @@
+openapi: 3.0.0
+info:
+  title: demospec
+  version: 1.0.0
+  description: A demo API specification
+paths: {}

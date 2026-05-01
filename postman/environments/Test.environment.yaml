@@ -1,0 +1,6 @@
+name: Test
+values:
+  - key: apikey
+    value: ""
+    enabled: true
+color: null

@@ -1,0 +1,13 @@
+$kind: collection
+name: E2E Library
+variables:
+  baseUrl: https://library-api.postmanlabs.com
+  tempBookTitle: ""
+  bookId: ""
+auth:
+  - id: fdb9ebfb-7b60-4840-8604-3ee5c76a568e
+    type: apikey
+    name: apikey auth
+    credentials:
+      key: Api-key
+      value: "{{apikey}}"
