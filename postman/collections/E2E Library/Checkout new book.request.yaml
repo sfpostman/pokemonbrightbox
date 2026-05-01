@@ -1,4 +1,14 @@
 $kind: http-request
+description: |-
+  Checks out a book by updating its `checkedOut` status to `true`.
+
+  Uses the `bookId` collection variable set by the "Create a new book" request. This is the final step in the E2E workflow, confirming that a book can be successfully checked out after being created and verified.
+
+  **Tests run:**
+  - Status code is `200`
+  - Response has `application/json` content type
+  - `checkedOut` is `true` in the response
+  - Returned `id` matches the `bookId` collection variable
 url: "{{baseUrl}}/books/:id"
 method: PATCH
 headers:
