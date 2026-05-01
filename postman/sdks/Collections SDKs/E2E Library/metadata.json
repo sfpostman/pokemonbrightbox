@@ -1,0 +1,245 @@
+{
+  "entityId": "fE4c4C2bdd806fEEFc377DAE",
+  "entityType": "collections",
+  "buildId": 3554,
+  "createdAt": "2026-05-01T19:18:25.735Z",
+  "downloads": [
+    {
+      "language": "cli",
+      "status": "success",
+      "createdAt": "2026-05-01T19:18:25.747Z",
+      "link": "https://us-prod-sdk-gen-api-code-gen-uploads.s3.us-east-1.amazonaws.com/8c2185ea-072b-4b27-8caf-3c25fb53692c/e2e-library-cli-1.0.0.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LJBU7LOK33OUS%2F20260501%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260501T191831Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEGQaCXVzLWVhc3QtMSJIMEYCIQCGXnIISVkzR6VA37lcVTIy5xCkZqpKxeDtKeqUydqozQIhALNTnNyjpVjWXvlIht4sqUs64JtGy39MyhKBUHlE1brvKpMFCCwQABoMNjM3NDIzNjUyMTU4IgyXQfgMBdIDVQ09IGQq8ATNEOirs4OMVc3DK1j3DPm0paKp32x3zqOliKWzMUhFg7rGdxxosmov2LWEZI5WJzo2TfGTA1xTV2z1Ux7n0jMJ8OxVznlYZP3QOtx0A%2FZcWJvRFN2Rnazf%2B%2FQONailKZtGnrbXzpDUzKbqvmLEL42spmIFHfFBCsVETHwPx0PsU7TrYeyDFwZdfkOsheb2VAFs8SxfA%2F6OYk5kb082Etsa8g9BRtNZyCJv9QSrLYbhfsonX8Ez4I6eT7KThljJRzQ4cxaFAUMARM1aazcZ2BWifVbZwpy7gGCYCN3iiY1Ensa6dMEv3DRAeavJxvjP5JUXr%2FnujNhu7cniSuzjfF9D30KYx5XZ0ujQ0AZ266%2FWsuWZ3tGjNCrRKqOKChn3UDyE%2FU8kynVxH1ffRf8E7nKkQKhDgyCgacwRNUqxeGGPDAXfx4Xr5glBqmDtR9U%2F%2BiDF1EOqFBkPRK2Xci7LwoMSHL2wsUF0kD9s7hjMlaqsw9WqMDF5UK54nfZ0bDeWFyE78ofCeAgB7rc3wdtod7F%2FBh4lOujZKjxJXsHG68O6pBWu06CeVgdpcZ%2BjcIMTEO3rxthuzjs2a1t%2FlCsIzVRpuLE7JztktpJ7SwUQ7%2Bd7D8w6xhOr3w31LK5rrVvHbrv1rg3lLXEqGz%2FRdenzeVzc862nvtuPbKHCJeIJ4pgTMiZEzPD7VIitZH8tCOOTaxBBFANEqBbkl2VFGr%2FK96YSoRGOsLLXtREokxc94tdJS%2FMe9mbfGPIyCYIxWtlfakGLVtxTf0v96Ibis2CRZg7V3Ye89yOZsZe8kGJJEcse5FZ8IbBEQELYKW39%2F9dxzE8wgfnTzwY6mAHbs5Y8FW1GDxqX4KK23DgAoa93jbQUPYQnQ6xyZILXPhNQrLEG4I3bz1N3r2AXJffwWxIoI35AjRBxl16QcR0Nk5TaDiOJmXpRq0uRb34t2MNb2MnRKXbPzchPFkGepNyWb0hH7s%2BFAZ%2FCd9Voxqe%2F7eJQOrR9XbkC8BV99RZr1nDWGWmqo082dEwoQ3ssbmW6ROvjY7IIgQ%3D%3D&X-Amz-Signature=59bf8f3786554d8f5f4051c90104e6eed1f649f30d98f355ccd1606c66c04ae6&X-Amz-SignedHeaders=host&x-id=GetObject",
+      "contentHash": "10cff6ac3ca7cb881f135c5fffe9e867b373e7383e7ab823410587e69a9262dc",
+      "logs": [
+        {
+          "message": "All header, cookie, path, and query parameters default to string since Postman does not specify the type.",
+          "severity": "INFO",
+          "path": "Fetch a list of books",
+          "createdAt": "2026-05-01T19:18:30.174Z"
+        },
+        {
+          "message": "Postman collections do not represent whether a property is required or optional. The SDK Generator will generate this property as optional.",
+          "severity": "INFO",
+          "path": "Checkout new book",
+          "createdAt": "2026-05-01T19:18:30.174Z"
+        },
+        {
+          "message": "Postman collection does not specify if the request body is required, so the SDK requires a request body by default.",
+          "severity": "INFO",
+          "path": "Checkout new book",
+          "createdAt": "2026-05-01T19:18:30.174Z"
+        },
+        {
+          "message": "Parameters, properties, and request bodies default to nullable since Postman collections do not specify nullability. Some fields may be incorrectly marked as nullable.",
+          "severity": "INFO",
+          "path": "Fetch a list of books",
+          "createdAt": "2026-05-01T19:18:30.174Z"
+        },
+        {
+          "message": "All header, cookie, path, and query parameters default to string since Postman does not specify the type.",
+          "severity": "INFO",
+          "path": "Fetch a list of books",
+          "createdAt": "2026-05-01T19:18:30.174Z"
+        },
+        {
+          "message": "Parameters, properties, and request bodies default to nullable since Postman collections do not specify nullability. Some fields may be incorrectly marked as nullable.",
+          "severity": "INFO",
+          "path": "Fetch a list of books",
+          "createdAt": "2026-05-01T19:18:30.174Z"
+        },
+        {
+          "message": "All header, cookie, path, and query parameters default to string since Postman does not specify the type.",
+          "severity": "INFO",
+          "path": "Create a new book",
+          "createdAt": "2026-05-01T19:18:30.174Z"
+        },
+        {
+          "message": "Parameters, properties, and request bodies default to nullable since Postman collections do not specify nullability. Some fields may be incorrectly marked as nullable.",
+          "severity": "INFO",
+          "path": "Create a new book",
+          "createdAt": "2026-05-01T19:18:30.174Z"
+        },
+        {
+          "message": "All header, cookie, path, and query parameters default to string since Postman does not specify the type.",
+          "severity": "INFO",
+          "path": "Create a new book",
+          "createdAt": "2026-05-01T19:18:30.174Z"
+        },
+        {
+          "message": "Parameters, properties, and request bodies default to nullable since Postman collections do not specify nullability. Some fields may be incorrectly marked as nullable.",
+          "severity": "INFO",
+          "path": "Create a new book",
+          "createdAt": "2026-05-01T19:18:30.174Z"
+        },
+        {
+          "message": "All header, cookie, path, and query parameters default to string since Postman does not specify the type.",
+          "severity": "INFO",
+          "path": "Create a new book",
+          "createdAt": "2026-05-01T19:18:30.174Z"
+        },
+        {
+          "message": "Parameters, properties, and request bodies default to nullable since Postman collections do not specify nullability. Some fields may be incorrectly marked as nullable.",
+          "severity": "INFO",
+          "path": "Create a new book",
+          "createdAt": "2026-05-01T19:18:30.174Z"
+        },
+        {
+          "message": "All header, cookie, path, and query parameters default to string since Postman does not specify the type.",
+          "severity": "INFO",
+          "path": "Create a new book",
+          "createdAt": "2026-05-01T19:18:30.174Z"
+        },
+        {
+          "message": "Parameters, properties, and request bodies default to nullable since Postman collections do not specify nullability. Some fields may be incorrectly marked as nullable.",
+          "severity": "INFO",
+          "path": "Create a new book",
+          "createdAt": "2026-05-01T19:18:30.174Z"
+        },
+        {
+          "message": "Parameters, properties, and request bodies default to nullable since Postman collections do not specify nullability. Some fields may be incorrectly marked as nullable.",
+          "severity": "INFO",
+          "path": "Create a new book",
+          "createdAt": "2026-05-01T19:18:30.174Z"
+        },
+        {
+          "message": "Postman collections do not represent whether a property is required or optional. The SDK Generator will generate this property as optional.",
+          "severity": "INFO",
+          "path": "Create a new book",
+          "createdAt": "2026-05-01T19:18:30.174Z"
+        },
+        {
+          "message": "Parameters, properties, and request bodies default to nullable since Postman collections do not specify nullability. Some fields may be incorrectly marked as nullable.",
+          "severity": "INFO",
+          "path": "Create a new book",
+          "createdAt": "2026-05-01T19:18:30.174Z"
+        },
+        {
+          "message": "Postman collections do not represent whether a property is required or optional. The SDK Generator will generate this property as optional.",
+          "severity": "INFO",
+          "path": "Create a new book",
+          "createdAt": "2026-05-01T19:18:30.174Z"
+        },
+        {
+          "message": "Parameters, properties, and request bodies default to nullable since Postman collections do not specify nullability. Some fields may be incorrectly marked as nullable.",
+          "severity": "INFO",
+          "path": "Create a new book",
+          "createdAt": "2026-05-01T19:18:30.174Z"
+        },
+        {
+          "message": "Postman collections do not represent whether a property is required or optional. The SDK Generator will generate this property as optional.",
+          "severity": "INFO",
+          "path": "Create a new book",
+          "createdAt": "2026-05-01T19:18:30.174Z"
+        },
+        {
+          "message": "Parameters, properties, and request bodies default to nullable since Postman collections do not specify nullability. Some fields may be incorrectly marked as nullable.",
+          "severity": "INFO",
+          "path": "Create a new book",
+          "createdAt": "2026-05-01T19:18:30.174Z"
+        },
+        {
+          "message": "Postman collections do not represent whether a property is required or optional. The SDK Generator will generate this property as optional.",
+          "severity": "INFO",
+          "path": "Create a new book",
+          "createdAt": "2026-05-01T19:18:30.174Z"
+        },
+        {
+          "message": "Postman collection does not specify if the request body is required, so the SDK requires a request body by default.",
+          "severity": "INFO",
+          "path": "Create a new book",
+          "createdAt": "2026-05-01T19:18:30.174Z"
+        },
+        {
+          "message": "All header, cookie, path, and query parameters default to string since Postman does not specify the type.",
+          "severity": "INFO",
+          "path": "Verify the book exists",
+          "createdAt": "2026-05-01T19:18:30.174Z"
+        },
+        {
+          "message": "Parameters, properties, and request bodies default to nullable since Postman collections do not specify nullability. Some fields may be incorrectly marked as nullable.",
+          "severity": "INFO",
+          "path": "Verify the book exists",
+          "createdAt": "2026-05-01T19:18:30.174Z"
+        },
+        {
+          "message": "All header, cookie, path, and query parameters default to string since Postman does not specify the type.",
+          "severity": "INFO",
+          "path": "Verify the book exists",
+          "createdAt": "2026-05-01T19:18:30.174Z"
+        },
+        {
+          "message": "Parameters, properties, and request bodies default to nullable since Postman collections do not specify nullability. Some fields may be incorrectly marked as nullable.",
+          "severity": "INFO",
+          "path": "Verify the book exists",
+          "createdAt": "2026-05-01T19:18:30.174Z"
+        },
+        {
+          "message": "All header, cookie, path, and query parameters default to string since Postman does not specify the type.",
+          "severity": "INFO",
+          "path": "Verify the book exists",
+          "createdAt": "2026-05-01T19:18:30.174Z"
+        },
+        {
+          "message": "Parameters, properties, and request bodies default to nullable since Postman collections do not specify nullability. Some fields may be incorrectly marked as nullable.",
+          "severity": "INFO",
+          "path": "Verify the book exists",
+          "createdAt": "2026-05-01T19:18:30.174Z"
+        },
+        {
+          "message": "All header, cookie, path, and query parameters default to string since Postman does not specify the type.",
+          "severity": "INFO",
+          "path": "Checkout new book",
+          "createdAt": "2026-05-01T19:18:30.174Z"
+        },
+        {
+          "message": "Parameters, properties, and request bodies default to nullable since Postman collections do not specify nullability. Some fields may be incorrectly marked as nullable.",
+          "severity": "INFO",
+          "path": "Checkout new book",
+          "createdAt": "2026-05-01T19:18:30.174Z"
+        },
+        {
+          "message": "All header, cookie, path, and query parameters default to string since Postman does not specify the type.",
+          "severity": "INFO",
+          "path": "Checkout new book",
+          "createdAt": "2026-05-01T19:18:30.174Z"
+        },
+        {
+          "message": "Parameters, properties, and request bodies default to nullable since Postman collections do not specify nullability. Some fields may be incorrectly marked as nullable.",
+          "severity": "INFO",
+          "path": "Checkout new book",
+          "createdAt": "2026-05-01T19:18:30.174Z"
+        },
+        {
+          "message": "All header, cookie, path, and query parameters default to string since Postman does not specify the type.",
+          "severity": "INFO",
+          "path": "Checkout new book",
+          "createdAt": "2026-05-01T19:18:30.174Z"
+        },
+        {
+          "message": "Parameters, properties, and request bodies default to nullable since Postman collections do not specify nullability. Some fields may be incorrectly marked as nullable.",
+          "severity": "INFO",
+          "path": "Checkout new book",
+          "createdAt": "2026-05-01T19:18:30.174Z"
+        },
+        {
+          "message": "All header, cookie, path, and query parameters default to string since Postman does not specify the type.",
+          "severity": "INFO",
+          "path": "Checkout new book",
+          "createdAt": "2026-05-01T19:18:30.174Z"
+        },
+        {
+          "message": "Parameters, properties, and request bodies default to nullable since Postman collections do not specify nullability. Some fields may be incorrectly marked as nullable.",
+          "severity": "INFO",
+          "path": "Checkout new book",
+          "createdAt": "2026-05-01T19:18:30.174Z"
+        },
+        {
+          "message": "Parameters, properties, and request bodies default to nullable since Postman collections do not specify nullability. Some fields may be incorrectly marked as nullable.",
+          "severity": "INFO",
+          "path": "Checkout new book",
+          "createdAt": "2026-05-01T19:18:30.174Z"
+        }
+      ]
+    }
+  ]
+}

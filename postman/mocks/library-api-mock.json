@@ -1,0 +1,13 @@
+{
+  "id": "library-api-mock",
+  "version": 1,
+  "name": "library-api-mock",
+  "protocol": "http",
+  "port": 4501,
+  "mockSrc": "./library-api-mock.js",
+  "autoRestartOnChange": true,
+  "logging": {
+    "level": "verbose",
+    "showBody": true
+  }
+}
