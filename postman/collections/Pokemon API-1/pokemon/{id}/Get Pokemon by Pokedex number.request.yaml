@@ -1,4 +1,30 @@
 $kind: http-request
+description: |-
+  Retrieve a single Pokémon by its Pokédex number.
+
+  ## Path parameters
+  - `id` (string, required) — The Pokédex number, zero-padded to 4 digits (e.g. `0001` for Bulbasaur, `0006` for Charizard).
+
+  ## Responses
+  - `200 OK` — Returns the Pokémon record:
+    ```json
+    {
+      "number": "0001",
+      "name": "Bulbasaur",
+      "type": "Grass/Poison",
+      "total": 318,
+      "hp": 45,
+      "attack": 49,
+      "defense": 49,
+      "sp_atk": 65,
+      "sp_def": 65,
+      "speed": 45
+    }
+    ```
+  - `404 Not Found` — `{ "error": "Pokemon not found" }` when no Pokémon matches the provided number.
+
+  ## Example
+  `GET {{baseUrl}}/pokemon/0001` returns Bulbasaur.
 url: "{{baseUrl}}/pokemon/:id"
 method: GET
 headers:

@@ -1,4 +1,37 @@
 $kind: http-request
+description: |-
+  Retrieve a paginated list of all Pokémon in the Pokédex.
+
+  ## Query parameters
+  - `limit` (integer, optional) — Number of records to return. Default `20`. Min `1`, max `100`.
+  - `offset` (integer, optional) — Number of records to skip from the beginning. Default `0`.
+
+  ## Responses
+  - `200 OK` — Returns an object with pagination metadata and the list of Pokémon:
+    ```json
+    {
+      "total": 1025,
+      "limit": 20,
+      "offset": 0,
+      "data": [
+        {
+          "number": "0001",
+          "name": "Bulbasaur",
+          "type": "Grass/Poison",
+          "total": 318,
+          "hp": 45,
+          "attack": 49,
+          "defense": 49,
+          "sp_atk": 65,
+          "sp_def": 65,
+          "speed": 45
+        }
+      ]
+    }
+    ```
+
+  ## Example
+  `GET {{baseUrl}}/pokemon?limit=20&offset=0` returns the first 20 Pokémon starting from Bulbasaur.
 url: "{{baseUrl}}/pokemon?limit=20&offset=0"
 method: GET
 headers:

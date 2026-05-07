@@ -1,4 +1,44 @@
 $kind: http-request
+description: |-
+  List all Pokémon that match the given elemental type. Matches both single-type Pokémon (e.g. `Fire`) and dual-type Pokémon where the requested type appears in either slot (e.g. `Fire/Flying`, `Water/Fire`).
+
+  This request also includes an `afterResponse` script that builds a Postman Visualizer view rendering a bar chart of base stats and a table of the returned Pokémon.
+
+  ## Path parameters
+  - `type` (string, required) — The elemental type to filter by, case-sensitive (e.g. `Fire`, `Water`, `Grass`). Use `GET /types` to discover valid values.
+
+  ## Query parameters
+  - `limit` (integer, optional) — Number of records to return. Default `20`. Min `1`, max `100`.
+  - `offset` (integer, optional) — Number of records to skip. Default `0`.
+
+  ## Responses
+  - `200 OK` — Returns the type, pagination metadata, and matching Pokémon:
+    ```json
+    {
+      "type": "Fire",
+      "total": 80,
+      "limit": 20,
+      "offset": 0,
+      "data": [
+        {
+          "number": "0004",
+          "name": "Charmander",
+          "type": "Fire",
+          "total": 309,
+          "hp": 39,
+          "attack": 52,
+          "defense": 43,
+          "sp_atk": 60,
+          "sp_def": 50,
+          "speed": 65
+        }
+      ]
+    }
+    ```
+  - `404 Not Found` — `{ "error": "No Pokemon found for type: <type>" }` when no Pokémon match the requested type.
+
+  ## Example
+  `GET {{baseUrl}}/types/Fire/pokemon?limit=20&offset=0` returns the first 20 Fire-type Pokémon (including dual types like `Fire/Flying`).
 url: "{{baseUrl}}/types/:type/pokemon?limit=20&offset=0"
 method: GET
 headers:

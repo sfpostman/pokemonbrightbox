@@ -1,4 +1,40 @@
 $kind: http-request
+description: |-
+  Create a new Pokémon record in the Pokédex.
+
+  ## Request body (JSON)
+  | Field   | Type    | Required | Description                                              |
+  |---------|---------|----------|----------------------------------------------------------|
+  | number  | string  | Yes      | Pokédex number, zero-padded (e.g. `"1025"`). Acts as the unique key. |
+  | name    | string  | Yes      | Pokémon name.                                            |
+  | type    | string  | Yes      | Single or dual type, slash-separated (e.g. `"Poison/Ghost"`). |
+  | total   | integer | No       | Sum of base stats.                                       |
+  | hp      | integer | No       | Hit points base stat.                                    |
+  | attack  | integer | No       | Attack base stat.                                        |
+  | defense | integer | No       | Defense base stat.                                       |
+  | sp_atk  | integer | No       | Special Attack base stat.                                |
+  | sp_def  | integer | No       | Special Defense base stat.                               |
+  | speed   | integer | No       | Speed base stat.                                         |
+
+  ## Responses
+  - `201 Created` — Returns the newly created Pokémon record (as stored in the database).
+  - `400 Bad Request` — `{ "error": "number, name, and type are required" }` when one of the required fields is missing.
+
+  ## Example
+  ```json
+  {
+    "number": "1025",
+    "name": "Pecharunt",
+    "type": "Poison/Ghost",
+    "total": 600,
+    "hp": 88,
+    "attack": 88,
+    "defense": 160,
+    "sp_atk": 88,
+    "sp_def": 88,
+    "speed": 88
+  }
+  ```
 url: "{{baseUrl}}/pokemon"
 method: POST
 headers:

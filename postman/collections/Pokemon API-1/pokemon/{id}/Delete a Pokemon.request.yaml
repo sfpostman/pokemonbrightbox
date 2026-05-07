@@ -1,4 +1,16 @@
 $kind: http-request
+description: |-
+  Delete a Pokémon from the Pokédex by its Pokédex number.
+
+  ## Path parameters
+  - `id` (string, required) — The Pokédex number of the Pokémon to delete, zero-padded (e.g. `0006`).
+
+  ## Responses
+  - `204 No Content` — The Pokémon was deleted successfully. The response body is empty.
+  - `404 Not Found` — `{ "error": "Pokemon not found" }` when no Pokémon matches the provided number.
+
+  ## Example
+  `DELETE {{baseUrl}}/pokemon/0006` removes Charizard from the database.
 url: "{{baseUrl}}/pokemon/:id"
 method: DELETE
 headers:
