@@ -5,8 +5,8 @@ headers:
   Accept: application/json
 pathVariables:
   - key: id
-    value: "0006"
-    description: Pokédex number (zero-padded, e.g. 0006)
+    value: "0001"
+    description: Pokédex number (zero-padded, e.g. 0001)
     $type: |-
       {
         "type": "object",
@@ -23,4 +23,11 @@ body:
   type: text
   content: ""
 examples: ./.resources/Get Pokemon by Pokedex number.resources/examples
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test("Status code is 200", function () {
+          pm.response.to.have.status(200);
+      });
 order: 1000

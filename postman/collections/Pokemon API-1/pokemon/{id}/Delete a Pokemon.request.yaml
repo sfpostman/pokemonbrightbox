@@ -23,4 +23,11 @@ body:
   type: text
   content: ""
 examples: ./.resources/Delete a Pokemon.resources/examples
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test("Status code is 204", function () {
+          pm.response.to.have.status(204);
+      });
 order: 3000

@@ -54,6 +54,10 @@ scripts:
   - type: afterResponse
     language: text/javascript
     code: |-
+      pm.test("Status code is 200", function () {
+          pm.response.to.have.status(200);
+      });
+
       var template = '' +
         '<html>' +
         '<head>' +

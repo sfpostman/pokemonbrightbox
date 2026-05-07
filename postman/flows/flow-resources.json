@@ -1,9 +1,4 @@
 {
   "version": 1,
-  "flows": {
-    "8176e662-a8de-4033-95a9-b595c485c6a6": {
-      "path": "postman/flows/New flow.flow",
-      "dependencies": []
-    }
-  }
+  "flows": {}
 }

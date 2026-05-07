@@ -61,4 +61,11 @@ body:
       ]
     }
 examples: ./.resources/Create a new Pokemon.resources/examples
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test("Status code is 201", function () {
+          pm.response.to.have.status(201);
+      });
 order: 2000

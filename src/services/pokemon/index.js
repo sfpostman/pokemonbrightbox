@@ -1,5 +1,7 @@
 const express = require('express');
 const mysql = require('mysql2/promise');
+const fs = require('fs');
+const path = require('path');
 
 const app = express();
 app.use(express.json());
@@ -9,6 +11,23 @@ const db = mysql.createPool({
   user: 'root',
   database: 'pokedex',
 });
+
+async function seedDatabase() {
+  const csvPath = path.join(__dirname, '../../../pokedex.csv');
+  const lines = fs.readFileSync(csvPath, 'utf8').trim().split('\n').slice(1); // skip header
+
+  const rows = lines.map(line => {
+    const [number, name, type, total, hp, attack, defense, sp_atk, sp_def, speed] = line.split(',');
+    return [number, name, type, parseInt(total), parseInt(hp), parseInt(attack), parseInt(defense), parseInt(sp_atk), parseInt(sp_def), parseInt(speed)];
+  });
+
+  await db.query('TRUNCATE TABLE pokemon');
+  await db.query(
+    'INSERT INTO pokemon (number, name, type, total, hp, attack, defense, sp_atk, sp_def, speed) VALUES ?',
+    [rows]
+  );
+  console.log(`Seeded ${rows.length} Pokemon from CSV.`);
+}
 
 app.get('/pokemon', async (req, res) => {
   const { limit = 20, offset = 0 } = req.query;
@@ -55,4 +74,6 @@ app.delete('/pokemon/:id', async (req, res) => {
   res.status(204).send();
 });
 
-app.listen(3001, () => console.log('Pokemon service running on port 3001'));
+seedDatabase().then(() => {
+  app.listen(3001, () => console.log('Pokemon service running on port 3001'));
+});

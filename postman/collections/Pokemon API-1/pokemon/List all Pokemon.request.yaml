@@ -35,4 +35,11 @@ body:
   type: text
   content: ""
 examples: ./.resources/List all Pokemon.resources/examples
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test("Status code is 200", function () {
+          pm.response.to.have.status(200);
+      });
 order: 1000
