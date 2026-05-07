@@ -7,7 +7,6 @@ workspace:
 cloudResources:
   specs:
     ../postman/specs/index.yaml: d115a41e-1f3b-412d-8c96-25022704215d
-    ../demospec.yaml: 53931f7e-6112-4c29-a191-6ec5e38ba225
   collections:
     ../postman/collections/E2E Library: 54079851-e31013d8-2123-41e2-ae89-fbe2ef650858
   environments:
@@ -15,5 +14,4 @@ cloudResources:
 
 localResources:
   specs:
-    - ../demospec.yaml
     - ../postman/specs/index.yaml
