@@ -1,0 +1,341 @@
+$kind: http-example
+request:
+  url: https://api.getpostman.com/api-catalog/services/:serviceId/endpoints?systemEnvironmentId=23b554c1-c30c-483d-bf98-dbe9ab7b88a0&sort=errorRate:desc
+  method: GET
+  queryParams:
+    systemEnvironmentId: 23b554c1-c30c-483d-bf98-dbe9ab7b88a0
+    sort: errorRate:desc
+  pathVariables:
+    serviceId: a5450abd-ec89-443c-a17a-68132e738714
+response:
+  statusCode: 200
+  statusText: OK
+  body:
+    type: json
+    content: |-
+      {
+          "meta": {
+              "nextCursor": null,
+              "limit": 20,
+              "filters": {
+                  "systemEnvironmentId": "23b554c1-c30c-483d-bf98-dbe9ab7b88a0",
+                  "sort": "error_rate:desc"
+              },
+              "timeRange": {
+                  "start": "2026-04-14T13:15:42.407Z",
+                  "end": "2026-04-21T13:15:42.407Z",
+                  "label": "last_7_days"
+              },
+              "totalEndpoints": 11,
+              "totalRequests": 16022
+          },
+          "data": [
+              {
+                  "method": "GET",
+                  "path": "/api/v1/role-assignments",
+                  "host": "acs-test-new.example.com",
+                  "requestCount": 382,
+                  "performance": {
+                      "p90LatencyMs": 12.8354,
+                      "p95LatencyMs": 15.002851
+                  },
+                  "errors": {
+                      "totalErrors": 96,
+                      "errorRatePct": 25.13,
+                      "breakdown": {
+                          "400": 96
+                      }
+                  }
+              },
+              {
+                  "method": "POST",
+                  "path": "/api/v1/object-groups",
+                  "host": "acs-test-new.example.com",
+                  "requestCount": 2774,
+                  "performance": {
+                      "p90LatencyMs": 20.300701,
+                      "p95LatencyMs": 22.9377
+                  },
+                  "errors": {
+                      "totalErrors": 20,
+                      "errorRatePct": 0.72,
+                      "breakdown": {
+                          "401": 12,
+                          "500": 8
+                      }
+                  }
+              },
+              {
+                  "method": "PATCH",
+                  "path": "/api/v1/object-groups/{group}",
+                  "host": "acs-test-new.example.com",
+                  "requestCount": 2916,
+                  "performance": {
+                      "p90LatencyMs": 19.701,
+                      "p95LatencyMs": 21.59825
+                  },
+                  "errors": {
+                      "totalErrors": 16,
+                      "errorRatePct": 0.55,
+                      "breakdown": {
+                          "400": 8,
+                          "500": 8
+                      }
+                  }
+              },
+              {
+                  "method": "POST",
+                  "path": "/api/roles/add",
+                  "host": "acs-test-new.example.com",
+                  "requestCount": 1031,
+                  "performance": {
+                      "p90LatencyMs": 20.06,
+                      "p95LatencyMs": 22.2735
+                  },
+                  "errors": {
+                      "totalErrors": 4,
+                      "errorRatePct": 0.39,
+                      "breakdown": {
+                          "401": 4
+                      }
+                  }
+              },
+              {
+                  "method": "POST",
+                  "path": "/api/permissions/check",
+                  "host": "acs-test-new.example.com",
+                  "requestCount": 2063,
+                  "performance": {
+                      "p90LatencyMs": 295.8238,
+                      "p95LatencyMs": 321.0344
+                  },
+                  "errors": {
+                      "totalErrors": 8,
+                      "errorRatePct": 0.39,
+                      "breakdown": {
+                          "400": 6,
+                          "500": 2
+                      }
+                  }
+              },
+              {
+                  "method": "POST",
+                  "path": "/api/permissions/list/by-objects",
+                  "host": "acs-test-new.example.com",
+                  "requestCount": 928,
+                  "performance": {
+                      "p90LatencyMs": 193.14041,
+                      "p95LatencyMs": 219.2336
+                  },
+                  "errors": {
+                      "totalErrors": 2,
+                      "errorRatePct": 0.22,
+                      "breakdown": {
+                          "401": 2
+                      }
+                  }
+              },
+              {
+                  "method": "DELETE",
+                  "path": "/api/v1/object-groups/{group}",
+                  "host": "acs-test-new.example.com",
+                  "requestCount": 2866,
+                  "performance": {
+                      "p90LatencyMs": 30.4165,
+                      "p95LatencyMs": 33.5495
+                  },
+                  "errors": {
+                      "totalErrors": 6,
+                      "errorRatePct": 0.21,
+                      "breakdown": {
+                          "400": 6
+                      }
+                  }
+              },
+              {
+                  "method": "DELETE",
+                  "path": "/api/groups/delete",
+                  "host": "acs-test-new.example.com",
+                  "requestCount": 1033,
+                  "performance": {
+                      "p90LatencyMs": 43.736202,
+                      "p95LatencyMs": 48.807
+                  },
+                  "errors": {
+                      "totalErrors": 2,
+                      "errorRatePct": 0.19,
+                      "breakdown": {
+                          "401": 2
+                      }
+                  }
+              },
+              {
+                  "method": "POST",
+                  "path": "/api/v2/groups",
+                  "host": "acs-test-new.example.com",
+                  "requestCount": 1979,
+                  "performance": {
+                      "p90LatencyMs": 21.105799,
+                      "p95LatencyMs": 23.576601
+                  },
+                  "errors": {
+                      "totalErrors": 2,
+                      "errorRatePct": 0.1,
+                      "breakdown": {
+                          "401": 2
+                      }
+                  }
+              },
+              {
+                  "method": "GET",
+                  "path": "/api/permissions/MANAGE_SYSTEM_ENVIRONMENT",
+                  "host": "acs-test-new.example.com",
+                  "requestCount": 2,
+                  "performance": {
+                      "p90LatencyMs": 11.3602,
+                      "p95LatencyMs": 11.3716
+                  },
+                  "errors": {
+                      "totalErrors": 0,
+                      "errorRatePct": 0,
+                      "breakdown": {}
+                  }
+              },
+              {
+                  "method": "POST",
+                  "path": "/api/roles/remove",
+                  "host": "acs-test-new.example.com",
+                  "requestCount": 48,
+                  "performance": {
+                      "p90LatencyMs": 32.1342,
+                      "p95LatencyMs": 34.145298
+                  },
+                  "errors": {
+                      "totalErrors": 0,
+                      "errorRatePct": 0,
+                      "breakdown": {}
+                  }
+              }
+          ]
+      }
+    $type: |-
+      {
+          "type": "object",
+          "required": ["meta", "data"],
+          "properties": {
+              "meta": {
+                  "type": "object",
+                  "description": "The response's meta information for paginated results.",
+                  "required": ["nextCursor", "limit", "filters", "timeRange", "totalEndpoints", "totalRequests"],
+                  "properties": {
+                      "nextCursor": {
+                          "type": ["string", "null"],
+                          "description": "The pagination cursor that points to the next record in the results set."
+                      },
+                      "limit": {
+                          "type": "integer",
+                          "description": "The maximum number of records in the paginated response."
+                      },
+                      "filters": {
+                          "type": "object",
+                          "description": "The filters applied to the request."
+                      },
+                      "timeRange": {
+                          "type": "object",
+                          "description": "The time window for the returned data.",
+                          "required": ["start", "end", "label"],
+                          "properties": {
+                              "start": {
+                                  "type": "string",
+                                  "format": "date-time",
+                                  "description": "The start of the time window."
+                              },
+                              "end": {
+                                  "type": "string",
+                                  "format": "date-time",
+                                  "description": "The end of the time window."
+                              },
+                              "label": {
+                                  "type": "string",
+                                  "enum": ["last_7_days"],
+                                  "description": "The time range's label."
+                              }
+                          }
+                      },
+                      "totalEndpoints": {
+                          "type": "integer",
+                          "description": "The total number of endpoints that match the given filters."
+                      },
+                      "totalRequests": {
+                          "type": "integer",
+                          "description": "The total number of requests that match the given filters."
+                      }
+                  }
+              },
+              "data": {
+                  "type": "array",
+                  "description": "A list of observed API endpoints with traffic and performance metrics.",
+                  "items": {
+                      "type": "object",
+                      "required": ["method", "path", "host", "requestCount", "performance", "errors"],
+                      "properties": {
+                          "method": {
+                              "type": "string",
+                              "enum": ["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS", "TRACE"],
+                              "description": "The endpoint's HTTP method."
+                          },
+                          "path": {
+                              "type": "string",
+                              "description": "The endpoint's URL path template."
+                          },
+                          "host": {
+                              "type": "string",
+                              "description": "The hostname the endpoint was observed on."
+                          },
+                          "requestCount": {
+                              "type": "integer",
+                              "description": "The total number of requests to this endpoint within the time window."
+                          },
+                          "performance": {
+                              "type": "object",
+                              "description": "Information about latency percentile metrics.",
+                              "required": ["p90LatencyMs", "p95LatencyMs"],
+                              "properties": {
+                                  "p90LatencyMs": {
+                                      "type": "number",
+                                      "description": "The 90th-percentile response latency, in milliseconds."
+                                  },
+                                  "p95LatencyMs": {
+                                      "type": "number",
+                                      "description": "The 95th-percentile response latency, in milliseconds."
+                                  }
+                              }
+                          },
+                          "errors": {
+                              "type": "object",
+                              "description": "Information about the endpoint's errors.",
+                              "required": ["totalErrors", "errorRatePct", "breakdown"],
+                              "properties": {
+                                  "totalErrors": {
+                                      "type": "integer",
+                                      "description": "The total number of 4xx and 5xx responses."
+                                  },
+                                  "errorRatePct": {
+                                      "type": "number",
+                                      "description": "The percentage of requests that resulted in errors."
+                                  },
+                                  "breakdown": {
+                                      "type": "object",
+                                      "description": "The error counts, keyed by the HTTP status code.",
+                                      "additionalProperties": {
+                                          "type": "integer"
+                                      }
+                                  }
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+      }
+order: 3000

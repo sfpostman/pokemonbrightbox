@@ -1,0 +1,23 @@
+$kind: http-request
+description: Gets information about a system environment.
+url: "{{baseUrl}}/api-catalog/system-environments/:systemEnvironmentId"
+method: GET
+pathVariables:
+  - key: systemEnvironmentId
+    value: ""
+    description: The system environment's ID.
+    $type: |-
+      {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "deprecated": false
+          }
+        },
+        "required": [
+          "value"
+        ]
+      }
+examples: ./.resources/Get a system environment.resources/examples
+order: 2000

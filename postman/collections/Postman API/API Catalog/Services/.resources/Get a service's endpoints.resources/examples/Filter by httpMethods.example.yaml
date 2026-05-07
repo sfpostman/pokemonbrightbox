@@ -1,0 +1,193 @@
+$kind: http-example
+request:
+  url: https://api.getpostman.com/api-catalog/services/:serviceId/endpoints?systemEnvironmentId=23b554c1-c30c-483d-bf98-dbe9ab7b88a0&httpMethods=DELETE,PATCH
+  method: GET
+  queryParams:
+    systemEnvironmentId: 23b554c1-c30c-483d-bf98-dbe9ab7b88a0
+    httpMethods: DELETE,PATCH
+  pathVariables:
+    serviceId: a5450abd-ec89-443c-a17a-68132e738714
+response:
+  statusCode: 200
+  statusText: OK
+  body:
+    type: json
+    content: |-
+      {
+          "meta": {
+              "nextCursor": null,
+              "limit": 20,
+              "filters": {
+                  "systemEnvironmentId": "23b554c1-c30c-483d-bf98-dbe9ab7b88a0",
+                  "httpMethods": [
+                      "DELETE",
+                      "PATCH"
+                  ]
+              },
+              "timeRange": {
+                  "start": "2026-04-14T13:11:58.975Z",
+                  "end": "2026-04-21T13:11:58.975Z",
+                  "label": "last_7_days"
+              },
+              "totalEndpoints": 2,
+              "totalRequests": 5782
+          },
+          "data": [
+              {
+                  "method": "PATCH",
+                  "path": "/api/v1/object-groups/{group}",
+                  "host": "acs-test-new.example.com",
+                  "requestCount": 2916,
+                  "performance": {
+                      "p90LatencyMs": 19.701,
+                      "p95LatencyMs": 21.59825
+                  },
+                  "errors": {
+                      "totalErrors": 16,
+                      "errorRatePct": 0.55,
+                      "breakdown": {
+                          "400": 8,
+                          "500": 8
+                      }
+                  }
+              },
+              {
+                  "method": "DELETE",
+                  "path": "/api/v1/object-groups/{group}",
+                  "host": "acs-test-new.example.com",
+                  "requestCount": 2866,
+                  "performance": {
+                      "p90LatencyMs": 30.4165,
+                      "p95LatencyMs": 33.5495
+                  },
+                  "errors": {
+                      "totalErrors": 6,
+                      "errorRatePct": 0.21,
+                      "breakdown": {
+                          "400": 6
+                      }
+                  }
+              }
+          ]
+      }
+    $type: |-
+      {
+          "type": "object",
+          "required": ["meta", "data"],
+          "properties": {
+              "meta": {
+                  "type": "object",
+                  "description": "The response's meta information for paginated results.",
+                  "required": ["nextCursor", "limit", "filters", "timeRange", "totalEndpoints", "totalRequests"],
+                  "properties": {
+                      "nextCursor": {
+                          "type": ["string", "null"],
+                          "description": "The pagination cursor that points to the next record in the results set."
+                      },
+                      "limit": {
+                          "type": "integer",
+                          "description": "The maximum number of records in the paginated response."
+                      },
+                      "filters": {
+                          "type": "object",
+                          "description": "The filters applied to the request."
+                      },
+                      "timeRange": {
+                          "type": "object",
+                          "description": "The time window for the returned data.",
+                          "required": ["start", "end", "label"],
+                          "properties": {
+                              "start": {
+                                  "type": "string",
+                                  "format": "date-time",
+                                  "description": "The start of the time window."
+                              },
+                              "end": {
+                                  "type": "string",
+                                  "format": "date-time",
+                                  "description": "The end of the time window."
+                              },
+                              "label": {
+                                  "type": "string",
+                                  "enum": ["last_7_days"],
+                                  "description": "The time range's label."
+                              }
+                          }
+                      },
+                      "totalEndpoints": {
+                          "type": "integer",
+                          "description": "The total number of endpoints that match the given filters."
+                      },
+                      "totalRequests": {
+                          "type": "integer",
+                          "description": "The total number of requests that match the given filters."
+                      }
+                  }
+              },
+              "data": {
+                  "type": "array",
+                  "description": "A list of observed API endpoints with traffic and performance metrics.",
+                  "items": {
+                      "type": "object",
+                      "required": ["method", "path", "host", "requestCount", "performance", "errors"],
+                      "properties": {
+                          "method": {
+                              "type": "string",
+                              "enum": ["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS", "TRACE"],
+                              "description": "The endpoint's HTTP method."
+                          },
+                          "path": {
+                              "type": "string",
+                              "description": "The endpoint's URL path template."
+                          },
+                          "host": {
+                              "type": "string",
+                              "description": "The hostname the endpoint was observed on."
+                          },
+                          "requestCount": {
+                              "type": "integer",
+                              "description": "The total number of requests to this endpoint within the time window."
+                          },
+                          "performance": {
+                              "type": "object",
+                              "description": "Information about latency percentile metrics.",
+                              "required": ["p90LatencyMs", "p95LatencyMs"],
+                              "properties": {
+                                  "p90LatencyMs": {
+                                      "type": "number",
+                                      "description": "The 90th-percentile response latency, in milliseconds."
+                                  },
+                                  "p95LatencyMs": {
+                                      "type": "number",
+                                      "description": "The 95th-percentile response latency, in milliseconds."
+                                  }
+                              }
+                          },
+                          "errors": {
+                              "type": "object",
+                              "description": "Information about the endpoint's errors.",
+                              "required": ["totalErrors", "errorRatePct", "breakdown"],
+                              "properties": {
+                                  "totalErrors": {
+                                      "type": "integer",
+                                      "description": "The total number of 4xx and 5xx responses."
+                                  },
+                                  "errorRatePct": {
+                                      "type": "number",
+                                      "description": "The percentage of requests that resulted in errors."
+                                  },
+                                  "breakdown": {
+                                      "type": "object",
+                                      "description": "The error counts, keyed by the HTTP status code.",
+                                      "additionalProperties": {
+                                          "type": "integer"
+                                      }
+                                  }
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+      }
+order: 7000

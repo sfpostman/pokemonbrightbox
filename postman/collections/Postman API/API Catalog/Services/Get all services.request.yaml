@@ -1,0 +1,85 @@
+$kind: http-request
+description: Gets a list of services in a system environment. The response includes details about analytics, compliance, and governance metadata.
+url: "{{baseUrl}}/api-catalog/services?systemEnvironmentId="
+method: GET
+queryParams:
+  - key: systemEnvironmentId
+    value: ""
+    description: The system environment's ID.
+    $type: |-
+      {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "value"
+        ]
+      }
+  - key: name
+    value: ""
+    disabled: true
+    description: Filter results to the given the service name. This is case-insensitive.
+    $type: |-
+      {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "maxLength": "255"
+          }
+        }
+      }
+  - key: tags
+    value: ""
+    disabled: true
+    description: A comma-separated list of tag names to filter by.
+    $type: |-
+      {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "pattern": "^[^,]+(,[^,]+)*$"
+          }
+        }
+      }
+  - key: governanceGroupId
+    value: ""
+    disabled: true
+    description: Filter results to only services that belong to the given governance group ID.
+    $type: string
+  - key: limit
+    value: ""
+    disabled: true
+    description: The maximum number of rows to return in the response.
+    $type: |-
+      {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer",
+            "default": "20",
+            "minimum": "1",
+            "maximum": "100"
+          }
+        }
+      }
+  - key: cursor
+    value: ""
+    disabled: true
+    description: The pointer to the first record of the set of paginated results. To view the next response, use the `nextCursor` value for this parameter.
+    $type: |-
+      {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9+/=]+$"
+          }
+        }
+      }
+examples: ./.resources/Get all services.resources/examples
+order: 1000

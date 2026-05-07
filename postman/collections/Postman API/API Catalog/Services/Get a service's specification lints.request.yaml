@@ -1,0 +1,95 @@
+$kind: http-request
+description: Gets a list of API specification lint runs for a service that includes summary statistics and per-severity issue counts.
+url: "{{baseUrl}}/api-catalog/services/:serviceId/spec-lints"
+method: GET
+queryParams:
+  - key: specId
+    value: ""
+    disabled: true
+    description: Filter results to the given API specification ID.
+    $type: string
+  - key: severity
+    value: ""
+    disabled: true
+    description: Filter results to runs with issues at or above the given severity threshold. Higher severities are always included.
+    $type: |-
+      {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": [
+              "error",
+              "warning",
+              "info"
+            ]
+          }
+        }
+      }
+  - key: status
+    value: ""
+    disabled: true
+    description: Filter results to the given specification lint outcome.
+    $type: |-
+      {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": [
+              "passed",
+              "failed"
+            ]
+          }
+        }
+      }
+  - key: sort
+    value: ""
+    disabled: true
+    description: Sort the results in field:direction order format. Accepts the `timestamp` and `errorCount` fields. Supports the `asc` and `desc` directions.
+    $type: |-
+      {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "pattern": "^(timestamp|errorCount):(asc|desc)$"
+          }
+        }
+      }
+  - key: limit
+    value: ""
+    disabled: true
+    description: The maximum number of rows to return in the response.
+    $type: |-
+      {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer",
+            "default": "20",
+            "minimum": "1",
+            "maximum": "100"
+          }
+        }
+      }
+  - key: cursor
+    value: ""
+    disabled: true
+    description: The pointer to the first record of the set of paginated results. To view the next response, use the `nextCursor` value for this parameter.
+    $type: |-
+      {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9+/=]+$"
+          }
+        }
+      }
+pathVariables:
+  - key: serviceId
+    value: ""
+    description: The service's ID.
+examples: ./.resources/Get a service's specification lints.resources/examples
+order: 5000

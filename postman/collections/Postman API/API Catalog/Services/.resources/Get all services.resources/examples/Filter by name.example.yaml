@@ -1,0 +1,269 @@
+$kind: http-example
+request:
+  url: https://api.getpostman.com/api-catalog/services?systemEnvironmentId=23b554c1-c30c-483d-bf98-dbe9ab7b88a0&name=acs
+  method: GET
+  queryParams:
+    systemEnvironmentId: 23b554c1-c30c-483d-bf98-dbe9ab7b88a0
+    name: acs
+response:
+  statusCode: 200
+  statusText: OK
+  body:
+    type: json
+    content: |-
+      {
+          "meta": {
+              "nextCursor": null,
+              "limit": 20,
+              "filters": {
+                  "systemEnvironmentId": "23b554c1-c30c-483d-bf98-dbe9ab7b88a0",
+                  "name": "acs"
+              },
+              "timeRange": {
+                  "start": "2026-04-14T12:27:36.779Z",
+                  "end": "2026-04-21T12:27:36.779Z",
+                  "label": "last_7_days"
+              }
+          },
+          "data": [
+              {
+                  "id": "a5450abd-ec89-443c-a17a-68132e738714",
+                  "name": "api-control-service",
+                  "status": "critical",
+                  "lastActivityAt": "2026-04-21T12:27:32Z",
+                  "traffic": {
+                      "p95LatencyMs": 251.8122497558594,
+                      "errorRatePct": 0.78
+                  },
+                  "compliance": {
+                      "monitorRun": {
+                          "status": "failed"
+                      },
+                      "cliRun": {
+                          "status": "failed"
+                      },
+                      "specLint": {
+                          "status": "passed"
+                      }
+                  },
+                  "createdAt": "2025-12-04T15:13:31.000Z",
+                  "gitRepo": "https://github.com/postman-eng/api-control-service",
+                  "owner": {
+                      "type": "user",
+                      "id": "12345678",
+                      "name": "Taylor Lee",
+                      "profilePicUrl": "https://res.cloudinary.com/ddn1d7iih/image/upload/t_user_profile_300/v1/user/default-9",
+                      "publicHandle": "https://www.acs-beta.example.com/orbital-module-specialist-12345678"
+                  },
+                  "tags": [
+                      "develop",
+                      "acs",
+                      "beta"
+                  ],
+                  "governanceGroup": {
+                      "id": "4937d932-b1f4-44cd-a929-4a860707766e",
+                      "name": "ACS"
+                  }
+              }
+          ]
+      }
+    $type: |-
+      {
+          "type": "object",
+          "required": ["meta", "data"],
+          "properties": {
+              "meta": {
+                  "type": "object",
+                  "description": "The response's meta information for paginated results.",
+                  "required": ["nextCursor", "limit", "filters", "timeRange"],
+                  "properties": {
+                      "nextCursor": {
+                          "type": ["string", "null"],
+                          "description": "The pagination cursor that points to the next record in the results set."
+                      },
+                      "limit": {
+                          "type": "integer",
+                          "description": "The maximum number of records in the paginated response."
+                      },
+                      "filters": {
+                          "type": "object",
+                          "description": "The filters applied to the request."
+                      },
+                      "timeRange": {
+                          "type": "object",
+                          "description": "The time window for the returned data.",
+                          "required": ["start", "end", "label"],
+                          "properties": {
+                              "start": {
+                                  "type": "string",
+                                  "format": "date-time",
+                                  "description": "The start of the time window."
+                              },
+                              "end": {
+                                  "type": "string",
+                                  "format": "date-time",
+                                  "description": "The end of the time window."
+                              },
+                              "label": {
+                                  "type": "string",
+                                  "enum": ["last_7_days"],
+                                  "description": "The time range's label."
+                              }
+                          }
+                      }
+                  }
+              },
+              "data": {
+                  "type": "array",
+                  "description": "A list of list of services.",
+                  "items": {
+                      "type": "object",
+                      "description": "Information about the service.",
+                      "required": ["id", "name", "status", "lastActivityAt", "traffic", "compliance", "createdAt", "gitRepo", "owner", "tags", "governanceGroup"],
+                      "properties": {
+                          "id": {
+                              "type": "string",
+                              "format": "uuid",
+                              "description": "The service's ID."
+                          },
+                          "name": {
+                              "type": "string",
+                              "description": "The service's name."
+                          },
+                          "status": {
+                              "type": "string",
+                              "enum": ["healthy", "warning", "critical", "inactive"],
+                              "description": "The overall health status, derived from compliance signals."
+                          },
+                          "lastActivityAt": {
+                              "type": ["string", "null"],
+                              "format": "date-time",
+                              "description": "The date and time of the last observed activity. If there's no activity in the time window, this returns a null value."
+                          },
+                          "traffic": {
+                              "type": "object",
+                              "description": "Information about traffic and performance within the time window. If there's no traffic data, this returns a null value.",
+                              "required": ["p95LatencyMs", "errorRatePct"],
+                              "properties": {
+                                  "p95LatencyMs": {
+                                      "type": ["number", "null"],
+                                      "description": "The 95th-percentile response latency, in milliseconds."
+                                  },
+                                  "errorRatePct": {
+                                      "type": ["number", "null"],
+                                      "description": "The percentage of requests that resulted in errors."
+                                  }
+                              }
+                          },
+                          "compliance": {
+                              "type": "object",
+                              "description": "Information about compliance and governance.",
+                              "required": ["monitorRun", "cliRun", "specLint"],
+                              "properties": {
+                                  "monitorRun": {
+                                      "type": "object",
+                                      "description": "The scheduled monitor run summary.",
+                                      "required": ["status"],
+                                      "properties": {
+                                          "status": {
+                                              "type": ["string", "null"],
+                                              "enum": ["passed", "failed", null],
+                                              "description": "Whether the monitor's latest runs passed or failed. If no runs exist, this returns a null value."
+                                          }
+                                      }
+                                  },
+                                  "cliRun": {
+                                      "type": "object",
+                                      "description": "Information about the CI/CD pipeline.",
+                                      "required": ["status"],
+                                      "properties": {
+                                          "status": {
+                                              "type": ["string", "null"],
+                                              "enum": ["passed", "failed", null],
+                                              "description": "Whether the pipelines' latest runs passed or failed. If no runs exist, this returns a null value."
+                                          }
+                                      }
+                                  },
+                                  "specLint": {
+                                      "type": "object",
+                                      "description": "Information about the API specification lint.",
+                                      "required": ["status"],
+                                      "properties": {
+                                          "status": {
+                                              "type": ["string", "null"],
+                                              "enum": ["passed", "failed", null],
+                                              "description": "Whether the specifications' latest lints passed or failed. If no lints exist, this returns a null value."
+                                          }
+                                      }
+                                  }
+                              }
+                          },
+                          "createdAt": {
+                              "type": ["string", "null"],
+                              "format": "date-time",
+                              "description": "The date and time at which the workspace was created."
+                          },
+                          "gitRepo": {
+                              "type": ["string", "null"],
+                              "format": "uri",
+                              "description": "The URL of the linked Git repository. If the workspace isn't connected to a repository, this returns a null value."
+                          },
+                          "owner": {
+                              "type": ["object", "null"],
+                              "description": "The service's owner. If no owner is assigned, this returns a null value.",
+                              "required": ["type", "id", "name", "profilePicUrl", "publicHandle"],
+                              "properties": {
+                                  "type": {
+                                      "type": "string",
+                                      "enum": ["user", "group"],
+                                      "description": "The type of owner."
+                                  },
+                                  "id": {
+                                      "type": "string",
+                                      "description": "The owner's ID."
+                                  },
+                                  "name": {
+                                      "type": ["string", "null"],
+                                      "description": "The owner's display name."
+                                  },
+                                  "profilePicUrl": {
+                                      "type": ["string", "null"],
+                                      "format": "uri",
+                                      "description": "The URL of the owner's profile picture."
+                                  },
+                                  "publicHandle": {
+                                      "type": ["string", "null"],
+                                      "format": "uri",
+                                      "description": "The URL of the owner's public profile."
+                                  }
+                              }
+                          },
+                          "tags": {
+                              "type": "array",
+                              "description": "A list of the workspace's tags.",
+                              "items": {
+                                  "type": "string"
+                              }
+                          },
+                          "governanceGroup": {
+                              "type": ["object", "null"],
+                              "description": "The governance group that the workspace belongs to. If no governance group is assigned, this returns a null value.",
+                              "required": ["id", "name"],
+                              "properties": {
+                                  "id": {
+                                      "type": "string",
+                                      "format": "uuid",
+                                      "description": "The governance group's ID."
+                                  },
+                                  "name": {
+                                      "type": "string",
+                                      "description": "The governance group's name."
+                                  }
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+      }
+order: 5000

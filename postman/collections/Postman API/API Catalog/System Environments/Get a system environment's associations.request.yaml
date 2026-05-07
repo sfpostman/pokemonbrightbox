@@ -1,0 +1,50 @@
+$kind: http-request
+description: Gets the workspace-environment associations for a system environment.
+url: "{{baseUrl}}/api-catalog/system-environments/:systemEnvironmentId/associations"
+method: GET
+queryParams:
+  - key: workspaceId
+    value: ""
+    disabled: true
+    description: The workspace's ID to which the environments in the association belong to.
+    $type: string
+  - key: limit
+    value: ""
+    disabled: true
+    description: The maximum number of rows to return in the response.
+    $type: |-
+      {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer",
+            "default": "20",
+            "minimum": "1",
+            "maximum": "100"
+          }
+        }
+      }
+  - key: cursor
+    value: ""
+    disabled: true
+    description: The pointer to the first record of the set of paginated results. To view the next response, use the `nextCursor` value for this parameter.
+    $type: string
+pathVariables:
+  - key: systemEnvironmentId
+    value: ""
+    description: The system environment's ID.
+    $type: |-
+      {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "deprecated": false
+          }
+        },
+        "required": [
+          "value"
+        ]
+      }
+examples: ./.resources/Get a system environment's associations.resources/examples
+order: 5000

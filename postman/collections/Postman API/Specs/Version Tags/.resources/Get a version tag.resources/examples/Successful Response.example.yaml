@@ -1,0 +1,89 @@
+$kind: http-example
+request:
+  url: https://api.getpostman.com/specs/:specId/version-tags/:tagId/files
+  method: GET
+  pathVariables:
+    specId: 73e15000-bc7a-4802-b80e-05fff18fd7f8
+    tagId: 97d2c74e-19de-426d-9763-8e7400429759
+response:
+  statusCode: 200
+  statusText: OK
+  body:
+    type: json
+    content: |-
+      {
+          "data": [
+              {
+                  "path": "index.yaml",
+                  "content": "swagger: '2.0'\ninfo:\n  title: 'REST API basics: CRUD, test & variable'\n  description: >-\n    # 🚀 Get started here\n\n\n    This template guides you through CRUD operations (GET, POST, PUT, DELETE),\n    variables, and tests.\n\n\n    ## 🔖 **How to use this template**\n\n\n    #### **Step 1: Send requests**\n\n\n    RESTful APIs allow you to perform CRUD operations using the POST, GET, PUT,\n    and DELETE HTTP methods.\n\n\n    This collection contains each of these\n    [request](https://learning.postman.com/docs/sending-requests/requests/)\n    types. Open each request and click \"Send\" to see what happens.\n\n\n    #### **Step 2: View responses**\n\n\n    Observe the response tab for status code (200 OK), response time, and size.\n\n\n    #### **Step 3: Send new Body data**\n\n\n    Update or add new data in \"Body\" in the POST request. Typically, Body data\n    is also used in PUT request.\n\n\n    ```\n\n    {\n        \"name\": \"Add your name in the body\"\n    }\n\n     ```\n\n    #### **Step 4: Update the variable**\n\n\n    Variables enable you to store and reuse values in Postman. We have created a\n    [variable](https://learning.postman.com/docs/sending-requests/variables/)\n    called `base_url` with the sample request\n    [https://postman-api-learner.glitch.me](https://postman-api-learner.glitch.me).\n    Replace it with your API endpoint to customize this collection.\n\n\n    #### **Step 5: Add tests in the \"Scripts\" tab**\n\n\n    Adding tests to your requests can help you confirm that your API is working\n    as expected. You can write test scripts in JavaScript and view the output in\n    the \"Test Results\" tab.\n\n\n    <img\n    src=\"https://content.pstmn.io/fa30ea0a-373d-4545-a668-e7b283cca343/aW1hZ2UucG5n\"\n    alt=\"\" height=\"1530\" width=\"2162\">\n\n\n    ## 💪 Pro tips\n\n\n    - Use folders to group related requests and organize the collection.\n        \n    - Add more\n    [scripts](https://learning.postman.com/docs/writing-scripts/intro-to-scripts/)\n    to verify if the API works as expected and execute workflows.\n        \n\n    ## 💡Related templates\n\n\n    [API testing\n    basics](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9a37a28-055b-49cd-8c7e-97494a21eb54&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n\n    [API\n    documentation](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9c28f47-1253-44af-a2f3-20dce4da1f18&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n\n    [Authorization\n    methods](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=31a9a6ed-4cdf-4ced-984c-d12c9aec1c27&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)\n  version: 1.0.0\npaths:\n  /info:\n    get:\n      summary: Get data\n      description: >-\n        This is a GET request and it is used to \"get\" data from an endpoint.\n        There is no request body for a GET request, but you can use query\n        parameters to help specify the resource you want data on (e.g., in this\n        request, we have `id=1`).\n\n\n        A successful GET response will have a `200 OK` status, and should\n        include some kind of response body - for example, HTML web content or\n        JSON data.\n      consumes:\n        - application/json\n      parameters:\n        - name: id\n          in: query\n          type: integer\n      responses: {}\n    post:\n      summary: Post data\n      description: >-\n        This is a POST request, submitting data to an API via the request body.\n        This request submits JSON data, and the data is reflected in the\n        response.\n\n\n        A successful POST request typically returns a `200 OK` or `201 Created`\n        response code.\n      consumes:\n        - application/json\n      parameters:\n        - name: body\n          in: body\n          schema:\n            type: object\n            properties:\n              name:\n                type: string\n      responses: {}\n    put:\n      summary: Update data\n      description: >-\n        This is a PUT request and it is used to overwrite an existing piece of\n        data. For instance, after you create an entity with a POST request, you\n        may want to modify that later. You can do that using a PUT request. You\n        typically identify the entity being updated by including an identifier\n        in the URL (eg. `id=1`).\n\n\n        A successful PUT request typically returns a `200 OK`, `201 Created`, or\n        `204 No Content` response code.\n      consumes:\n        - application/json\n      parameters:\n        - name: id\n          in: query\n          type: integer\n        - name: body\n          in: body\n          schema:\n            type: object\n            properties:\n              name:\n                type: string\n      responses: {}\n    delete:\n      summary: Delete data\n      description: >-\n        This is a DELETE request, and it is used to delete data that was\n        previously created via a POST request. You typically identify the entity\n        being updated by including an identifier in the URL (eg. `id=1`).\n\n\n        A successful DELETE request typically returns a `200 OK`, `202\n        Accepted`, or `204 No Content` response code.\n      consumes:\n        - application/json\n      parameters:\n        - name: id\n          in: query\n          type: integer\n        - name: body\n          in: body\n          schema:\n            type: object\n      responses: {}\nhost: template.postman-echo.com\nschemes:\n  - https\n",
+                  "fileType": "ROOT",
+                  "updatedAt": "2026-04-29T19:38:29.000Z",
+                  "id": "158bd551-4e3d-4397-a27f-4034ac33f1f6",
+                  "createdAt": "2026-03-10T17:05:11.000Z",
+                  "createdBy": "12345678",
+                  "updatedBy": "12345678",
+                  "type": "FILE",
+                  "name": "index.yaml"
+              }
+          ]
+      }
+    $type: |-
+      {
+          "type": "object",
+          "properties": {
+              "data": {
+                  "type": "array",
+                  "description": "A list of the version tag's files and folders.",
+                  "items": {
+                      "type": "object",
+                      "description": "Information about the element.",
+                      "properties": {
+                          "path": {
+                              "type": "string",
+                              "description": "The file's path."
+                          },
+                          "content": {
+                              "type": "string",
+                              "description": "The file's content. Folders don't return this property."
+                          },
+                          "fileType": {
+                              "type": "string",
+                              "description": "The type of file:\n- `ROOT` — A file containing the full OpenAPI structure and references other (DEFAULT) spec files.\n- `DEFAULT` — A file referenced by the `ROOT` file.\n\nThis value doesn't return for folders."
+                          },
+                          "updatedAt": {
+                              "type": "string",
+                              "format": "date-time",
+                              "description": "The date and time at which the file was updated."
+                          },
+                          "id": {
+                              "type": "string",
+                              "description": "7a65e696-76fe-462d-a374-b4de06cac805"
+                          },
+                          "createdAt": {
+                              "type": "string",
+                              "format": "date-time",
+                              "description": "The date and time at which the file was created."
+                          },
+                          "createdBy": {
+                              "type": "string",
+                              "description": "The user ID of the user that created the file."
+                          },
+                          "updatedBy": {
+                              "type": "string",
+                              "description": "The ID of the user who updated the file."
+                          },
+                          "type": {
+                              "type": "string",
+                              "enum": ["FILE", "FOLDER"],
+                              "description": "The file's type."
+                          },
+                          "name": {
+                              "type": "string",
+                              "description": "The file's name."
+                          }
+                      }
+                  }
+              }
+          }
+      }
+order: 1000

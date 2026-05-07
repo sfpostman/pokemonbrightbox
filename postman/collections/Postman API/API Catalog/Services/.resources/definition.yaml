@@ -1,0 +1,3 @@
+$kind: collection
+description: These endpoints enable you to retrieve and monitor [services](https://learning.postman.com/latest-v-12/docs/api-catalog/explore) in your API Catalog. Services map to a Postman workspace and aggregates traffic analytics, compliance signals (monitor runs, CI pipeline runs, API specification lints), endpoint performance, and governance metadata.
+order: 2000

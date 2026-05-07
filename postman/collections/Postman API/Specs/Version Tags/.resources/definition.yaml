@@ -1,0 +1,3 @@
+$kind: collection
+description: These endpoints enables you to manage your specifications' version tags. Version tags are snapshots of a specification at a point in time that let you to track changes to your specifications over time.
+order: 4000

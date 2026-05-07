@@ -1,0 +1,37 @@
+$kind: http-request
+description: Gets information about a specification's version tag. The response returns a snapshot of a specification at a point in time that lets you track changes to your specifications over time.
+url: "{{baseUrl}}/specs/:specId/version-tags/:tagId/files"
+method: GET
+pathVariables:
+  - key: specId
+    value: ""
+    description: The specification's ID.
+    $type: |-
+      {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "value"
+        ]
+      }
+  - key: tagId
+    value: ""
+    description: The version tag's ID.
+    $type: |-
+      {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "value"
+        ]
+      }
+examples: ./.resources/Get a version tag.resources/examples
+order: 2000

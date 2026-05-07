@@ -1,0 +1,3 @@
+$kind: collection
+description: These endpoints enable you to manage your team's [system environments](https://learning.postman.com/latest-v-12/docs/api-catalog/overview#system-environments). System environments let you define organization-wide deployment stages (such as production, staging, or QA) and associate workspace-level Postman environments with them.
+order: 3000

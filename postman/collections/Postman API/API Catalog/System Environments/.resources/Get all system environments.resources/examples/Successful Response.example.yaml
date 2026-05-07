@@ -1,0 +1,326 @@
+$kind: http-example
+request:
+  url: https://api.getpostman.com/api-catalog/system-environments
+  method: GET
+response:
+  statusCode: 200
+  statusText: OK
+  body:
+    type: json
+    content: |-
+      {
+          "meta": {
+              "total": 100,
+              "nextCursor": "ZjlkZDAyNTEtZjUxZS00ODdkLTkxY2QtZTE4ZDRkODEwNzc0",
+              "limit": 20
+          },
+          "data": [
+              {
+                  "id": "fffa77cd-fd06-448e-a65d-2f77a0e58dad",
+                  "name": "TESTING-1774258301513-4358-1",
+                  "label": "",
+                  "color": "#FF0000",
+                  "description": "Testing environment.",
+                  "isProduction": false,
+                  "associationCount": 0,
+                  "createdAt": "2026-03-23T09:31:41.000Z",
+                  "updatedAt": "2026-03-27T17:56:16.000Z"
+              },
+              {
+                  "id": "fecb4dbd-240a-44e9-89f3-4756d8c1c893",
+                  "name": "TESTING-1772092243420-1818-1",
+                  "label": "",
+                  "color": "#FF0000",
+                  "description": "Testing environment.",
+                  "isProduction": false,
+                  "associationCount": 1,
+                  "createdAt": "2026-02-26T07:50:43.000Z",
+                  "updatedAt": "2026-03-27T17:56:16.000Z"
+              },
+              {
+                  "id": "fde857ad-d590-4f4f-94cd-021d771d88de",
+                  "name": "TESTING-1774092688416-7397-1",
+                  "label": "",
+                  "color": "#FF0000",
+                  "description": "Testing environment.",
+                  "isProduction": false,
+                  "associationCount": 0,
+                  "createdAt": "2026-03-21T11:31:28.000Z",
+                  "updatedAt": "2026-03-27T17:56:16.000Z"
+              },
+              {
+                  "id": "fdc88e7d-59ab-46d0-ab37-9827936cd510",
+                  "name": "TESTING-1774189852129-2330-1",
+                  "label": "",
+                  "color": "#FF0000",
+                  "description": "Testing environment.",
+                  "isProduction": false,
+                  "associationCount": 0,
+                  "createdAt": "2026-03-22T14:30:52.000Z",
+                  "updatedAt": "2026-03-27T17:56:16.000Z"
+              },
+              {
+                  "id": "fd741d0d-92bf-4ad8-bfc0-2e9aa0560b12",
+                  "name": "TESTING-1774002637514-7841-1",
+                  "label": "",
+                  "color": "#FF0000",
+                  "description": "Testing environment.",
+                  "isProduction": false,
+                  "associationCount": 0,
+                  "createdAt": "2026-03-20T10:30:37.000Z",
+                  "updatedAt": "2026-03-27T17:56:16.000Z"
+              },
+              {
+                  "id": "fd4ff540-5237-4523-b747-7ed054be18ee",
+                  "name": "TESTING-1774510225782-3137-1",
+                  "label": "",
+                  "color": "#FF0000",
+                  "description": "Testing environment.",
+                  "isProduction": false,
+                  "associationCount": 0,
+                  "createdAt": "2026-03-26T07:30:25.000Z",
+                  "updatedAt": "2026-03-27T17:56:16.000Z"
+              },
+              {
+                  "id": "fd31e1bc-edbd-4646-8b76-babc84a4ed5d",
+                  "name": "TESTING-1772008838873-9737-1",
+                  "label": "",
+                  "color": "#FF0000",
+                  "description": "Testing environment.",
+                  "isProduction": false,
+                  "associationCount": 1,
+                  "createdAt": "2026-02-25T08:40:38.000Z",
+                  "updatedAt": "2026-03-27T17:56:16.000Z"
+              },
+              {
+                  "id": "fce920ab-86b2-4b22-bd9c-a4e2a827fc22",
+                  "name": "TESTING-1772014970836-9161-1",
+                  "label": "",
+                  "color": "#FF0000",
+                  "description": "Testing environment.",
+                  "isProduction": false,
+                  "associationCount": 1,
+                  "createdAt": "2026-02-25T10:22:50.000Z",
+                  "updatedAt": "2026-03-27T17:56:16.000Z"
+              },
+              {
+                  "id": "fc56a9f2-ef62-401d-8ab6-dc2b3295d48d",
+                  "name": "TESTING-1773317381966-6301-1",
+                  "label": "",
+                  "color": "#FF0000",
+                  "description": "Testing environment.",
+                  "isProduction": false,
+                  "associationCount": 0,
+                  "createdAt": "2026-03-12T12:09:42.000Z",
+                  "updatedAt": "2026-03-27T17:56:16.000Z"
+              },
+              {
+                  "id": "fc4a764c-323d-46e2-b35e-54439713b042",
+                  "name": "TESTING-1773772412144-4570-1",
+                  "label": "",
+                  "color": "#FF0000",
+                  "description": "Testing environment.",
+                  "isProduction": false,
+                  "associationCount": 0,
+                  "createdAt": "2026-03-17T18:33:32.000Z",
+                  "updatedAt": "2026-03-27T17:56:16.000Z"
+              },
+              {
+                  "id": "fc2cab54-af34-4b9e-baa3-dacf35083c0d",
+                  "name": "TESTING-1774222224868-3587-1",
+                  "label": "",
+                  "color": "#FF0000",
+                  "description": "Testing environment.",
+                  "isProduction": false,
+                  "associationCount": 0,
+                  "createdAt": "2026-03-22T23:30:24.000Z",
+                  "updatedAt": "2026-03-27T17:56:16.000Z"
+              },
+              {
+                  "id": "fc179dfe-8a4e-428b-b77d-338274c47919",
+                  "name": "TESTING-1773147048870-1689-1",
+                  "label": "",
+                  "color": "#FF0000",
+                  "description": "Testing environment.",
+                  "isProduction": false,
+                  "associationCount": 0,
+                  "createdAt": "2026-03-10T12:50:48.000Z",
+                  "updatedAt": "2026-03-27T17:56:16.000Z"
+              },
+              {
+                  "id": "fb16e5c6-916c-4c21-9b87-f7ca23a22890",
+                  "name": "TESTING-1771859323768-2461-1",
+                  "label": "",
+                  "color": "#FF0000",
+                  "description": "Testing environment.",
+                  "isProduction": false,
+                  "associationCount": 1,
+                  "createdAt": "2026-02-23T15:08:43.000Z",
+                  "updatedAt": "2026-03-27T17:56:16.000Z"
+              },
+              {
+                  "id": "fab0f173-32c3-48c6-860e-465343960cee",
+                  "name": "TESTING-1771999132205-2781-1",
+                  "label": "",
+                  "color": "#FF0000",
+                  "description": "Testing environment.",
+                  "isProduction": false,
+                  "associationCount": 1,
+                  "createdAt": "2026-02-25T05:58:52.000Z",
+                  "updatedAt": "2026-03-27T17:56:16.000Z"
+              },
+              {
+                  "id": "fa72e62a-942d-4f38-8470-fa8d7cba4c04",
+                  "name": "TESTING-1772727507440-4390-1",
+                  "label": "",
+                  "color": "#FF0000",
+                  "description": "Testing environment.",
+                  "isProduction": false,
+                  "associationCount": 0,
+                  "createdAt": "2026-03-05T16:18:27.000Z",
+                  "updatedAt": "2026-03-27T17:56:16.000Z"
+              },
+              {
+                  "id": "fa50e347-8633-4467-8a9f-b955fd2d0737",
+                  "name": "PRODUCTION-1772023144720-9547-1",
+                  "label": "",
+                  "color": "#FF0000",
+                  "description": "Production environment.",
+                  "isProduction": true,
+                  "associationCount": 1,
+                  "createdAt": "2026-02-25T12:39:04.000Z",
+                  "updatedAt": "2026-03-27T17:56:16.000Z"
+              },
+              {
+                  "id": "fa443806-cb11-41c2-b293-ccbc8a353035",
+                  "name": "PRODUCTION-1773826254026-8166-2",
+                  "label": "",
+                  "color": "#FF0000",
+                  "description": "Production environment.",
+                  "isProduction": true,
+                  "associationCount": 0,
+                  "createdAt": "2026-03-18T09:30:54.000Z",
+                  "updatedAt": "2026-03-27T17:56:16.000Z"
+              },
+              {
+                  "id": "fa1e910c-e092-4eaa-af51-d0a91b7907ff",
+                  "name": "PRODUCTION-1772276118050-3585-3",
+                  "label": "",
+                  "color": "#FF0000",
+                  "description": "Production environment.",
+                  "isProduction": true,
+                  "associationCount": 0,
+                  "createdAt": "2026-02-28T10:55:18.000Z",
+                  "updatedAt": "2026-03-27T17:56:16.000Z"
+              },
+              {
+                  "id": "f9f140fb-4772-405a-904e-db89b357a781",
+                  "name": "PRODUCTION-1774546283561-4747-4",
+                  "label": "",
+                  "color": "#FF0000",
+                  "description": "Production environment.",
+                  "isProduction": true,
+                  "associationCount": 0,
+                  "createdAt": "2026-03-26T17:31:23.000Z",
+                  "updatedAt": "2026-03-27T17:56:16.000Z"
+              },
+              {
+                  "id": "f9dd0251-f51e-487d-91cd-e18d4d810774",
+                  "name": "PRODUCTION-1771985260417-5689-5",
+                  "label": "",
+                  "color": "#FF0000",
+                  "description": "Production environment.",
+                  "isProduction": true,
+                  "associationCount": 1,
+                  "createdAt": "2026-02-25T02:07:40.000Z",
+                  "updatedAt": "2026-03-27T17:56:16.000Z"
+              }
+          ]
+      }
+    $type: |-
+      {
+          "type": "object",
+          "properties": {
+              "meta": {
+                  "type": "object",
+                  "description": "The response's meta information for paginated results.",
+                  "properties": {
+                      "total": {
+                          "type": "integer",
+                          "description": "The number of records that match the defined criteria."
+                      },
+                      "nextCursor": {
+                          "type": ["string", "null"],
+                          "description": "The pagination cursor that points to the next record in the results set."
+                      },
+                      "limit": {
+                          "type": "integer",
+                          "description": "The maximum number of records in the paginated response."
+                      },
+                      "filters": {
+                          "type": "object",
+                          "description": "The applied filters, if any.",
+                          "properties": {
+                              "isProduction": {
+                                  "type": "boolean"
+                              }
+                          },
+                          "additionalProperties": false
+                      }
+                  },
+                  "required": ["total", "nextCursor", "limit"]
+              },
+              "data": {
+                  "type": "array",
+                  "description": "A list of system environments.",
+                  "items": {
+                      "type": "object",
+                      "description": "Information about the system environment.",
+                      "properties": {
+                          "id": {
+                              "type": "string",
+                              "description": "The system environment's ID."
+                          },
+                          "name": {
+                              "type": "string",
+                              "description": "The system environment's name."
+                          },
+                          "label": {
+                              "type": "string",
+                              "description": "A lowercase, terminal-friendly identifier for the system environment."
+                          },
+                          "color": {
+                              "type": "string",
+                              "description": "A six-digit hex color code.",
+                              "pattern": "^#[0-9A-Fa-f]{6}$"
+                          },
+                          "description": {
+                              "type": "string",
+                              "description": "A description of the system environment."
+                          },
+                          "isProduction": {
+                              "type": "boolean",
+                              "description": "If true, the system environment is a production environment."
+                          },
+                          "associationCount": {
+                              "type": "integer",
+                              "description": "The total number of workspace environments associated with this system environment."
+                          },
+                          "createdAt": {
+                              "type": "string",
+                              "format": "date-time",
+                              "description": "The date and time at which the system environment was created."
+                          },
+                          "updatedAt": {
+                              "type": "string",
+                              "format": "date-time",
+                              "description": "The date and time at which the system environment was last updated."
+                          }
+                      },
+                      "required": ["id", "name", "label", "color", "description", "isProduction", "associationCount", "createdAt", "updatedAt"]
+                  }
+              }
+          },
+          "required": ["meta", "data"]
+      }
+order: 1000

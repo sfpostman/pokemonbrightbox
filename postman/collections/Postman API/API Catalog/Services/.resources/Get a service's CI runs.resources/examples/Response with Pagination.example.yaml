@@ -1,0 +1,502 @@
+$kind: http-example
+request:
+  url: https://api.getpostman.com/api-catalog/services/:serviceId/ci-runs?systemEnvironmentId=23b554c1-c30c-483d-bf98-dbe9ab7b88a0&limit=3&cursor=NzI2NTk4NzIsY2xvdWQ5IHBsYXRmb3JtIGF1dGggc2VydmljZQ==
+  method: GET
+  queryParams:
+    systemEnvironmentId: 23b554c1-c30c-483d-bf98-dbe9ab7b88a0
+    limit: "3"
+    cursor: NzI2NTk4NzIsY2xvdWQ5IHBsYXRmb3JtIGF1dGggc2VydmljZQ==
+  pathVariables:
+    serviceId: a5450abd-ec89-443c-a17a-68132e738714
+response:
+  statusCode: 200
+  statusText: OK
+  body:
+    type: json
+    content: |-
+      {
+          "meta": {
+              "nextCursor": "NzI0MTIzOTgsYWktc2VydmljZQ==",
+              "limit": 3,
+              "filters": {
+                  "systemEnvironmentId": "23b554c1-c30c-483d-bf98-dbe9ab7b88a0"
+              },
+              "timeRange": {
+                  "start": "2026-04-14T15:06:29.751Z",
+                  "end": "2026-04-21T15:06:29.751Z",
+                  "label": "last_7_days"
+              },
+              "totalRuns": 7,
+              "passedRuns": 4,
+              "failedRuns": 3,
+              "successRatePct": 57.14
+          },
+          "data": [
+              {
+                  "id": "cf2766f1-7ec9-4192-8769-f4c3147d7218",
+                  "status": "failed",
+                  "timestamp": "2026-04-15T16:54:12.795Z",
+                  "collection": {
+                      "id": "12345678-528df970-ceec-45a5-9f72-187ea19ff53b",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "environment": {
+                      "id": "9b83df88-9b5c-445b-ac23-460c37897340",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "source": {
+                      "branch": "main",
+                      "commitSha": "d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5",
+                      "repo": {
+                          "name": "acs-runtime",
+                          "owner": "acs-team",
+                          "url": "https://gitlab.com/acs-team/acs-runtime"
+                      },
+                      "pullRequest": null
+                  },
+                  "pipeline": {
+                      "provider": "gitlab-ci",
+                      "workflowName": "Deploy Pipeline",
+                      "workflowId": "40001",
+                      "jobName": "api-tests",
+                      "jobId": "40001-job",
+                      "pipelineId": "40001",
+                      "pipelineNumber": "55",
+                      "runAttempt": 1,
+                      "actor": "deploy-bot"
+                  },
+                  "execution": {
+                      "cliVersion": "1.28.0",
+                      "system": {
+                          "os": "linux 5.15.0-1051-aws",
+                          "cpus": 2,
+                          "memoryMb": 7873
+                      }
+                  },
+                  "summary": {
+                      "totalRequests": 29,
+                      "failedRequests": 0,
+                      "totalAssertions": 97,
+                      "failedAssertions": 1,
+                      "durationMs": 12792
+                  },
+                  "performance": {
+                      "minResponseMs": 307.7815420000006,
+                      "maxResponseMs": 2033.1472079999999
+                  }
+              },
+              {
+                  "id": "bbc09eac-e0a5-46e3-97ae-03d98d375a96",
+                  "status": "passed",
+                  "timestamp": "2026-04-15T16:43:00.781Z",
+                  "collection": {
+                      "id": "12345678-528df970-ceec-45a5-9f72-187ea19ff53b",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "environment": {
+                      "id": "9b83df88-9b5c-445b-ac23-460c37897340",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "source": {
+                      "branch": "release/v2.0",
+                      "commitSha": "e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6",
+                      "repo": {
+                          "name": "acs-sdk",
+                          "owner": "acs-team",
+                          "url": "https://github.com/acs-team/acs-sdk"
+                      },
+                      "pullRequest": {
+                          "number": 88,
+                          "title": "Release v2.0.0",
+                          "status": "merged",
+                          "author": "taylor-lee",
+                          "baseBranch": "main",
+                          "headBranch": "release/v2.0"
+                      }
+                  },
+                  "pipeline": {
+                      "provider": "github-actions",
+                      "workflowName": "Release Tests",
+                      "workflowId": "30004",
+                      "jobName": "smoke-tests",
+                      "jobId": null,
+                      "pipelineId": "30004",
+                      "pipelineNumber": "103",
+                      "runAttempt": 1,
+                      "actor": "taylor-lee"
+                  },
+                  "execution": {
+                      "cliVersion": "1.29.5",
+                      "system": {
+                          "os": "linux 6.12.46-66.121.amzn2023.aarch64",
+                          "cpus": 8,
+                          "memoryMb": 31492
+                      }
+                  },
+                  "summary": {
+                      "totalRequests": 29,
+                      "failedRequests": 0,
+                      "totalAssertions": 97,
+                      "failedAssertions": 0,
+                      "durationMs": 16578
+                  },
+                  "performance": {
+                      "minResponseMs": 390.8125409999993,
+                      "maxResponseMs": 2759.324709
+                  }
+              },
+              {
+                  "id": "6ea531b8-f20a-439b-b64e-15c8eb77aaca",
+                  "status": "passed",
+                  "timestamp": "2026-04-15T16:24:14.654Z",
+                  "collection": {
+                      "id": "12345678-528df970-ceec-45a5-9f72-187ea19ff53b",
+                      "name": "[E2E] API Control Service"
+                  },
+                  "environment": {
+                      "id": "9b83df88-9b5c-445b-ac23-460c37897340",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "source": {
+                      "branch": "develop",
+                      "commitSha": "f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1",
+                      "repo": {
+                          "name": "acs-catalog",
+                          "owner": "acs-team",
+                          "url": "https://github.com/acs-team/acs-catalog"
+                      },
+                      "pullRequest": null
+                  },
+                  "pipeline": {
+                      "provider": "github-actions",
+                      "workflowName": "E2E Tests",
+                      "workflowId": "30005",
+                      "jobName": "run-tests",
+                      "jobId": null,
+                      "pipelineId": "30005",
+                      "pipelineNumber": "104",
+                      "runAttempt": 1,
+                      "actor": "deploy-bot"
+                  },
+                  "execution": {
+                      "cliVersion": "1.29.5",
+                      "system": {
+                          "os": "linux 6.12.46-66.121.amzn2023.aarch64",
+                          "cpus": 8,
+                          "memoryMb": 31492
+                      }
+                  },
+                  "summary": {
+                      "totalRequests": 29,
+                      "failedRequests": 0,
+                      "totalAssertions": 97,
+                      "failedAssertions": 0,
+                      "durationMs": 13036
+                  },
+                  "performance": {
+                      "minResponseMs": 307.87195900000006,
+                      "maxResponseMs": 2233.1558330000007
+                  }
+              }
+          ]
+      }
+    $type: |-
+      {
+          "type": "object",
+          "required": ["meta", "data"],
+          "properties": {
+              "meta": {
+                  "type": "object",
+                  "description": "The response's meta information for paginated results.",
+                  "required": ["nextCursor", "limit", "filters", "timeRange", "totalRuns", "passedRuns", "failedRuns", "successRatePct"],
+                  "properties": {
+                      "nextCursor": {
+                          "type": ["string", "null"],
+                          "description": "The pagination cursor that points to the next record in the results set."
+                      },
+                      "limit": {
+                          "type": "integer",
+                          "description": "The maximum number of records in the paginated response."
+                      },
+                      "filters": {
+                          "type": "object",
+                          "description": "The filters applied to the request."
+                      },
+                      "timeRange": {
+                          "type": "object",
+                          "description": "The time window for the returned data.",
+                          "required": ["start", "end", "label"],
+                          "properties": {
+                              "start": {
+                                  "type": "string",
+                                  "format": "date-time",
+                                  "description": "The start of the time window."
+                              },
+                              "end": {
+                                  "type": "string",
+                                  "format": "date-time",
+                                  "description": "The end of the time window."
+                              },
+                              "label": {
+                                  "type": "string",
+                                  "enum": ["last_7_days"],
+                                  "description": "The time range's label."
+                              }
+                          }
+                      },
+                      "totalRuns": {
+                          "type": "integer",
+                          "description": "The total number of CI runs that match the given filters."
+                      },
+                      "passedRuns": {
+                          "type": "integer",
+                          "description": "The number of runs where all assertions passed."
+                      },
+                      "failedRuns": {
+                          "type": "integer",
+                          "description": "The number of runs with at least one failed assertion."
+                      },
+                      "successRatePct": {
+                          "type": "number",
+                          "description": "The percentage of runs that passed, rounded to two decimal places."
+                      }
+                  }
+              },
+              "data": {
+                  "type": "array",
+                  "description": "A list of CI collection runs.",
+                  "items": {
+                      "type": "object",
+                      "required": ["id", "status", "timestamp", "collection", "environment", "source", "pipeline", "execution", "summary", "performance"],
+                      "properties": {
+                          "id": {
+                              "type": "string",
+                              "format": "uuid",
+                              "description": "The CI run's ID."
+                          },
+                          "status": {
+                              "type": "string",
+                              "enum": ["passed", "failed"],
+                              "description": "Whether the CI run passed or failed."
+                          },
+                          "timestamp": {
+                              "type": "string",
+                              "format": "date-time",
+                              "description": "The date and time at which the run completed."
+                          },
+                          "collection": {
+                              "type": "object",
+                              "description": "Information about the collection.",
+                              "required": ["id", "name"],
+                              "properties": {
+                                  "id": {
+                                      "type": "string",
+                                      "description": "The collection's ID."
+                                  },
+                                  "name": {
+                                      "type": ["string", "null"],
+                                      "description": "The collection's name. If the collection was deleted, this returns a null value."
+                                  }
+                              }
+                          },
+                          "environment": {
+                              "type": "object",
+                              "description": "Information about the environment.",
+                              "required": ["id", "name"],
+                              "properties": {
+                                  "id": {
+                                      "type": "string",
+                                      "description": "The environment's ID."
+                                  },
+                                  "name": {
+                                      "type": ["string", "null"],
+                                      "description": "The environment's name. If the environment was deleted, this returns a null value."
+                                  }
+                              }
+                          },
+                          "source": {
+                              "type": "object",
+                              "description": "Information about the Git source control for the CI run.",
+                              "required": ["branch", "commitSha", "repo", "pullRequest"],
+                              "properties": {
+                                  "branch": {
+                                      "type": ["string", "null"],
+                                      "description": "The Git branch's name."
+                                  },
+                                  "commitSha": {
+                                      "type": ["string", "null"],
+                                      "description": "The full Git commit SHA."
+                                  },
+                                  "repo": {
+                                      "type": "object",
+                                      "description": "Information about the source repository.",
+                                      "required": ["name", "owner", "url"],
+                                      "properties": {
+                                          "name": {
+                                              "type": ["string", "null"],
+                                              "description": "The repository's name."
+                                          },
+                                          "owner": {
+                                              "type": ["string", "null"],
+                                              "description": "The repository owner or organization."
+                                          },
+                                          "url": {
+                                              "type": ["string", "null"],
+                                              "format": "uri",
+                                              "description": "The repository's URL."
+                                          }
+                                      }
+                                  },
+                                  "pullRequest": {
+                                      "type": ["object", "null"],
+                                      "description": "Information about the pull request. This returns null if the run wasn't triggered by a pull request.",
+                                      "required": ["number", "title", "status", "author", "baseBranch", "headBranch"],
+                                      "properties": {
+                                          "number": {
+                                              "type": "integer",
+                                              "description": "The pull request number."
+                                          },
+                                          "title": {
+                                              "type": ["string", "null"],
+                                              "description": "The pull request's title."
+                                          },
+                                          "status": {
+                                              "type": ["string", "null"],
+                                              "description": "The pull request's status."
+                                          },
+                                          "author": {
+                                              "type": ["string", "null"],
+                                              "description": "The author of the pull request."
+                                          },
+                                          "baseBranch": {
+                                              "type": ["string", "null"],
+                                              "description": "The target branch of the pull request."
+                                          },
+                                          "headBranch": {
+                                              "type": ["string", "null"],
+                                              "description": "The pull request's source branch."
+                                          }
+                                      }
+                                  }
+                              }
+                          },
+                          "pipeline": {
+                              "type": "object",
+                              "description": "Information about the CI/CD pipeline.",
+                              "required": ["provider", "workflowName", "workflowId", "jobName", "jobId", "pipelineId", "pipelineNumber", "runAttempt", "actor"],
+                              "properties": {
+                                  "provider": {
+                                      "type": ["string", "null"],
+                                      "description": "The CI provider."
+                                  },
+                                  "workflowName": {
+                                      "type": ["string", "null"],
+                                      "description": "The workflow or pipeline name."
+                                  },
+                                  "workflowId": {
+                                      "type": ["string", "null"],
+                                      "description": "The workflow ID."
+                                  },
+                                  "jobName": {
+                                      "type": ["string", "null"],
+                                      "description": "The job name in the workflow."
+                                  },
+                                  "jobId": {
+                                      "type": ["string", "null"],
+                                      "description": "The job's ID."
+                                  },
+                                  "pipelineId": {
+                                      "type": ["string", "null"],
+                                      "description": "The pipeline run's ID."
+                                  },
+                                  "pipelineNumber": {
+                                      "type": ["string", "null"],
+                                      "description": "The pipeline run number."
+                                  },
+                                  "runAttempt": {
+                                      "type": ["integer", "null"],
+                                      "description": "The attempt number for this run."
+                                  },
+                                  "actor": {
+                                      "type": ["string", "null"],
+                                      "description": "The user or bot that triggered the run."
+                                  }
+                              }
+                          },
+                          "execution": {
+                              "type": "object",
+                              "description": "Information about the environment run.",
+                              "required": ["cliVersion", "system"],
+                              "properties": {
+                                  "cliVersion": {
+                                      "type": ["string", "null"],
+                                      "description": "The Postman CLI version."
+                                  },
+                                  "system": {
+                                      "type": ["object", "null"],
+                                      "description": "The system information about the execution run. This returns as null if unavailable.",
+                                      "properties": {
+                                          "os": {
+                                              "type": "string",
+                                              "description": "The operating system and kernel version."
+                                          },
+                                          "cpus": {
+                                              "type": "integer",
+                                              "description": "The number of CPU cores."
+                                          },
+                                          "memoryMb": {
+                                              "type": "integer",
+                                              "description": "The available memory, in megabytes."
+                                          }
+                                      }
+                                  }
+                              }
+                          },
+                          "summary": {
+                              "type": "object",
+                              "description": "Information about the CI run.",
+                              "required": ["totalRequests", "failedRequests", "totalAssertions", "failedAssertions", "durationMs"],
+                              "properties": {
+                                  "totalRequests": {
+                                      "type": "integer",
+                                      "description": "The total number of HTTP requests executed in the run."
+                                  },
+                                  "failedRequests": {
+                                      "type": "integer",
+                                      "description": "The number of requests that failed."
+                                  },
+                                  "totalAssertions": {
+                                      "type": "integer",
+                                      "description": "The total number of test assertions evaluated."
+                                  },
+                                  "failedAssertions": {
+                                      "type": "integer",
+                                      "description": "The number of failed assertions."
+                                  },
+                                  "durationMs": {
+                                      "type": "integer",
+                                      "description": "Total execution duration in milliseconds."
+                                  }
+                              }
+                          },
+                          "performance": {
+                              "type": "object",
+                              "description": "Information about the response time range across all requests in the run.",
+                              "required": ["minResponseMs", "maxResponseMs"],
+                              "properties": {
+                                  "minResponseMs": {
+                                      "type": "number",
+                                      "description": "The fastest individual response time, in milliseconds."
+                                  },
+                                  "maxResponseMs": {
+                                      "type": "number",
+                                      "description": "The slowest individual response time, in milliseconds."
+                                  }
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+      }
+order: 2000

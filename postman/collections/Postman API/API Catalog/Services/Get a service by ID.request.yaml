@@ -1,0 +1,38 @@
+$kind: http-request
+description: Gets information about a service, including its health, traffic, compliance, ownership, and dependencies.
+url: "{{baseUrl}}/api-catalog/services/:serviceId?systemEnvironmentId="
+method: GET
+queryParams:
+  - key: systemEnvironmentId
+    value: ""
+    description: The system environment's ID.
+    $type: |-
+      {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "value"
+        ]
+      }
+pathVariables:
+  - key: serviceId
+    value: ""
+    description: The service's ID.
+    $type: |-
+      {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "value"
+        ]
+      }
+examples: ./.resources/Get a service by ID.resources/examples
+order: 2000

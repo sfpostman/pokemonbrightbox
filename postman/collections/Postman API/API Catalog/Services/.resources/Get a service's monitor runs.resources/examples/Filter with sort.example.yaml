@@ -1,0 +1,678 @@
+$kind: http-example
+request:
+  url: https://api.getpostman.com/api-catalog/services/:serviceId/monitor-runs?systemEnvironmentId=23b554c1-c30c-483d-bf98-dbe9ab7b88a0&sort=failedAssertions:desc
+  method: GET
+  queryParams:
+    systemEnvironmentId: 23b554c1-c30c-483d-bf98-dbe9ab7b88a0
+    sort: failedAssertions:desc
+  pathVariables:
+    serviceId: a5450abd-ec89-443c-a17a-68132e738714
+response:
+  statusCode: 200
+  statusText: OK
+  body:
+    type: json
+    content: |-
+      {
+          "meta": {
+              "nextCursor": null,
+              "limit": 20,
+              "filters": {
+                  "systemEnvironmentId": "23b554c1-c30c-483d-bf98-dbe9ab7b88a0",
+                  "sort": "failedAssertions:desc"
+              },
+              "timeRange": {
+                  "start": "2026-04-14T13:35:51.155Z",
+                  "end": "2026-04-21T13:35:51.155Z",
+                  "label": "last_7_days"
+              },
+              "totalRuns": 1026,
+              "passedRuns": 454,
+              "failedRuns": 572,
+              "successRatePct": 44.25
+          },
+          "data": [
+              {
+                  "id": "019d9b72-5f4b-75f7-a5d4-adea60a2f0e0",
+                  "status": "failed",
+                  "timestamp": "2026-04-17T12:37:37.087Z",
+                  "collection": {
+                      "id": "12345678-528df970-ceec-45a5-9f72-187ea19ff53b",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "environment": {
+                      "id": "12345678-9b83df88-9b5c-445b-ac23-460c37897340",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "summary": {
+                      "totalRequests": 16,
+                      "failedRequests": 0,
+                      "totalAssertions": 56,
+                      "failedAssertions": 19,
+                      "durationMs": 153791
+                  },
+                  "performance": {
+                      "minResponseMs": 9,
+                      "maxResponseMs": 51233
+                  }
+              },
+              {
+                  "id": "019d9b76-ed98-7444-8a4e-ae416ab94314",
+                  "status": "failed",
+                  "timestamp": "2026-04-17T12:42:35.680Z",
+                  "collection": {
+                      "id": "12345678-528df970-ceec-45a5-9f72-187ea19ff53b",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "environment": {
+                      "id": "12345678-9b83df88-9b5c-445b-ac23-460c37897340",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "summary": {
+                      "totalRequests": 16,
+                      "failedRequests": 0,
+                      "totalAssertions": 56,
+                      "failedAssertions": 19,
+                      "durationMs": 152575
+                  },
+                  "performance": {
+                      "minResponseMs": 8,
+                      "maxResponseMs": 50570
+                  }
+              },
+              {
+                  "id": "019d9b69-4466-753e-b17e-73fbcbf6927b",
+                  "status": "failed",
+                  "timestamp": "2026-04-17T12:27:40.416Z",
+                  "collection": {
+                      "id": "12345678-528df970-ceec-45a5-9f72-187ea19ff53b",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "environment": {
+                      "id": "12345678-9b83df88-9b5c-445b-ac23-460c37897340",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "summary": {
+                      "totalRequests": 16,
+                      "failedRequests": 0,
+                      "totalAssertions": 56,
+                      "failedAssertions": 7,
+                      "durationMs": 152340
+                  },
+                  "performance": {
+                      "minResponseMs": 20,
+                      "maxResponseMs": 50657
+                  }
+              },
+              {
+                  "id": "019d9b6d-cc04-741d-8dd1-50d21e9f90cc",
+                  "status": "failed",
+                  "timestamp": "2026-04-17T12:32:37.277Z",
+                  "collection": {
+                      "id": "12345678-528df970-ceec-45a5-9f72-187ea19ff53b",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "environment": {
+                      "id": "12345678-9b83df88-9b5c-445b-ac23-460c37897340",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "summary": {
+                      "totalRequests": 16,
+                      "failedRequests": 0,
+                      "totalAssertions": 56,
+                      "failedAssertions": 7,
+                      "durationMs": 154992
+                  },
+                  "performance": {
+                      "minResponseMs": 27,
+                      "maxResponseMs": 50907
+                  }
+              },
+              {
+                  "id": "019d9717-c7d5-78a0-a9ac-aec9384a4c31",
+                  "status": "failed",
+                  "timestamp": "2026-04-16T16:20:11.234Z",
+                  "collection": {
+                      "id": "12345678-528df970-ceec-45a5-9f72-187ea19ff53b",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "environment": {
+                      "id": "12345678-9b83df88-9b5c-445b-ac23-460c37897340",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "summary": {
+                      "totalRequests": 16,
+                      "failedRequests": 0,
+                      "totalAssertions": 56,
+                      "failedAssertions": 4,
+                      "durationMs": 6722
+                  },
+                  "performance": {
+                      "minResponseMs": 18,
+                      "maxResponseMs": 5230
+                  }
+              },
+              {
+                  "id": "019d9eb1-4546-766b-bfdd-0bf0667c2daa",
+                  "status": "failed",
+                  "timestamp": "2026-04-18T03:45:10.866Z",
+                  "collection": {
+                      "id": "12345678-528df970-ceec-45a5-9f72-187ea19ff53b",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "environment": {
+                      "id": "12345678-9b83df88-9b5c-445b-ac23-460c37897340",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "summary": {
+                      "totalRequests": 16,
+                      "failedRequests": 0,
+                      "totalAssertions": 56,
+                      "failedAssertions": 1,
+                      "durationMs": 1641
+                  },
+                  "performance": {
+                      "minResponseMs": 17,
+                      "maxResponseMs": 231
+                  }
+              },
+              {
+                  "id": "019d96d7-aa3c-7e47-bfcf-af30d18c4961",
+                  "status": "failed",
+                  "timestamp": "2026-04-16T15:10:09.349Z",
+                  "collection": {
+                      "id": "12345678-528df970-ceec-45a5-9f72-187ea19ff53b",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "environment": {
+                      "id": "12345678-9b83df88-9b5c-445b-ac23-460c37897340",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "summary": {
+                      "totalRequests": 16,
+                      "failedRequests": 0,
+                      "totalAssertions": 56,
+                      "failedAssertions": 1,
+                      "durationMs": 1687
+                  },
+                  "performance": {
+                      "minResponseMs": 19,
+                      "maxResponseMs": 223
+                  }
+              },
+              {
+                  "id": "019d9a6b-2c00-72e5-bfa6-274bd50ecc94",
+                  "status": "failed",
+                  "timestamp": "2026-04-17T07:50:08.030Z",
+                  "collection": {
+                      "id": "12345678-528df970-ceec-45a5-9f72-187ea19ff53b",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "environment": {
+                      "id": "12345678-9b83df88-9b5c-445b-ac23-460c37897340",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "summary": {
+                      "totalRequests": 16,
+                      "failedRequests": 0,
+                      "totalAssertions": 56,
+                      "failedAssertions": 1,
+                      "durationMs": 1536
+                  },
+                  "performance": {
+                      "minResponseMs": 19,
+                      "maxResponseMs": 333
+                  }
+              },
+              {
+                  "id": "019d9dec-68e4-7906-bf5a-5f8e59448ec6",
+                  "status": "failed",
+                  "timestamp": "2026-04-18T00:10:09.396Z",
+                  "collection": {
+                      "id": "12345678-528df970-ceec-45a5-9f72-187ea19ff53b",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "environment": {
+                      "id": "12345678-9b83df88-9b5c-445b-ac23-460c37897340",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "summary": {
+                      "totalRequests": 16,
+                      "failedRequests": 0,
+                      "totalAssertions": 56,
+                      "failedAssertions": 1,
+                      "durationMs": 1717
+                  },
+                  "performance": {
+                      "minResponseMs": 17,
+                      "maxResponseMs": 252
+                  }
+              },
+              {
+                  "id": "e5260e74-17e1-4920-bf26-3b0b8fd116f7",
+                  "status": "failed",
+                  "timestamp": "2026-04-15T10:00:13.925Z",
+                  "collection": {
+                      "id": "12345678-528df970-ceec-45a5-9f72-187ea19ff53b",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "environment": {
+                      "id": "12345678-9b83df88-9b5c-445b-ac23-460c37897340",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "summary": {
+                      "totalRequests": 16,
+                      "failedRequests": 0,
+                      "totalAssertions": 56,
+                      "failedAssertions": 1,
+                      "durationMs": 1355
+                  },
+                  "performance": {
+                      "minResponseMs": 17,
+                      "maxResponseMs": 235
+                  }
+              },
+              {
+                  "id": "2d680c48-3533-4792-bf1d-f2187b228b6d",
+                  "status": "failed",
+                  "timestamp": "2026-04-15T09:30:26.296Z",
+                  "collection": {
+                      "id": "12345678-528df970-ceec-45a5-9f72-187ea19ff53b",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "environment": {
+                      "id": "12345678-9b83df88-9b5c-445b-ac23-460c37897340",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "summary": {
+                      "totalRequests": 16,
+                      "failedRequests": 0,
+                      "totalAssertions": 56,
+                      "failedAssertions": 1,
+                      "durationMs": 1538
+                  },
+                  "performance": {
+                      "minResponseMs": 19,
+                      "maxResponseMs": 295
+                  }
+              },
+              {
+                  "id": "019d992a-d15d-7e72-beff-4677252e061e",
+                  "status": "failed",
+                  "timestamp": "2026-04-17T02:00:13.296Z",
+                  "collection": {
+                      "id": "12345678-528df970-ceec-45a5-9f72-187ea19ff53b",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "environment": {
+                      "id": "12345678-9b83df88-9b5c-445b-ac23-460c37897340",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "summary": {
+                      "totalRequests": 16,
+                      "failedRequests": 0,
+                      "totalAssertions": 56,
+                      "failedAssertions": 1,
+                      "durationMs": 1427
+                  },
+                  "performance": {
+                      "minResponseMs": 18,
+                      "maxResponseMs": 220
+                  }
+              },
+              {
+                  "id": "12884123-e531-4fe5-beee-599b3dd2a7ff",
+                  "status": "failed",
+                  "timestamp": "2026-04-14T23:00:05.836Z",
+                  "collection": {
+                      "id": "12345678-528df970-ceec-45a5-9f72-187ea19ff53b",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "environment": {
+                      "id": "12345678-9b83df88-9b5c-445b-ac23-460c37897340",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "summary": {
+                      "totalRequests": 16,
+                      "failedRequests": 0,
+                      "totalAssertions": 56,
+                      "failedAssertions": 1,
+                      "durationMs": 1685
+                  },
+                  "performance": {
+                      "minResponseMs": 21,
+                      "maxResponseMs": 258
+                  }
+              },
+              {
+                  "id": "019d9e9e-ef46-791b-be86-0396ffc86829",
+                  "status": "failed",
+                  "timestamp": "2026-04-18T03:25:09.181Z",
+                  "collection": {
+                      "id": "12345678-528df970-ceec-45a5-9f72-187ea19ff53b",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "environment": {
+                      "id": "12345678-9b83df88-9b5c-445b-ac23-460c37897340",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "summary": {
+                      "totalRequests": 16,
+                      "failedRequests": 0,
+                      "totalAssertions": 56,
+                      "failedAssertions": 1,
+                      "durationMs": 1667
+                  },
+                  "performance": {
+                      "minResponseMs": 16,
+                      "maxResponseMs": 261
+                  }
+              },
+              {
+                  "id": "2c5d738b-3051-40c8-be84-b09075544c8b",
+                  "status": "failed",
+                  "timestamp": "2026-04-15T10:55:04.889Z",
+                  "collection": {
+                      "id": "12345678-528df970-ceec-45a5-9f72-187ea19ff53b",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "environment": {
+                      "id": "12345678-9b83df88-9b5c-445b-ac23-460c37897340",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "summary": {
+                      "totalRequests": 16,
+                      "failedRequests": 0,
+                      "totalAssertions": 56,
+                      "failedAssertions": 1,
+                      "durationMs": 1644
+                  },
+                  "performance": {
+                      "minResponseMs": 15,
+                      "maxResponseMs": 243
+                  }
+              },
+              {
+                  "id": "019d9ea8-1eea-76da-be6d-1bbef4e1d596",
+                  "status": "failed",
+                  "timestamp": "2026-04-18T03:35:11.231Z",
+                  "collection": {
+                      "id": "12345678-528df970-ceec-45a5-9f72-187ea19ff53b",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "environment": {
+                      "id": "12345678-9b83df88-9b5c-445b-ac23-460c37897340",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "summary": {
+                      "totalRequests": 16,
+                      "failedRequests": 0,
+                      "totalAssertions": 56,
+                      "failedAssertions": 1,
+                      "durationMs": 1476
+                  },
+                  "performance": {
+                      "minResponseMs": 18,
+                      "maxResponseMs": 251
+                  }
+              },
+              {
+                  "id": "019d9672-e707-73d0-be50-171ff21568b3",
+                  "status": "failed",
+                  "timestamp": "2026-04-16T13:20:05.763Z",
+                  "collection": {
+                      "id": "12345678-528df970-ceec-45a5-9f72-187ea19ff53b",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "environment": {
+                      "id": "12345678-9b83df88-9b5c-445b-ac23-460c37897340",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "summary": {
+                      "totalRequests": 16,
+                      "failedRequests": 0,
+                      "totalAssertions": 56,
+                      "failedAssertions": 1,
+                      "durationMs": 1680
+                  },
+                  "performance": {
+                      "minResponseMs": 18,
+                      "maxResponseMs": 257
+                  }
+              },
+              {
+                  "id": "019d9c75-05c7-7058-be4b-ab6fc4788380",
+                  "status": "failed",
+                  "timestamp": "2026-04-17T17:20:07.967Z",
+                  "collection": {
+                      "id": "12345678-528df970-ceec-45a5-9f72-187ea19ff53b",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "environment": {
+                      "id": "12345678-9b83df88-9b5c-445b-ac23-460c37897340",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "summary": {
+                      "totalRequests": 16,
+                      "failedRequests": 0,
+                      "totalAssertions": 56,
+                      "failedAssertions": 1,
+                      "durationMs": 1793
+                  },
+                  "performance": {
+                      "minResponseMs": 22,
+                      "maxResponseMs": 257
+                  }
+              },
+              {
+                  "id": "019d9a34-319a-7690-bdee-d3479369efde",
+                  "status": "failed",
+                  "timestamp": "2026-04-17T06:50:04.957Z",
+                  "collection": {
+                      "id": "12345678-528df970-ceec-45a5-9f72-187ea19ff53b",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "environment": {
+                      "id": "12345678-9b83df88-9b5c-445b-ac23-460c37897340",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "summary": {
+                      "totalRequests": 16,
+                      "failedRequests": 0,
+                      "totalAssertions": 56,
+                      "failedAssertions": 1,
+                      "durationMs": 1785
+                  },
+                  "performance": {
+                      "minResponseMs": 17,
+                      "maxResponseMs": 305
+                  }
+              },
+              {
+                  "id": "019d9881-508a-77cd-bdea-4d8d0a10f156",
+                  "status": "failed",
+                  "timestamp": "2026-04-16T22:55:04.729Z",
+                  "collection": {
+                      "id": "12345678-528df970-ceec-45a5-9f72-187ea19ff53b",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "environment": {
+                      "id": "12345678-9b83df88-9b5c-445b-ac23-460c37897340",
+                      "name": "[PROD] API Control Service"
+                  },
+                  "summary": {
+                      "totalRequests": 16,
+                      "failedRequests": 0,
+                      "totalAssertions": 56,
+                      "failedAssertions": 1,
+                      "durationMs": 1588
+                  },
+                  "performance": {
+                      "minResponseMs": 19,
+                      "maxResponseMs": 298
+                  }
+              }
+          ]
+      }
+    $type: |-
+      {
+                "type": "object",
+                "required": ["meta", "data"],
+                "properties": {
+                    "meta": {
+                        "type": "object",
+                        "description": "The response's meta information for paginated results.",
+                        "required": ["nextCursor", "limit", "filters", "timeRange", "totalRuns", "passedRuns", "failedRuns", "successRatePct"],
+                        "properties": {
+                            "nextCursor": {
+                                "type": ["string", "null"],
+                                "description": "The pagination cursor that points to the next record in the results set."
+                            },
+                            "limit": {
+                                "type": "integer",
+                                "description": "The maximum number of records in the paginated response."
+                            },
+                            "filters": {
+                                "type": "object",
+                                "description": "The filters applied to the request."
+                            },
+                            "timeRange": {
+                                "type": "object",
+                                "description": "The time window for the returned data.",
+                                "required": ["start", "end", "label"],
+                                "properties": {
+                                    "start": {
+                                        "type": "string",
+                                        "format": "date-time",
+                                        "description": "The start of the time window."
+                                    },
+                                    "end": {
+                                        "type": "string",
+                                        "format": "date-time",
+                                        "description": "The end of the time window."
+                                    },
+                                    "label": {
+                                        "type": "string",
+                                        "enum": ["last_7_days"],
+                                        "description": "The time range's label."
+                                    }
+                                }
+                            },
+                            "totalRuns": {
+                                "type": "integer",
+                                "description": "The total number of runs that match the given filters."
+                            },
+                            "passedRuns": {
+                                "type": "integer",
+                                "description": "The number of successful runs."
+                            },
+                            "failedRuns": {
+                                "type": "integer",
+                                "description": "The number of runs with at least one failure."
+                            },
+                            "successRatePct": {
+                                "type": "number",
+                                "description": "The percentage of runs that passed, rounded to two decimal places."
+                            }
+                        }
+                    },
+                    "data": {
+                        "type": "array",
+                        "description": "A list of monitor runs.",
+                        "items": {
+                            "type": "object",
+                            "required": ["id", "status", "timestamp", "collection", "environment", "summary", "performance"],
+                            "properties": {
+                                "id": {
+                                    "type": "string",
+                                    "format": "uuid",
+                                    "description": "The monitor run's ID."
+                                },
+                                "status": {
+                                    "type": "string",
+                                    "enum": ["passed", "failed"],
+                                    "description": "Whether the monitor run passed or failed."
+                                },
+                                "timestamp": {
+                                    "type": "string",
+                                    "format": "date-time",
+                                    "description": "The date and time at which the run completed."
+                                },
+                                "collection": {
+                                    "type": "object",
+                                    "description": "Information about the collection.",
+                                    "required": ["id", "name"],
+                                    "properties": {
+                                        "id": {
+                                            "type": "string",
+                                            "description": "The collection's ID."
+                                        },
+                                        "name": {
+                                            "type": ["string", "null"],
+                                            "description": "The collection's name. If the collection was deleted, this returns a null value."
+                                        }
+                                    }
+                                },
+                                "environment": {
+                                    "type": "object",
+                                    "description": "Information about the environment.",
+                                    "required": ["id", "name"],
+                                    "properties": {
+                                        "id": {
+                                            "type": "string",
+                                            "description": "The environment's ID."
+                                        },
+                                        "name": {
+                                            "type": ["string", "null"],
+                                            "description": "The environment's name. If the environment was deleted, this returns a null value."
+                                        }
+                                    }
+                                },
+                                "summary": {
+                                    "type": "object",
+                                    "description": "Information about the monitor run.",
+                                    "required": ["totalRequests", "failedRequests", "totalAssertions", "failedAssertions", "durationMs"],
+                                    "properties": {
+                                        "totalRequests": {
+                                            "type": "integer",
+                                            "description": "The total number of HTTP requests executed in the run."
+                                        },
+                                        "failedRequests": {
+                                            "type": "integer",
+                                            "description": "The number of requests that failed."
+                                        },
+                                        "totalAssertions": {
+                                            "type": "integer",
+                                            "description": "The total number of test assertions evaluated."
+                                        },
+                                        "failedAssertions": {
+                                            "type": "integer",
+                                            "description": "The number of failed assertions."
+                                        },
+                                        "durationMs": {
+                                            "type": "integer",
+                                            "description": "The total execution duration, in milliseconds."
+                                        }
+                                    }
+                                },
+                                "performance": {
+                                    "type": "object",
+                                    "description": "Information about the response time range across all requests in the run.",
+                                    "required": ["minResponseMs", "maxResponseMs"],
+                                    "properties": {
+                                        "minResponseMs": {
+                                            "type": "integer",
+                                            "description": "The fastest individual response time, in milliseconds."
+                                        },
+                                        "maxResponseMs": {
+                                            "type": "integer",
+                                            "description": "The slowest individual response time, in milliseconds."
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+order: 3000

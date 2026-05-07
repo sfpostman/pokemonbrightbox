@@ -1,0 +1,55 @@
+$kind: http-example
+request:
+  url: https://api.getpostman.com/api-catalog/system-environments/:systemEnvironmentId/associations?allowPartial=true
+  method: POST
+  queryParams:
+    allowPartial: "true"
+  pathVariables:
+    systemEnvironmentId: 019d3dca-5e16-7bba-9f13-7abf00a6a443
+  body:
+    type: json
+    content: |-
+      {
+          "workspaceEnvironmentIds": [
+              "12345678-4b076607-09cf-4f9d-8a9a-08c8f3cf4619",
+              "56781234-c71c146a-ee75-4e3d-b1c4-dacc28577ffa",
+              "87654321-9b83df88-9b5c-445b-ac23-460c37897340",
+              "12387654-9b83df88-9b5c-445b-12bc-460c37897340"
+          ]
+      }
+response:
+  statusCode: 400
+  statusText: Bad Request
+  body:
+    type: json
+    content: |-
+      {
+          "type": "https://api.postman.com/problems/bad-request",
+          "status": 400,
+          "title": "Bad Request",
+          "detail": "None of the 4 environment(s) could be processed due to insufficient permissions or resolution failures."
+      }
+    $type: |-
+      {
+          "type": "object",
+          "properties": {
+              "type": {
+                  "type": "string",
+                  "format": "uri",
+                  "description": "The [URI reference](https://www.rfc-editor.org/rfc/rfc3986) that identifies the type of problem."
+              },
+              "status": {
+                  "type": "integer",
+                  "description": "The error's HTTP status code."
+              },
+              "title": {
+                  "type": "string",
+                  "description": "A short summary of the problem."
+              },
+              "detail": {
+                  "type": "string",
+                  "description": "Information about the error."
+              }
+          }
+      }
+order: 4000

@@ -1,14 +1,4 @@
 $kind: http-request
-description: |-
-  Retrieves the full list of books available in the library.
-
-  This is the first step in the E2E workflow. It confirms the library API is reachable and returns a well-formed array of book objects.
-
-  **Tests run:**
-  - Status code is `200`
-  - Response has `application/json` content type
-  - Response body is an array
-  - Each book contains all required fields: `id`, `title`, `author`, `genre`, `yearPublished`, `checkedOut`, `isPermanentCollection`, `createdAt`
 url: "{{baseUrl}}/books"
 method: GET
 headers:

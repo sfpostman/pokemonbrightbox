@@ -1,0 +1,79 @@
+$kind: http-example
+request:
+  url: https://api.getpostman.com/api-catalog/system-environments/:systemEnvironmentId/associations
+  method: DELETE
+  pathVariables:
+    systemEnvironmentId: 019d3dca-5e16-7bba-9f13-7abf00a6a443
+  body:
+    type: json
+    content: |-
+      {
+          "workspaceEnvironmentIds": [
+              "12345678-4b076607-09cf-4f9d-8a9a-08c8f3cf4619",
+              "56781234-c71c146a-ee75-4e3d-b1c4-dacc28577ffb"
+          ]
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  body:
+    type: json
+    content: |-
+      {
+          "meta": {
+              "deleted": 1,
+              "notFound": 1
+          },
+          "data": [
+              {
+                  "workspaceEnvironmentId": "12345678-4b076607-09cf-4f9d-8a9a-08c8f3cf4619",
+                  "status": "deleted"
+              },
+              {
+                  "workspaceEnvironmentId": "56781234-c71c146a-ee75-4e3d-b1c4-dacc28577ffb",
+                  "status": "notFound"
+              }
+          ]
+      }
+    $type: |-
+      {
+          "type": "object",
+          "properties": {
+              "meta": {
+                  "type": "object",
+                  "description": "The response's meta information for paginated results.",
+                  "properties": {
+                      "deleted": {
+                          "type": "integer",
+                          "description": "The number of associations successfully removed."
+                      },
+                      "notFound": {
+                          "type": "integer",
+                          "description": "The number of environment IDs with no existing association to remove."
+                      }
+                  },
+                  "required": ["deleted", "notFound"]
+              },
+              "data": {
+                  "type": "array",
+                  "items": {
+                      "type": "object",
+                      "description": "Information about the associated workspace environment.",
+                      "properties": {
+                          "workspaceEnvironmentId": {
+                              "type": "string",
+                              "description": "The workspace's environment ID."
+                          },
+                          "status": {
+                              "type": "string",
+                              "enum": ["deleted", "notFound"],
+                              "description": "The status of the operation:\n- `deleted` — The association was successfully removed.\n- `notFound` — The association could not be removed."
+                          }
+                      },
+                      "required": ["workspaceEnvironmentId", "status"]
+                  }
+              }
+          },
+          "required": ["meta", "data"]
+      }
+order: 1000

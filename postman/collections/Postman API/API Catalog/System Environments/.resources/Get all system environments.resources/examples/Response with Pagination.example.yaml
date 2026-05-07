@@ -1,0 +1,164 @@
+$kind: http-example
+request:
+  url: https://api.getpostman.com/api-catalog/system-environments?limit=5&cursor=ZjA2MjRkN2QtMjI2MS00NTdlLTlmNzEtYTYyYjFkYTcxZWFh
+  method: GET
+  queryParams:
+    limit: "5"
+    cursor: ZjA2MjRkN2QtMjI2MS00NTdlLTlmNzEtYTYyYjFkYTcxZWFh
+response:
+  statusCode: 200
+  statusText: OK
+  body:
+    type: json
+    content: |-
+      {
+          "meta": {
+              "total": 100,
+              "nextCursor": "ZjlkZDAyNTEtZjUxZS00ODdkLTkxY2QtZTE4ZDRkODEwNzc0",
+              "limit": 20
+          },
+          "data": [
+              {
+                  "id": "fffa77cd-fd06-448e-a65d-2f77a0e58dad",
+                  "name": "TESTING-1774258301513-4358-1",
+                  "label": "",
+                  "color": "#FF0000",
+                  "description": "Testing environment.",
+                  "isProduction": false,
+                  "associationCount": 0,
+                  "createdAt": "2026-03-23T09:31:41.000Z",
+                  "updatedAt": "2026-03-27T17:56:16.000Z"
+              },
+              {
+                  "id": "fecb4dbd-240a-44e9-89f3-4756d8c1c893",
+                  "name": "TESTING-1772092243420-1818-1",
+                  "label": "",
+                  "color": "#FF0000",
+                  "description": "Testing environment.",
+                  "isProduction": false,
+                  "associationCount": 1,
+                  "createdAt": "2026-02-26T07:50:43.000Z",
+                  "updatedAt": "2026-03-27T17:56:16.000Z"
+              },
+              {
+                  "id": "fde857ad-d590-4f4f-94cd-021d771d88de",
+                  "name": "TESTING-1774092688416-7397-1",
+                  "label": "",
+                  "color": "#FF0000",
+                  "description": "Testing environment.",
+                  "isProduction": false,
+                  "associationCount": 0,
+                  "createdAt": "2026-03-21T11:31:28.000Z",
+                  "updatedAt": "2026-03-27T17:56:16.000Z"
+              },
+              {
+                  "id": "fdc88e7d-59ab-46d0-ab37-9827936cd510",
+                  "name": "TESTING-1774189852129-2330-1",
+                  "label": "",
+                  "color": "#FF0000",
+                  "description": "Testing environment.",
+                  "isProduction": false,
+                  "associationCount": 0,
+                  "createdAt": "2026-03-22T14:30:52.000Z",
+                  "updatedAt": "2026-03-27T17:56:16.000Z"
+              },
+              {
+                  "id": "fd741d0d-92bf-4ad8-bfc0-2e9aa0560b12",
+                  "name": "TESTING-1774002637514-7841-1",
+                  "label": "",
+                  "color": "#FF0000",
+                  "description": "Testing environment.",
+                  "isProduction": false,
+                  "associationCount": 0,
+                  "createdAt": "2026-03-20T10:30:37.000Z",
+                  "updatedAt": "2026-03-27T17:56:16.000Z"
+              }
+          ]
+      }
+    $type: |-
+      {
+          "type": "object",
+          "properties": {
+              "meta": {
+                  "type": "object",
+                  "description": "The response's meta information for paginated results.",
+                  "properties": {
+                      "total": {
+                          "type": "integer",
+                          "description": "The number of records that match the defined criteria."
+                      },
+                      "nextCursor": {
+                          "type": ["string", "null"],
+                          "description": "The pagination cursor that points to the next record in the results set."
+                      },
+                      "limit": {
+                          "type": "integer",
+                          "description": "The maximum number of records in the paginated response."
+                      },
+                      "filters": {
+                          "type": "object",
+                          "description": "The applied filters, if any.",
+                          "properties": {
+                              "isProduction": {
+                                  "type": "boolean"
+                              }
+                          },
+                          "additionalProperties": false
+                      }
+                  },
+                  "required": ["total", "nextCursor", "limit"]
+              },
+              "data": {
+                  "type": "array",
+                  "description": "A list of system environments.",
+                  "items": {
+                      "type": "object",
+                      "description": "Information about the system environment.",
+                      "properties": {
+                          "id": {
+                              "type": "string",
+                              "description": "The system environment's ID."
+                          },
+                          "name": {
+                              "type": "string",
+                              "description": "The system environment's name."
+                          },
+                          "label": {
+                              "type": "string",
+                              "description": "A lowercase, terminal-friendly identifier for the system environment."
+                          },
+                          "color": {
+                              "type": "string",
+                              "description": "A six-digit hex color code.",
+                              "pattern": "^#[0-9A-Fa-f]{6}$"
+                          },
+                          "description": {
+                              "type": "string",
+                              "description": "A description of the system environment."
+                          },
+                          "isProduction": {
+                              "type": "boolean",
+                              "description": "If true, the system environment is a production environment."
+                          },
+                          "associationCount": {
+                              "type": "integer",
+                              "description": "The total number of workspace environments associated with this system environment."
+                          },
+                          "createdAt": {
+                              "type": "string",
+                              "format": "date-time",
+                              "description": "The date and time at which the system environment was created."
+                          },
+                          "updatedAt": {
+                              "type": "string",
+                              "format": "date-time",
+                              "description": "The date and time at which the system environment was last updated."
+                          }
+                      },
+                      "required": ["id", "name", "label", "color", "description", "isProduction", "associationCount", "createdAt", "updatedAt"]
+                  }
+              }
+          },
+          "required": ["meta", "data"]
+      }
+order: 3000

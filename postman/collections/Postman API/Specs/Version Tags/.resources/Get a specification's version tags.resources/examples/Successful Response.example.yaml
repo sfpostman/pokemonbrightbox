@@ -1,0 +1,61 @@
+$kind: http-example
+request:
+  url: https://api.getpostman.com/specs/:specId/version-tags
+  method: GET
+  pathVariables:
+    specId: 73e15000-bc7a-4802-b80e-05fff18fd7f8
+response:
+  statusCode: 200
+  statusText: OK
+  body:
+    type: json
+    content: |-
+      {
+          "meta": {
+              "nextCursor": null
+          },
+          "data": [
+              {
+                  "id": "5b7fa363-d6f6-40f6-8751-37987112cf14",
+                  "name": "1.0.1"
+              },
+              {
+                  "id": "2cefdde6-f912-4cb4-86b1-c874d7d5ea03",
+                  "name": "1.0.0"
+              }
+          ]
+      }
+    $type: |-
+      {
+          "type": "object",
+          "properties": {
+              "meta": {
+                  "type": "object",
+                  "properties": {
+                      "nextCursor": {
+                          "type": ["string", "null"],
+                          "description": "The pagination cursor that points to the next record in the results set."
+                      }
+                  }
+              },
+              "data": {
+                  "type": "array",
+                  "description": "A list of the specification's version tags.",
+                  "items": {
+                      "type": "object",
+                      "description": "Information about the version tag.",
+                      "properties": {
+                          "id": {
+                              "type": "string",
+                              "description": "The version tag's ID."
+                          },
+                          "name": {
+                              "type": "string",
+                              "description": "The version tag's name."
+                          }
+                      }
+                  }
+              }
+          }
+      }
+order: 1000

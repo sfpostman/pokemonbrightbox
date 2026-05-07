@@ -1,0 +1,176 @@
+$kind: http-example
+request:
+  url: https://api.getpostman.com/specs/:specId/version-tags/:tagId/files
+  method: GET
+  pathVariables:
+    specId: 73e15000-bc7a-4802-b80e-05fff18fd7f8
+    tagId: 97d2c74e-19de-426d-9763-8e7400429759
+response:
+  statusCode: 200
+  statusText: OK
+  body:
+    type: json
+    content: |-
+      {
+          "data": [
+              {
+                  "id": "6993ec3e-677b-4586-8856-169cc95030a2",
+                  "name": "components",
+                  "updatedBy": "12345678",
+                  "createdAt": "2025-07-08T19:32:48.000Z",
+                  "updatedAt": "2025-07-08T19:32:49.000Z",
+                  "createdBy": "12345678",
+                  "type": "FOLDER",
+                  "path": "components"
+              },
+              {
+                  "createdBy": "12345678",
+                  "updatedBy": "12345678",
+                  "createdAt": "2025-07-08T19:33:02.000Z",
+                  "updatedAt": "2025-07-08T19:33:09.000Z",
+                  "type": "FOLDER",
+                  "id": "aa2d66e5-079a-4786-8a85-72770fac5967",
+                  "name": "parameters",
+                  "parentId": "6993ec3e-677b-4586-8856-169cc95030a2",
+                  "path": "components/parameters"
+              },
+              {
+                  "createdBy": "12345678",
+                  "updatedBy": "12345678",
+                  "createdAt": "2025-07-08T19:33:27.000Z",
+                  "fileType": "DEFAULT",
+                  "content": "SpacecraftId:\n  name: spacecraftId\n  description: The unique identifier of the spacecraft\n  in: path\n  required: true\n  schema:\n    $ref: ../schemas/spacecrafts.yaml#/SpacecraftId\n",
+                  "id": "a2074528-e9fa-400d-b343-9deab40c02b8",
+                  "name": "spacecrafts.yaml",
+                  "parentId": "aa2d66e5-079a-4786-8a85-72770fac5967",
+                  "updatedAt": "2025-07-08T19:35:58.000Z",
+                  "path": "components/parameters/spacecrafts.yaml",
+                  "type": "FILE"
+              },
+              {
+                  "createdBy": "12345678",
+                  "updatedBy": "12345678",
+                  "createdAt": "2025-07-08T19:33:18.000Z",
+                  "updatedAt": "2025-07-08T19:33:20.000Z",
+                  "type": "FOLDER",
+                  "id": "2647f42c-3307-414f-b949-9a9b07b4cbd9",
+                  "name": "responses",
+                  "parentId": "6993ec3e-677b-4586-8856-169cc95030a2",
+                  "path": "components/responses"
+              },
+              {
+                  "createdBy": "12345678",
+                  "updatedBy": "12345678",
+                  "createdAt": "2025-07-08T19:33:39.000Z",
+                  "fileType": "DEFAULT",
+                  "content": "SuccessfulResponse:\n  description: The spacecraft corresponding to the provided `spacecraftId`\n  content:\n    application/json:\n      schema:\n        $ref: ../schemas/spacecrafts.yaml#/Spacecraft\n\nNotFound:\n  description: No spacecraft found for the provided `spacecraftId`\n  content:\n    application/problem+json:\n      schema:\n        $ref: ../schemas/spacecrafts.yaml#/Error\n\nUnexpectedError:\n  description: Unexpected error\n  content:\n    application/problem+json:\n      schema:\n        $ref: ../schemas/spacecrafts.yaml#/Error",
+                  "id": "7a65e696-76fe-462d-a374-b4de06cac805",
+                  "name": "spacecrafts.yaml",
+                  "parentId": "2647f42c-3307-414f-b949-9a9b07b4cbd9",
+                  "updatedAt": "2025-07-08T20:03:33.000Z",
+                  "path": "components/responses/spacecrafts.yaml",
+                  "type": "FILE"
+              },
+              {
+                  "createdBy": "12345678",
+                  "updatedBy": "12345678",
+                  "createdAt": "2025-07-08T19:33:24.000Z",
+                  "updatedAt": "2025-07-08T19:33:25.000Z",
+                  "type": "FOLDER",
+                  "id": "597e7c88-fd2d-482d-a667-e7881629eaa8",
+                  "name": "schemas",
+                  "parentId": "6993ec3e-677b-4586-8856-169cc95030a2",
+                  "path": "components/schemas"
+              },
+              {
+                  "createdBy": "12345678",
+                  "updatedBy": "12345678",
+                  "createdAt": "2025-07-08T19:33:46.000Z",
+                  "fileType": "DEFAULT",
+                  "content": "SpacecraftId:\n  description: The unique identifier of a spacecraft\n  type: string\n\nSpacecraft:\n  type: object\n  required:\n    - id\n    - name\n    - type\n  properties:\n    id:\n      $ref: \"#/SpacecraftId\"\n    name:\n      type: string\n    type:\n      type: string\n      enum:\n        - capsule\n        - probe\n        - satellite\n        - spaceplane\n        - station\n    description:\n      type: string\n\nError:\n  type: object\n  properties:\n    type:\n      type: string\n      description: The type of error.\n      example: https://api.postman.com/problems/forbidden\n    title:\n      type: string\n      description: A short summary of the problem.\n      example: You are not permitted to perform the action.\n    status:\n      type: integer\n      description: The error's HTTP status code.\n      example: 403\n    detail:\n      type: string\n      description: Information about the error.\n      example: Please ensure that you have required permissions\n",
+                  "id": "cfdb32f1-f028-446f-9da6-ddeaa2a53b48",
+                  "name": "spacecrafts.yaml",
+                  "parentId": "597e7c88-fd2d-482d-a667-e7881629eaa8",
+                  "updatedAt": "2025-07-08T20:04:28.000Z",
+                  "path": "components/schemas/spacecrafts.yaml",
+                  "type": "FILE"
+              },
+              {
+                  "createdBy": "12345678",
+                  "updatedBy": "12345678",
+                  "createdAt": "2025-07-08T19:31:57.000Z",
+                  "fileType": "ROOT",
+                  "content": "openapi: '3.0.0'\ninfo:\n  version: '1.0.0'\n  title: Sample API\n  description: Buy or rent spacecrafts\n  contact:\n    name: Taylor Lee\n\nservers:\n  - url: https://example.com\n\nsecurity:\n  - ApiKey: []\n\npaths:\n  /spacecrafts/{spacecraftId}:\n    parameters:\n      - $ref: ./components/parameters/spacecrafts.yaml#/SpacecraftId\n    get:\n      summary: Read a spacecraft\n      description: Gets information about a spacecraft.\n      operationId: getSpacecraft\n      tags:\n        - Spacecrafts\n      responses:\n        '200':\n          $ref: ./components/responses/spacecrafts.yaml#/SuccessfulResponse\n        '404':\n          $ref: ./components/responses/spacecrafts.yaml#/NotFound\n        '500':\n          $ref: ./components/responses/spacecrafts.yaml#/UnexpectedError\n\ntags:\n  - name: Spacecrafts\n\ncomponents:\n  securitySchemes:\n    ApiKey:\n      type: apiKey\n      in: header\n      name: X-Api-Key\n",
+                  "id": "71c6f91f-5813-4800-a5fc-bea764b4a5d1",
+                  "name": "index.yaml",
+                  "updatedAt": "2026-04-29T20:07:11.000Z",
+                  "path": "index.yaml",
+                  "type": "FILE"
+              }
+          ]
+      }
+    $type: |-
+      {
+          "type": "object",
+          "properties": {
+              "data": {
+                  "type": "array",
+                  "description": "A list of the version tag's files and folders.",
+                  "items": {
+                      "type": "object",
+                      "description": "Information about the element.",
+                      "properties": {
+                          "id": {
+                              "type": "string",
+                              "description": "The file's ID."
+                          },
+                          "name": {
+                              "type": "string",
+                              "description": "The file's name."
+                          },
+                          "updatedBy": {
+                              "type": "string",
+                              "description": "The ID of the user who updated the file."
+                          },
+                          "createdAt": {
+                              "type": "string",
+                              "format": "date-time",
+                              "description": "The date and time at which the file was created."
+                          },
+                          "updatedAt": {
+                              "type": "string",
+                              "format": "date-time",
+                              "description": "The date and time at which the file was updated."
+                          },
+                          "createdBy": {
+                              "type": "string",
+                              "description": "The user ID of the user that created the file."
+                          },
+                          "type": {
+                              "type": "string",
+                              "enum": ["FOLDER", "FILE"],
+                              "description": "The file's type."
+                          },
+                          "path": {
+                              "type": "string",
+                              "description": "The file's path."
+                          },
+                          "fileType": {
+                              "type": "string",
+                              "enum": ["ROOT", "DEFAULT"],
+                              "description": "The type of file:\n- `ROOT` — A file containing the full OpenAPI structure and references other (DEFAULT) spec files.\n- `DEFAULT` — A file referenced by the `ROOT` file.\n\nThis value doesn't return for folders."
+                          },
+                          "content": {
+                              "type": "string",
+                              "description": "The file's stringified contents."
+                          },
+                          "parentId": {
+                              "type": "string",
+                              "description": "The file's parent folder ID."
+                          }
+                      }
+                  }
+              }
+          }
+      }
+order: 2000

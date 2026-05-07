@@ -1,31 +1,10 @@
 $kind: collection
-name: E2E Library
-description: |-
-  End-to-end test suite for the Library API, covering the full lifecycle of a book from creation through to checkout.
-
-  ## Workflow
-  The collection runs 4 requests in sequence:
-
-  1. **Fetch a list of books** — confirms the API is reachable and returns a valid list of books
-  2. **Create a new book** — POSTs a new book with a dynamically generated title and saves the returned `id` to the `bookId` variable
-  3. **Verify the book exists** — GETs the newly created book by `bookId` to confirm it was persisted correctly
-  4. **Checkout new book** — PATCHes the book to set `checkedOut: true`, completing the workflow
-
-  ## Variables
-  | Variable | Description |
-  |---|---|
-  | `baseUrl` | Base URL of the Library API |
-  | `bookId` | ID of the book created during the run, passed between requests |
-  | `tempBookTitle` | Unique title generated at runtime for the new book |
-
-  ## Authentication
-  Requests are authenticated using an API key passed in the `Api-key` header, sourced from the `{{apikey}}` environment variable.
 variables:
   baseUrl: https://library-api.postmanlabs.com
-  tempBookTitle: ""
   bookId: ""
+  tempBookTitle: ""
 auth:
-  - id: fdb9ebfb-7b60-4840-8604-3ee5c76a568e
+  - id: 3ec3598b-7f6d-41c3-9a06-3654550efb67
     type: apikey
     name: apikey auth
     credentials:

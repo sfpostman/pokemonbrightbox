@@ -1,0 +1,44 @@
+$kind: http-request
+description: |-
+  Creates a version tag for a specification. Version tags are snapshots of a specification at a point in time that let you to track changes to your specifications over time.
+
+  **Note:**
+
+  Conflicts can occur if you try to create a version tag for a changelog group that already has a version tag. To resolve this, make new changes to the specification to create a new changelog group, then create a version tag on that new changelog group.
+url: "{{baseUrl}}/specs/:specId/version-tags"
+method: POST
+pathVariables:
+  - key: specId
+    value: ""
+    description: The specification's ID.
+    $type: |-
+      {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "value"
+        ]
+      }
+body:
+  type: json
+  content: |-
+    {
+        "name": "{{versionTagName}}"
+    }
+  $type: |-
+    {
+        "type": "object",
+        "required": ["name"],
+        "properties": {
+            "name": {
+                "type": "string",
+                "description": "The version tag's name."
+            }
+        }
+    }
+examples: ./.resources/Create a version tag.resources/examples
+order: 1000

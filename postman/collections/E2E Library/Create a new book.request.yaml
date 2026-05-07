@@ -1,16 +1,4 @@
 $kind: http-request
-description: |-
-  Creates a new book entry in the library.
-
-  A unique title is generated dynamically using `Date.now()` and stored in the `tempBookTitle` collection variable before the request is sent. The author name is randomised using Postman dynamic variables. On a successful response, the returned `id` is saved to the `bookId` collection variable for use in downstream requests.
-
-  **Tests run:**
-  - Status code is `201`
-  - Response has `application/json` content type
-  - Response body contains all required fields: `id`, `title`, `author`, `genre`, `yearPublished`, `checkedOut`, `isPermanentCollection`, `createdAt`
-  - `checkedOut` defaults to `false`
-  - `id` is a non-empty string
-  - `bookId` collection variable is set from the response
 url: "{{baseUrl}}/books"
 method: POST
 headers:

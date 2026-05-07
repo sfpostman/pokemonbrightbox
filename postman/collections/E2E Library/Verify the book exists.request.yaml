@@ -1,21 +1,11 @@
 $kind: http-request
-description: |-
-  Fetches a single book by its ID to confirm it was successfully created.
-
-  Uses the `bookId` collection variable set by the "Create a new book" request. This step validates that the newly created book is persisted and retrievable before attempting a checkout.
-
-  **Tests run:**
-  - Status code is `200`
-  - Response has `application/json` content type
-  - Response body contains all required fields: `id`, `title`, `author`, `genre`, `yearPublished`, `checkedOut`, `isPermanentCollection`, `createdAt`
-  - Returned `id` matches the `bookId` collection variable
 url: "{{baseUrl}}/books/:id"
 method: GET
 headers:
   x-mock-response-code: "200"
   Accept: application/json
 pathVariables:
-  id: '{{bookId}}'
+  id: "{{bookId}}"
 scripts:
   - type: afterResponse
     code: |-

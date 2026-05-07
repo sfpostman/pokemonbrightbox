@@ -1,0 +1,122 @@
+$kind: http-example
+request:
+  url: https://api.getpostman.com/api-catalog/system-environments?isProduction=true
+  method: GET
+  queryParams:
+    isProduction: "true"
+response:
+  statusCode: 200
+  statusText: OK
+  body:
+    type: json
+    content: |-
+      {
+          "meta": {
+              "total": 1,
+              "nextCursor": null,
+              "limit": 20,
+              "filters": {
+                  "isProduction": true
+              }
+          },
+          "data": [
+              {
+                  "id": "e34d6213-509d-4b61-94da-8b8c093cb925",
+                  "name": "PRODUCTION",
+                  "label": "prod",
+                  "color": "#EF4444",
+                  "description": "Production environment.",
+                  "isProduction": true,
+                  "createdAt": "2026-03-27T11:38:30.000Z",
+                  "updatedAt": "2026-03-27T12:26:16.000Z",
+                  "associationCount": 0
+              }
+          ]
+      }
+    $type: |-
+      {
+          "type": "object",
+          "properties": {
+              "meta": {
+                  "type": "object",
+                  "description": "The response's meta information for paginated results.",
+                  "properties": {
+                      "total": {
+                          "type": "integer",
+                          "description": "The number of records that match the defined criteria."
+                      },
+                      "nextCursor": {
+                          "type": ["string", "null"],
+                          "description": "The pagination cursor that points to the next record in the results set."
+                      },
+                      "limit": {
+                          "type": "integer",
+                          "description": "The maximum number of records in the paginated response."
+                      },
+                      "filters": {
+                          "type": "object",
+                          "description": "The applied filters, if any.",
+                          "properties": {
+                              "isProduction": {
+                                  "type": "boolean"
+                              }
+                          },
+                          "additionalProperties": false
+                      }
+                  },
+                  "required": ["total", "nextCursor", "limit"]
+              },
+              "data": {
+                  "type": "array",
+                  "description": "A list of system environments.",
+                  "items": {
+                      "type": "object",
+                      "description": "Information about the system environment.",
+                      "properties": {
+                          "id": {
+                              "type": "string",
+                              "description": "The system environment's ID."
+                          },
+                          "name": {
+                              "type": "string",
+                              "description": "The system environment's name."
+                          },
+                          "label": {
+                              "type": "string",
+                              "description": "A lowercase, terminal-friendly identifier for the system environment."
+                          },
+                          "color": {
+                              "type": "string",
+                              "description": "A six-digit hex color code.",
+                              "pattern": "^#[0-9A-Fa-f]{6}$"
+                          },
+                          "description": {
+                              "type": "string",
+                              "description": "A description of the system environment."
+                          },
+                          "isProduction": {
+                              "type": "boolean",
+                              "description": "If true, the system environment is a production environment."
+                          },
+                          "associationCount": {
+                              "type": "integer",
+                              "description": "The total number of workspace environments associated with this system environment."
+                          },
+                          "createdAt": {
+                              "type": "string",
+                              "format": "date-time",
+                              "description": "The date and time at which the system environment was created."
+                          },
+                          "updatedAt": {
+                              "type": "string",
+                              "format": "date-time",
+                              "description": "The date and time at which the system environment was last updated."
+                          }
+                      },
+                      "required": ["id", "name", "label", "color", "description", "isProduction", "associationCount", "createdAt", "updatedAt"]
+                  }
+              }
+          },
+          "required": ["meta", "data"]
+      }
+order: 2000

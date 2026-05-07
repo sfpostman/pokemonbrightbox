@@ -1,0 +1,148 @@
+$kind: http-example
+request:
+  url: https://api.getpostman.com/api-catalog/system-environments/:systemEnvironmentId/associations?workspaceId=47d1b387-2485-482a-bf62-46ddd70a6d1e
+  method: GET
+  queryParams:
+    workspaceId: 47d1b387-2485-482a-bf62-46ddd70a6d1e
+  pathVariables:
+    systemEnvironmentId: 23b554c1-c30c-483d-bf98-dbe9ab7b88a0
+response:
+  statusCode: 200
+  statusText: OK
+  body:
+    type: json
+    content: |-
+      {
+          "meta": {
+              "total": 11,
+              "nextCursor": null,
+              "limit": 20
+          },
+          "data": [
+              {
+                  "id": "ff53b4bc-eeb7-4b13-866a-5fbd79b13137",
+                  "workspaceEnvironmentId": "12345678-10ec194c-01eb-4844-91a2-9612fccf59d9",
+                  "workspaceId": "47d1b387-2485-482a-bf62-46ddd70a6d1e",
+                  "associatedAt": "2026-03-17T09:48:14.000Z"
+              },
+              {
+                  "id": "d17e1e36-39e8-420b-8eab-52bbd6a9d414",
+                  "workspaceEnvironmentId": "56781234-6c30365c-aa38-4f6f-b544-c8b06acfc48d",
+                  "workspaceId": "47d1b387-2485-482a-bf62-46ddd70a6d1e",
+                  "associatedAt": "2026-03-17T09:48:14.000Z"
+              },
+              {
+                  "id": "cb302fe2-0c2b-48cb-be0f-64a265e153e0",
+                  "workspaceEnvironmentId": "87654321-3610b709-275b-488d-9f30-5730fc999905",
+                  "workspaceId": "47d1b387-2485-482a-bf62-46ddd70a6d1e",
+                  "associatedAt": "2026-03-17T09:48:14.000Z"
+              },
+              {
+                  "id": "c248ee20-b817-40f1-bcce-09d4cf4987a6",
+                  "workspaceEnvironmentId": "54367812-0877b33f-3fb2-4a9c-b11e-dc634d9b24d0",
+                  "workspaceId": "47d1b387-2485-482a-bf62-46ddd70a6d1e",
+                  "associatedAt": "2026-03-17T09:48:14.000Z"
+              },
+              {
+                  "id": "7e63f482-458c-453c-83f8-dc29f49b00b1",
+                  "workspaceEnvironmentId": "12345678-46ea6b0e-2fa7-40f4-afe1-2e409724d41c",
+                  "workspaceId": "47d1b387-2485-482a-bf62-46ddd70a6d1e",
+                  "associatedAt": "2026-03-17T09:48:14.000Z"
+              },
+              {
+                  "id": "4980cc10-47d1-4a95-8ded-a09a5eeec82a",
+                  "workspaceEnvironmentId": "98765432-c7019db3-a205-4f93-a206-d00d6b6bacdc",
+                  "workspaceId": "47d1b387-2485-482a-bf62-46ddd70a6d1e",
+                  "associatedAt": "2026-03-17T09:48:14.000Z"
+              },
+              {
+                  "id": "370e1614-908a-4c2c-8bec-3c39d332ae52",
+                  "workspaceEnvironmentId": "56781234-9b6b55ca-b360-4e4a-849e-f92f42fc65d1",
+                  "workspaceId": "47d1b387-2485-482a-bf62-46ddd70a6d1e",
+                  "associatedAt": "2026-03-17T09:48:14.000Z"
+              },
+              {
+                  "id": "35a2854b-e2f7-446f-a348-0b95f75df74c",
+                  "workspaceEnvironmentId": "87654321-7bc7da32-a085-474e-b0e9-40d4c19cc44c",
+                  "workspaceId": "47d1b387-2485-482a-bf62-46ddd70a6d1e",
+                  "associatedAt": "2026-03-17T09:48:14.000Z"
+              },
+              {
+                  "id": "25bb736a-810a-480d-b86d-df559c5168ee",
+                  "workspaceEnvironmentId": "12345678-f58a2d9c-36de-4129-b96b-d58f7e7f4515",
+                  "workspaceId": "47d1b387-2485-482a-bf62-46ddd70a6d1e",
+                  "associatedAt": "2026-03-17T09:48:14.000Z"
+              },
+              {
+                  "id": "155e18fb-0a9c-4a91-b56a-f19ff91e2b6d",
+                  "workspaceEnvironmentId": "87612345-8fdcad35-154c-4c65-8bb9-fea0154593ca",
+                  "workspaceId": "47d1b387-2485-482a-bf62-46ddd70a6d1e",
+                  "associatedAt": "2026-03-17T09:48:14.000Z"
+              }
+          ]
+      }
+    $type: |-
+      {
+          "type": "object",
+          "properties": {
+              "meta": {
+                  "type": "object",
+                  "description": "The response's meta information for paginated results.",
+                  "properties": {
+                      "total": {
+                          "type": "integer",
+                          "description": "The number of records that match the defined criteria."
+                      },
+                      "nextCursor": {
+                          "type": ["string", "null"],
+                          "description": "The pagination cursor that points to the next record in the results set."
+                      },
+                      "limit": {
+                          "type": "integer",
+                          "description": "The maximum number of records in the paginated response."
+                      },
+                      "filters": {
+                          "type": "object",
+                          "description": "The applied filters, if any.",
+                          "properties": {
+                              "workspaceId": {
+                                  "type": "string"
+                              }
+                          },
+                          "additionalProperties": false
+                      }
+                  },
+                  "required": ["total", "nextCursor", "limit" ]
+              },
+              "data": {
+                  "type": "array",
+                  "description": "A list of workspace-environment associations.",
+                  "items": {
+                      "type": "object",
+                      "description": "Information about the workspace-environment association.",
+                      "properties": {
+                          "id": {
+                              "type": "string",
+                              "description": "The association's ID."
+                          },
+                          "workspaceEnvironmentId": {
+                              "type": "string",
+                              "description": "The workspace environment's ID."
+                          },
+                          "workspaceId": {
+                              "type": "string",
+                              "description": "The ID of the workspace that contains the environment."
+                          },
+                          "associatedAt": {
+                              "type": "string",
+                              "format": "date-time",
+                              "description": "The date and time at which the association was created."
+                          }
+                      },
+                      "required": ["id", "workspaceEnvironmentId", "workspaceId", "associatedAt"]
+                  }
+              }
+          },
+          "required": ["meta", "data"]
+      }
+order: 2000

@@ -1,0 +1,136 @@
+$kind: http-example
+request:
+  url: https://api.getpostman.com/api-catalog/system-environments/:systemEnvironmentId/associations?allowPartial=true
+  method: POST
+  queryParams:
+    allowPartial: "true"
+  pathVariables:
+    systemEnvironmentId: 019d3dca-5e16-7bba-9f13-7abf00a6a443
+  body:
+    type: json
+    content: |-
+      {
+          "workspaceEnvironmentIds": [
+              "12345678-4b076607-09cf-4f9d-8a9a-08c8f3cf4619",
+              "56781234-c71c146a-ee75-4e3d-b1c4-dacc28577ffa",
+              "87654321-9b83df88-9b5c-445b-ac23-460c37897340",
+              "12387654-9b83df88-9b5c-445b-12bc-460c37897340"
+          ]
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  body:
+    type: json
+    content: |-
+      {
+          "meta": {
+              "created": 1,
+              "existing": 1,
+              "replaced": 1,
+              "excluded": 1
+          },
+          "data": [
+              {
+                  "workspaceEnvironmentId": "12387654-9b83df88-9b5c-445b-12bc-460c37897340",
+                  "status": "excluded",
+                  "reason": "Access denied"
+              },
+              {
+                  "id": "019d3e38-bf02-7770-91f0-cc0968a15129",
+                  "workspaceEnvironmentId": "12345678-4b076607-09cf-4f9d-8a9a-08c8f3cf4619",
+                  "workspaceId": "4540d410-ef72-4977-afb8-d7f53705f379",
+                  "associatedAt": "2026-03-30T04:39:59.000Z",
+                  "status": "existing"
+              },
+              {
+                  "id": "019d3e3a-8185-7770-91f0-d10f7a05076a",
+                  "workspaceEnvironmentId": "56781234-c71c146a-ee75-4e3d-b1c4-dacc28577ffa",
+                  "workspaceId": "a5edcd30-c773-4f88-9660-9590bc0af96b",
+                  "associatedAt": "2026-03-30T10:11:54.884Z",
+                  "status": "replaced",
+                  "previousSystemEnvironmentId": "23b554c1-c30c-483d-bf98-dbe9ab7b88a0"
+              },
+              {
+                  "id": "019d3e3a-8185-7770-91f0-d957ac333230",
+                  "workspaceEnvironmentId": "87654321-9b83df88-9b5c-445b-ac23-460c37897340",
+                  "workspaceId": "a5450abd-ec89-443c-a17a-68132e738714",
+                  "associatedAt": "2026-03-30T10:11:54.884Z",
+                  "status": "created"
+              }
+          ]
+      }
+    $type: |-
+      {
+          "type": "object",
+          "properties": {
+              "meta": {
+                  "type": "object",
+                  "description": "The response's meta information for paginated results.",
+                  "properties": {
+                      "created": {
+                          "type": "integer",
+                          "description": "The number of new associations created."
+                      },
+                      "existing": {
+                          "type": "integer",
+                          "description": "The number of associations that already existed and were unchanged."
+                      },
+                      "replaced": {
+                          "type": "integer",
+                          "description": "The number of associations that were moved from a different system environment."
+                      },
+                      "excluded": {
+                          "type": "integer",
+                          "description": "The number of associations that were skipped. This only returns if you pass the `allowPartial` query parameter as `true`)."
+                      }
+                  },
+                  "required": ["created", "existing", "replaced", "excluded"]
+              },
+              "data": {
+                  "type": "array",
+                  "items": {
+                      "type": "object",
+                      "description": "Information about the associated workspace environment.",
+                      "properties": {
+                          "id": {
+                              "type": "string",
+                              "description": "The association's unique ID. This value doesn't return if the item was excluded."
+                          },
+                          "workspaceEnvironmentId": {
+                              "type": "string",
+                              "description": "The workspace's environment ID."
+                          },
+                          "workspaceId": {
+                              "type": "string",
+                              "description": "The workspace ID containing the environment. This value doesn't return if the item was excluded."
+                          },
+                          "associatedAt": {
+                              "type": "string",
+                              "format": "date-time",
+                              "description": "The date and time at which the association was created. This value doesn't return if the item was excluded."
+                          },
+                          "status": {
+                              "type": "string",
+                              "enum": ["created", "existing", "replaced", "excluded"],
+                              "description": "The association's status:\n- `created` — An association was created. \n- `existing` — The association already existed and is unchanged.\n- `replaced` — The association was moved from a different system environment. \n- `excluded` — The association was skipped."
+                          },
+                          "previousSystemEnvironmentId": {
+                              "type": "string",
+                              "description": "The system environment ID the association was moved from. This only returns when the status is `replaced`."
+                          },
+                          "reason": {
+                              "type": "string",
+                              "description": "The reason the association was excluded. This only returns when the status is `excluded`."
+                          }
+                      },
+                      "required": ["workspaceEnvironmentId", "status"]
+                  }
+              }
+          },
+          "required": [
+              "meta",
+              "data"
+          ]
+      }
+order: 2000

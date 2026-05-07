@@ -1,0 +1,43 @@
+$kind: http-example
+request:
+  url: https://api.getpostman.com/api-catalog/services
+  method: GET
+response:
+  statusCode: 401
+  statusText: Unauthorized
+  headers:
+    content-type: application/problem+json
+  body:
+    type: json
+    content: |-
+      {
+          "type": "https://api.postman.com/problems/unauthorized",
+          "status": 401,
+          "title": "Unauthorized",
+          "detail": "Authentication required."
+      }
+    $type: |-
+      {
+          "type": "object",
+          "required": ["type", "status", "title", "detail"],
+          "properties": {
+              "type": {
+                  "type": "string",
+                  "format": "uri",
+                  "description": "The [URI reference](https://www.rfc-editor.org/rfc/rfc3986) that identifies the type of problem."
+              },
+              "status": {
+                  "type": "integer",
+                  "description": "The error's HTTP status code."
+              },
+              "title": {
+                  "type": "string",
+                  "description": "A short summary of the problem."
+              },
+              "detail": {
+                  "type": "string",
+                  "description": "Information about the error."
+              }
+          }
+      }
+order: 7000

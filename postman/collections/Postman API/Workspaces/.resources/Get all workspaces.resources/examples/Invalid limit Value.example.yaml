@@ -1,0 +1,19 @@
+$kind: http-example
+request:
+  url: https://api.getpostman.com/workspaces?limit=101
+  method: GET
+  queryParams:
+    limit: "101"
+response:
+  statusCode: 400
+  statusText: Bad Request
+  body:
+    type: json
+    content: |-
+      {
+          "error": {
+              "name": "badRequestError",
+              "message": "The limit parameter must not exceed 100."
+          }
+      }
+order: 8000

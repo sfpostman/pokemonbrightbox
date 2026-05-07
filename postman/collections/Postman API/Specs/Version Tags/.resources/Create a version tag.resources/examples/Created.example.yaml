@@ -1,0 +1,45 @@
+$kind: http-example
+request:
+  url: https://api.getpostman.com/specs/:specId/version-tags
+  method: POST
+  pathVariables:
+    specId: 73e15000-bc7a-4802-b80e-05fff18fd7f8
+  body:
+    type: json
+    content: |-
+      {
+          "name": "1.0.0"
+      }
+response:
+  statusCode: 201
+  statusText: Created
+  body:
+    type: json
+    content: |-
+      {
+          "data": {
+              "id": "9c3c45e4-183a-4bc4-92aa-6b39d047377d",
+              "name": "1.0.0"
+          }
+      }
+    $type: |-
+      {
+          "type": "object",
+          "properties": {
+              "data": {
+                  "type": "object",
+                  "description": "Information about the created version tag.",
+                  "properties": {
+                      "id": {
+                          "type": "string",
+                          "description": "The version tag's ID."
+                      },
+                      "name": {
+                          "type": "string",
+                          "description": "The version tag's name."
+                      }
+                  }
+              }
+          }
+      }
+order: 1000

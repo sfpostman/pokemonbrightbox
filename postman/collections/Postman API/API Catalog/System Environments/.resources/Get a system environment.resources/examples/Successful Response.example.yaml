@@ -1,0 +1,79 @@
+$kind: http-example
+request:
+  url: https://api.getpostman.com/api-catalog/system-environments/:systemEnvironmentId
+  method: GET
+  pathVariables:
+    systemEnvironmentId: 23b554c1-c30c-483d-bf98-dbe9ab7b88a0
+response:
+  statusCode: 200
+  statusText: OK
+  body:
+    type: json
+    content: |-
+      {
+          "data": {
+              "id": "23b554c1-c30c-483d-bf98-dbe9ab7b88a0",
+              "name": "BETA",
+              "label": "beta",
+              "color": "#F7F13B",
+              "description": "This is the BETA environment",
+              "isProduction": false,
+              "associationCount": 11,
+              "createdAt": "2026-02-23T11:54:16.000Z",
+              "updatedAt": "2026-03-27T17:56:16.000Z"
+          }
+      }
+    $type: |-
+      {
+          "type": "object",
+          "properties": {
+              "data": {
+                  "type": "object",
+                  "description": "Information about the system environment.",
+                  "properties": {
+                      "id": {
+                          "type": "string",
+                          "description": "The system environment's ID."
+                      },
+                      "name": {
+                          "type": "string",
+                          "description": "The system environment's name."
+                      },
+                      "label": {
+                          "type": "string",
+                          "description": "A lowercase, terminal-friendly identifier for the system environment."
+                      },
+                      "color": {
+                          "type": "string",
+                          "description": "A six-digit hex color code.",
+                          "pattern": "^#[0-9A-Fa-f]{6}$"
+                      },
+                      "description": {
+                          "type": "string",
+                          "description": "A description of the system environment."
+                      },
+                      "isProduction": {
+                          "type": "boolean",
+                          "description": "If true, the system environment is a production environment."
+                      },
+                      "associationCount": {
+                          "type": "integer",
+                          "description": "The total number of workspace environments associated with this system environment."
+                      },
+                      "createdAt": {
+                          "type": "string",
+                          "format": "date-time",
+                          "description": "The date and time at which the system environment was created."
+                      },
+                      "updatedAt": {
+                          "type": "string",
+                          "format": "date-time",
+                          "description": "The date and time at which the system environment was last updated."
+                      }
+                  },
+                  "required": ["id", "name", "label", "color", "description", "isProduction", "associationCount", "createdAt", "updatedAt"]
+              }
+          },
+          "required": ["data"]
+      }
+order: 1000

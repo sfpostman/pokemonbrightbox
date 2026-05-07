@@ -1,0 +1,42 @@
+$kind: http-example
+request:
+  url: https://api.getpostman.com/specs/:specId/version-tags/:tagId/files
+  method: GET
+  pathVariables:
+    specId: 73e15000-bc7a-4802-b80e-05fff18fd7f8
+    tagId: 97d2c74e-19de-426d-9763-8e7400429759
+response:
+  statusCode: 404
+  statusText: Not Found
+  body:
+    type: json
+    content: |-
+      {
+          "type": "instanceNotFoundError",
+          "title": "Specification not found",
+          "status": 404,
+          "detail": "The specification you are trying to access does not exist."
+      }
+    $type: |-
+      {
+          "type": "object",
+          "properties": {
+              "type": {
+                  "type": "string",
+                  "description": "The [URI reference](https://www.rfc-editor.org/rfc/rfc3986) that identifies the type of problem."
+              },
+              "title": {
+                  "type": "string",
+                  "description": "A short summary of the problem."
+              },
+              "status": {
+                  "type": "integer",
+                  "description": "The error's HTTP status code."
+              },
+              "detail": {
+                  "type": "string",
+                  "description": "Information about the error."
+              }
+          }
+      }
+order: 5000
