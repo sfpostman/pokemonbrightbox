@@ -1,0 +1,141 @@
+$kind: http-request
+url: "{{baseUrl}}/types/:type/pokemon?limit=20&offset=0"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: limit
+    value: "20"
+    $type: |-
+      {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer",
+            "default": 20,
+            "minimum": 1,
+            "maximum": 100
+          }
+        }
+      }
+  - key: offset
+    value: "0"
+    $type: |-
+      {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer",
+            "default": 0,
+            "minimum": 0
+          }
+        }
+      }
+pathVariables:
+  - key: type
+    value: Fire
+    $type: |-
+      {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "value"
+        ]
+      }
+body:
+  type: text
+  content: ""
+examples: ./.resources/Get Pokemon by type.resources/examples
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      var template = '' +
+        '<html>' +
+        '<head>' +
+        '<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>' +
+        '<style>' +
+        '  body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; padding: 16px; background: #f7f7f7; }' +
+        '  h2 { margin: 0 0 8px 0; }' +
+        '  .meta { color: #555; margin-bottom: 16px; font-size: 13px; }' +
+        '  .chart-wrap { background: #fff; padding: 16px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); margin-bottom: 24px; }' +
+        '  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }' +
+        '  th, td { padding: 8px 10px; text-align: left; border-bottom: 1px solid #eee; font-size: 13px; }' +
+        '  th { background: #fafafa; font-weight: 600; }' +
+        '  tr:last-child td { border-bottom: none; }' +
+        '  .num { text-align: right; font-variant-numeric: tabular-nums; }' +
+        '</style>' +
+        '</head>' +
+        '<body>' +
+        '<h2>{{type}} Pokémon Stats</h2>' +
+        '<div class="meta">Showing {{count}} of {{total}} (limit {{limit}}, offset {{offset}})</div>' +
+        '<div class="chart-wrap"><canvas id="statsChart" height="120"></canvas></div>' +
+        '<table>' +
+        '<thead><tr>' +
+        '<th>#</th><th>Name</th><th>Type</th>' +
+        '<th class="num">HP</th><th class="num">Atk</th><th class="num">Def</th>' +
+        '<th class="num">SpA</th><th class="num">SpD</th><th class="num">Spe</th>' +
+        '<th class="num">Total</th>' +
+        '</tr></thead>' +
+        '<tbody>' +
+        '{{#each rows}}' +
+        '<tr>' +
+        '<td>{{number}}</td><td>{{name}}</td><td>{{type}}</td>' +
+        '<td class="num">{{hp}}</td><td class="num">{{attack}}</td><td class="num">{{defense}}</td>' +
+        '<td class="num">{{sp_atk}}</td><td class="num">{{sp_def}}</td><td class="num">{{speed}}</td>' +
+        '<td class="num"><strong>{{total}}</strong></td>' +
+        '</tr>' +
+        '{{/each}}' +
+        '</tbody></table>' +
+        '<script>' +
+        '  pm.getData(function (err, value) {' +
+        '    var ctx = document.getElementById("statsChart").getContext("2d");' +
+        '    new Chart(ctx, {' +
+        '      type: "bar",' +
+        '      data: {' +
+        '        labels: value.labels,' +
+        '        datasets: [' +
+        '          { label: "HP",      data: value.hp,      backgroundColor: "#ef4444" },' +
+        '          { label: "Attack",  data: value.attack,  backgroundColor: "#f59e0b" },' +
+        '          { label: "Defense", data: value.defense, backgroundColor: "#10b981" },' +
+        '          { label: "Sp. Atk", data: value.spAtk,   backgroundColor: "#3b82f6" },' +
+        '          { label: "Sp. Def", data: value.spDef,   backgroundColor: "#8b5cf6" },' +
+        '          { label: "Speed",   data: value.speed,   backgroundColor: "#ec4899" }' +
+        '        ]' +
+        '      },' +
+        '      options: {' +
+        '        responsive: true,' +
+        '        legend: { position: "bottom" },' +
+        '        scales: { yAxes: [{ ticks: { beginAtZero: true } }] }' +
+        '      }' +
+        '    });' +
+        '  });' +
+        '</script>' +
+        '</body></html>';
+
+      function constructVisualizerPayload() {
+        var res = pm.response.json();
+        var rows = res.data || [];
+        return {
+          type: res.type,
+          total: res.total,
+          limit: res.limit,
+          offset: res.offset,
+          count: rows.length,
+          rows: rows,
+          labels: rows.map(function (p) { return p.name; }),
+          hp: rows.map(function (p) { return p.hp; }),
+          attack: rows.map(function (p) { return p.attack; }),
+          defense: rows.map(function (p) { return p.defense; }),
+          spAtk: rows.map(function (p) { return p.sp_atk; }),
+          spDef: rows.map(function (p) { return p.sp_def; }),
+          speed: rows.map(function (p) { return p.speed; })
+        };
+      }
+
+      pm.visualizer.set(template, constructVisualizerPayload());
+order: 1000

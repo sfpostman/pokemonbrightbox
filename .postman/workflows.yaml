@@ -9,3 +9,7 @@ workflows:
       collection: ../postman/collections/E2E Library
       options:
         syncExamples: false
+    - spec: ../postman/specs/pokemon-api.yaml
+      collection: ../postman/collections/Pokemon API-1
+      options:
+        syncExamples: false
