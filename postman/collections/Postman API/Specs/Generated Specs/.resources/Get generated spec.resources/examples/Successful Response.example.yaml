@@ -27,49 +27,4 @@ response:
               }
           ]
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "meta": {
-                  "type": "object",
-                  "properties": {
-                      "nextCursor": {
-                          "type": "null"
-                      }
-                  }
-              },
-              "specs": {
-                  "type": "array",
-                  "items": {
-                      "type": "object",
-                      "properties": {
-                          "id": {
-                              "type": "string"
-                          },
-                          "name": {
-                              "type": "string"
-                          },
-                          "state": {
-                              "type": "string"
-                          },
-                          "createdAt": {
-                              "type": "string",
-                              "format": "date-time"
-                          },
-                          "updatedAt": {
-                              "type": "string",
-                              "format": "date-time"
-                          },
-                          "createdBy": {
-                              "type": "integer"
-                          },
-                          "updatedBy": {
-                              "type": "integer"
-                          }
-                      }
-                  }
-              }
-          }
-      }
 order: 1000

@@ -6,32 +6,8 @@ pathVariables:
   - key: specId
     value: ""
     description: The specification's ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
   - key: tagId
     value: ""
     description: The version tag's ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 examples: ./.resources/Get a version tag.resources/examples
 order: 2000

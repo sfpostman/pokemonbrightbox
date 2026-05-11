@@ -23,44 +23,4 @@ response:
           },
           "revision": 24994562696
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "model_id": {
-                  "type": "string",
-                  "description": "The folder's ID."
-              },
-              "meta": {
-                  "type": "object",
-                  "description": "A Postman-specific response that contains information about the internal performed operation.",
-                  "properties": {
-                      "model": {
-                          "type": "string"
-                      },
-                      "action": {
-                          "type": "string"
-                      }
-                  }
-              },
-              "data": {
-                  "type": "object",
-                  "description": "The folder's information.",
-                  "properties": {
-                      "id": {
-                          "type": "string",
-                          "description": "The folder's ID."
-                      },
-                      "owner": {
-                          "type": "string",
-                          "description": "The user ID of the request's owner."
-                      }
-                  }
-              },
-              "revision": {
-                  "type": "integer",
-                  "description": "An internal revision ID. Its value increments each time the resource changes. You can use this ID to track whether there were changes since the last time you fetched the resource."
-              }
-          }
-      }
 order: 1000

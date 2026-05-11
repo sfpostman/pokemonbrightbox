@@ -19,23 +19,4 @@ response:
               "message": "Invalid value for parameter: since. Cannot view logs beyond the call log retention period based on your plan i.e. 30 days."
           }
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "error": {
-                  "type": "object",
-                  "properties": {
-                      "name": {
-                          "type": "string",
-                          "description": "The error name."
-                      },
-                      "message": {
-                          "type": "string",
-                          "description": "The error message."
-                      }
-                  }
-              }
-          }
-      }
 order: 12000

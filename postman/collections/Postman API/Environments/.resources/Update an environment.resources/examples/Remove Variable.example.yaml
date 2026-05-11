@@ -30,46 +30,4 @@ response:
               "uid": "12345678-5daabc50-8451-43f6-922d-96b403b4f28e"
           }
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "environment": {
-                  "type": "object",
-                  "description": "Information about the environment.",
-                  "properties": {
-                      "id": {
-                          "type": "string",
-                          "description": "The environment's ID."
-                      },
-                      "name": {
-                          "type": "string",
-                          "description": "The environment's name."
-                      },
-                      "owner": {
-                          "type": "string",
-                          "description": "The ID of environment's owner."
-                      },
-                      "createdAt": {
-                          "type": "string",
-                          "format": "date-time",
-                          "description": "The date and time at which the environment was created."
-                      },
-                      "updatedAt": {
-                          "type": "string",
-                          "format": "date-time",
-                          "description": "The date and time at which the environment was last updated."
-                      },
-                      "values": {
-                          "type": "array",
-                          "description": "A list of the environment's variables."
-                      },
-                      "uid": {
-                          "type": "string",
-                          "description": "The environment's unique ID."
-                      }
-                  }
-              }
-          }
-      }
 order: 6000

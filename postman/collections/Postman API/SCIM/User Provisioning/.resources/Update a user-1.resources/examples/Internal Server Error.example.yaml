@@ -33,26 +33,4 @@ response:
           "detail": "Couldn’t update this team member’s information. Try again — it should work next time around.",
           "status": "500"
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "schemas": {
-                  "type": "array",
-                  "description": "The [SCIM schema URI](https://www.iana.org/assignments/scim/scim.xhtml).",
-                  "items": {
-                      "type": "string",
-                      "format": "uri"
-                  }
-              },
-              "detail": {
-                  "type": "string",
-                  "description": "Information about the error."
-              },
-              "status": {
-                  "type": "string",
-                  "description": "The HTTP status code."
-              }
-          }
-      }
 order: 12000

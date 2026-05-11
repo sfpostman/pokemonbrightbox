@@ -29,26 +29,4 @@ response:
           "status": 400,
           "detail": "Required property `type` is invalid. Should be one of: OPENAPI:3.0, ASYNCAPI:2.0"
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "type": {
-                  "type": "string",
-                  "description": "The type of error."
-              },
-              "title": {
-                  "type": "string",
-                  "description": "A short summary of the problem."
-              },
-              "detail": {
-                  "type": "string",
-                  "description": "Information about the error."
-              },
-              "status": {
-                  "type": "integer",
-                  "description": "The error's HTTP status code."
-              }
-          }
-      }
 order: 9000

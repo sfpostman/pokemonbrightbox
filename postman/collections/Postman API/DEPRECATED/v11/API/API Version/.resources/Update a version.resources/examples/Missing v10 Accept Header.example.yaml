@@ -24,23 +24,4 @@ response:
               "message": "API not found. For v10 and later APIs, ensure that your request sends the \"application/vnd.api.v10+json\" Accept header."
           }
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "error": {
-                  "type": "object",
-                  "properties": {
-                      "name": {
-                          "type": "string",
-                          "description": "The error name."
-                      },
-                      "message": {
-                          "type": "string",
-                          "description": "The error message."
-                      }
-                  }
-              }
-          }
-      }
 order: 2000

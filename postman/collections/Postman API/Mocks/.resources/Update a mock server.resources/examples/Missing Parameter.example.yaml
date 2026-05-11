@@ -31,33 +31,4 @@ response:
               "message": "At least one parameter must be provided."
           }
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "error": {
-                  "type": "object",
-                  "properties": {
-                      "details": {
-                          "type": "object",
-                          "description": "Information about the error.",
-                          "properties": {
-                              "param": {
-                                  "type": "string"
-                                  
-                              }
-                          }
-                      },
-                      "name": {
-                          "type": "string",
-                          "description": "The error name."
-                      },
-                      "message": {
-                          "type": "string",
-                          "description": "The error message."
-                      }
-                  }
-              }
-          }
-      }
 order: 5000

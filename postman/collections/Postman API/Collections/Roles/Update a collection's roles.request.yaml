@@ -13,20 +13,6 @@ pathVariables:
   - key: collectionId
     value: ""
     description: The collection's ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "uniqueItems": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 body:
   type: json
   content: |-
@@ -43,51 +29,6 @@ body:
                 ]
             }
         ]
-    }
-  $type: |-
-    {
-        "type": "object",
-        "required": ["roles"],
-        "properties": {
-            "roles": {
-                "type": "array",
-                "items": {
-                    "type": "object",
-                    "required": ["op", "path", "value"],
-                    "properties": {
-                        "op": {
-                            "type": "string",
-                            "description": "The operation to perform on the path.",
-                            "enum": ["update"]
-                        },
-                        "path": {
-                            "type": "string",
-                            "description": "The resource to perform the action on.",
-                            "enum": ["/user", "/group", "/team"]
-                        },
-                        "value": {
-                            "type": "array",
-                            "items": {
-                                "type": "object",
-                                "description": "Information about the updated role.",
-                                "required": ["id", "role"],
-                                "properties": {
-                                    "id": {
-                                        "type": "number",
-                                        "description": "The user, group, or team's ID."
-                                    },
-                                    "role": {
-                                        "type": "string",
-                                        "description": "The role type:\n- `VIEWER` — Can view, fork, and export collections.\n- `EDITOR` — Can edit collections directly.",
-                                        "enum": ["VIEWER", "EDITOR"]
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
     }
 settings:
   disabledSystemHeaders: []

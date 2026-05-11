@@ -16,24 +16,4 @@ response:
               "uid": "1679925-0fca2246-c108-41f5-8454-cc032def329f"
           }
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "mock": {
-                  "type": "object",
-                  "description": "Information about the mock server.",
-                  "properties": {
-                      "id": {
-                          "type": "string",
-                          "description": "The mock server's ID."
-                      },
-                      "uid": {
-                          "type": "string",
-                          "description": "The mock server's unique ID."
-                      }
-                  }
-              }
-          }
-      }
 order: 1000

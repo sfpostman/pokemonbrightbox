@@ -20,18 +20,4 @@ response:
           "name": "requestEntityAlreadyPublished",
           "message": "Billing Team Workspace has already been published to the network"
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "name": {
-                  "type": "string",
-                  "description": "The error name."
-              },
-              "message": {
-                  "type": "string",
-                  "description": "The error message."   
-              }
-          }
-      }
 order: 5000

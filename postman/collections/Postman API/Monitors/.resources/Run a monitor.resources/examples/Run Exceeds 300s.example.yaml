@@ -19,34 +19,4 @@ response:
               }
           }
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "run": {
-                  "type": "object",
-                  "description": "The response if the monitor's run exceeds 300 seconds. To get information about the monitor's run, call the GET `/monitors/{id}` endpoint.",
-                  "properties": {
-                      "info": {
-                          "type": "object",
-                          "description": "Information about the monitor.",
-                          "properties": {
-                              "monitorId": {
-                                  "type": "string",
-                                  "description": "The monitor's ID."
-                              },
-                              "status": {
-                                  "type": "string",
-                                  "description": "The monitor run's status."
-                              },
-                              "message": {
-                                  "type": "string",
-                                  "description": "A message that details the monitor run's current status."
-                              }
-                          }
-                      }
-                  }
-              }
-          }
-      }
 order: 2000

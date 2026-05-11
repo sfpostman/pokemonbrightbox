@@ -33,48 +33,4 @@ response:
           "createdBy": "12345678",
           "status": "open"
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "id": {
-                  "type": "string",
-                  "description": "The pull request's ID."
-              },
-              "createdAt": {
-                  "type": "string",
-                  "format": "date-time",
-                  "description": "The date and time at which the pull request was created."
-              },
-              "updatedAt": {
-                  "type": "string",
-                  "format": "date-time",
-                  "description": "The date and time at which the pull request was updated."
-              },
-              "sourceId": {
-                  "type": "string",
-                  "description": "The pull request's source (parent) ID."
-              },
-              "destinationId": {
-                  "type": "string",
-                  "description": "The pull request's merge destination ID."
-              },
-              "title": {
-                  "type": "string",
-                  "description": "The pull request's title."
-              },
-              "description": {
-                  "type": "string",
-                  "description": "The pull request's description."
-              },
-              "createdBy": {
-                  "type": "string",
-                  "description": "The ID of the user who created the pull request."
-              },
-              "status": {
-                  "type": "string",
-                  "description": "The pull request's current status."
-              }
-          }
-      }
 order: 1000

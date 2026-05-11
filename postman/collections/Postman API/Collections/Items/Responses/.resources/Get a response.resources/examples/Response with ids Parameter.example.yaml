@@ -27,45 +27,4 @@ response:
               "id": "cc364734-7dfd-4bfc-897d-be763dcdbb07"
           }
       }
-    $type: |-
-      {
-          "type": "object",
-          "description": "Information about the response. For a complete list of properties, refer to the **Response** entry in the [Postman Collection Format documentation](https://schema.postman.com/collection/json/v2.1.0/draft-07/docs/index.html).",
-          "properties": {
-              "model_id": {
-                  "type": "string"
-              },
-              "meta": {
-                  "type": "object",
-                  "properties": {
-                      "model": {
-                          "type": "string"
-                      },
-                      "populate": {
-                          "type": "boolean"
-                      },
-                      "changeset": {
-                          "type": "boolean"
-                      },
-                      "action": {
-                          "type": "string"
-                      }
-                  }
-              },
-              "data": {
-                  "type": "object",
-                  "properties": {
-                      "owner": {
-                          "type": "string"
-                      },
-                      "request": {
-                          "type": "string"
-                      },
-                      "id": {
-                          "type": "string"
-                      }
-                  }
-              }
-          }
-      }
 order: 4000

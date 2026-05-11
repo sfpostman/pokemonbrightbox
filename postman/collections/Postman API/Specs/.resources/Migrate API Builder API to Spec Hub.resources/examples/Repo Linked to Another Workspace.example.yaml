@@ -29,33 +29,4 @@ response:
               "message": "The git repository is already linked to another workspace. Please reach out to Postman support for assistance."
           }
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "error": {
-                  "type": "object",
-                  "properties": {
-                      "title": {
-                          "type": "string",
-                          "description": "A short summary of the problem."
-                      },
-                      "details": {
-                          "type": "object",
-                          "description": "Information about the error.",
-                          "properties": {
-                              "workspaceId": {
-                                  "type": "string",
-                                  "description": "The workspace's ID."
-                              }
-                          }
-                      },
-                      "message": {
-                          "type": "string",
-                          "description": "The error message."
-                      }
-                  }
-              }
-          }
-      }
 order: 6000

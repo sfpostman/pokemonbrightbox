@@ -2,11 +2,8 @@ $kind: http-request
 url: "{{baseUrl}}/books"
 method: GET
 headers:
-  - key: x-mock-response-code
-    value: "500"
-    $type: integer
-  - key: Accept
-    value: application/json
+  x-mock-response-code: "500"
+  Accept: application/json
 scripts:
   - type: afterResponse
     code: |-

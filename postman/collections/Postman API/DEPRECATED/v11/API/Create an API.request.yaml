@@ -18,24 +18,5 @@ body:
         "summary": "{{apiSummary}}",
         "description": "{{apiDescription}}"
     }
-  $type: |-
-    {
-        "type": "object",
-        "required": ["name"],
-        "properties": {
-            "name": {
-                "type": "string",
-                "description": "The API's name."
-            },
-            "summary": {
-                "type": "string",
-                "description": "The API's short summary."
-            },
-            "description": {
-                "type": "string",
-                "description": "The API's description. This supports Markdown formatting."
-            }
-        }
-    }
 examples: ./.resources/Create an API.resources/examples
 order: 8000

@@ -37,57 +37,5 @@ body:
         ],
         "active": true
     }
-  $type: |-
-    {
-        "type": "object",
-        "properties": {
-            "schemas": {
-                "type": "array",
-                "description": "The [SCIM schema URI](https://www.iana.org/assignments/scim/scim.xhtml).",
-                "items": {
-                    "type": "string",
-                    "format": "uri",
-                    "enum": ["urn:ietf:params:scim:schemas:core:2.0:User"]
-                }
-            },
-            "userName": {
-                "type": "string",
-                "description": "The user's username."
-            },
-            "name": {
-                "type": "object",
-                "description": "Information about the user's name.",
-                "properties": {
-                    "givenName": {
-                        "type": "string",
-                        "description": "The user's first name."
-                    },
-                    "familyName": {
-                        "type": "string",
-                        "description": "The user's last name."
-                    }
-                }
-            },
-            "externalId": {
-                "type": "string",
-                "description": " The user's external ID."
-            },
-            "locale": {
-                "type": "string",
-                "description": "The user's [IETF language tag](https://datatracker.ietf.org/doc/html/rfc5646)."
-            },
-            "groups": {
-                "type": "array",
-                "description": "A list of groups to assign the user to.",
-                "items": {
-                    "type": "string"
-                }
-            },
-            "active": {
-                "type": "boolean",
-                "description": "If true, activates the user. This lets them authenticate in to your Postman team."
-            }
-        }
-    }
 examples: ./.resources/Create a user.resources/examples
 order: 3000

@@ -15,13 +15,4 @@ response:
       {
           "data": []
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "data": {
-                  "type": "array"
-              }
-          }
-      }
 order: 2000

@@ -563,23 +563,4 @@ response:
               "status": "in-progress"
           }
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "task": {
-                  "type": "object",
-                  "properties": {
-                      "id": {
-                          "type": "string",
-                          "description": "The collection update task's ID. Use this value to get the update's status with the GET `/collection-updates-tasks/{taskId}` endpoint."
-                      },
-                      "status": {
-                          "type": "string",
-                          "description": "The task's current status."
-                      }
-                  }
-              }
-          }
-      }
 order: 1000

@@ -8,19 +8,6 @@ pathVariables:
   - key: id
     value: <string>
     description: Pokédex number (zero-padded, e.g. 0006)
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "default": "<string>"
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 body:
   type: json
   content: |-
@@ -34,39 +21,6 @@ body:
       "sp_atk": "<integer>",
       "sp_def": "<integer>",
       "speed": "<integer>"
-    }
-  $type: |-
-    {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "type": {
-          "type": "string"
-        },
-        "total": {
-          "type": "integer"
-        },
-        "hp": {
-          "type": "integer"
-        },
-        "attack": {
-          "type": "integer"
-        },
-        "defense": {
-          "type": "integer"
-        },
-        "sp_atk": {
-          "type": "integer"
-        },
-        "sp_def": {
-          "type": "integer"
-        },
-        "speed": {
-          "type": "integer"
-        }
-      }
     }
 scripts:
   - type: afterResponse

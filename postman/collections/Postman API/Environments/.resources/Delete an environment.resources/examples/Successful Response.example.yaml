@@ -16,24 +16,4 @@ response:
               "uid": "12345678-5daabc50-8451-43f6-922d-96b403b4f28e"
           }
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "environment": {
-                  "type": "object",
-                  "description": "Information about the environment.",
-                  "properties": {
-                      "id": {
-                          "type": "string",
-                          "description": "The deleted environment's ID."
-                      },
-                      "uid": {
-                          "type": "string",
-                          "description": "The deleted environment's unique ID."
-                      }
-                  }
-              }
-          }
-      }
 order: 1000

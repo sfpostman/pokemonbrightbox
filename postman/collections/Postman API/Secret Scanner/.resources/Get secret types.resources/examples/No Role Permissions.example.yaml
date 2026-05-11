@@ -14,22 +14,4 @@ response:
           "title": "Only members with Superadmin, Admin, or Workspace Admin roles can view the detected secrets.",
           "type": "FORBIDDEN"
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "instance": {
-                  "type": "string"
-              },
-              "status": {
-                  "type": "integer"
-              },
-              "title": {
-                  "type": "string"
-              },
-              "type": {
-                  "type": "string"
-              }
-          }
-      }
 order: 3000

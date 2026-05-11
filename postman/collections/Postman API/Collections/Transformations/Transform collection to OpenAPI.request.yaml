@@ -15,39 +15,9 @@ queryParams:
       Return the OpenAPI definition in the given format:
       - `json` (default)
       - `yaml`
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "default": "json",
-            "enum": [
-              "json",
-              "yaml"
-            ],
-            "uniqueItems": false
-          }
-        }
-      }
 pathVariables:
   - key: collectionId
     value: ""
     description: The collection's ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "uniqueItems": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 examples: ./.resources/Transform collection to OpenAPI.resources/examples
 order: 1000

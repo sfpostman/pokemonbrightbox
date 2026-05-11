@@ -15,42 +15,5 @@ body:
         "displayName": "{{userGroup}}",
         "members": []
     }
-  $type: |-
-    {
-        "type": "object",
-        "properties": {
-            "schemas": {
-                "type": "array",
-                "description": "The [SCIM schema URI](https://www.iana.org/assignments/scim/scim.xhtml).",
-                "items": {
-                    "type": "string",
-                    "format": "uri",
-                    "enum": ["urn:ietf:params:scim:schemas:core:2.0:Group"]
-                }
-            },
-            "displayName": {
-                "type": "string",
-                "description": "The group's display name."
-            },
-            "members": {
-                "type": "array",
-                "description": "An object containing the SCIM users to assign to the group.",
-                "items": {
-                    "type": "object",
-                    "description": "An object containing the SCIM users to assign to the group.",
-                    "properties": {
-                        "value": {
-                            "type": "string",
-                            "description": "The user's SCIM ID."
-                        },
-                        "display": {
-                            "type": "string",
-                            "description": "The user's display name."
-                        }
-                    }
-                }
-            }
-        }
-    }
 examples: ./.resources/Create a group.resources/examples
 order: 4000

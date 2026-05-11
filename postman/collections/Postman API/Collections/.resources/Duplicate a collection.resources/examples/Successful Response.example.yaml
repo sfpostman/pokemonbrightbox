@@ -23,23 +23,4 @@ response:
               "status": "processing"
           }
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "task": {
-                  "type": "object",
-                  "properties": {
-                      "id": {
-                          "type": "string",
-                          "description": "The duplication task's ID."
-                      },
-                      "status": {
-                          "type": "string",
-                          "description": "The status of the collection duplication task."
-                      }
-                  }
-              }
-          }
-      }
 order: 1000

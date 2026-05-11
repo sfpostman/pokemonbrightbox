@@ -43,42 +43,4 @@ response:
               }
           ]
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "roles": {
-                  "type": "array",
-                  "items": {
-                      "type": "object",
-                      "properties": {
-                          "group": {
-                              "type": "array",
-                              "description": "A list of user group IDs assigned to the role.",
-                              "items": {
-                                  "type": "string",
-                                  "description": "The user group's ID or SCIM ID."
-                              }
-                          },
-                          "user": {
-                              "type": "array",
-                              "description": "A list of user IDs assigned to the role.",
-                              "items": {
-                                  "type": "string",
-                                  "description": "The user's ID or SCIM ID."
-                              }
-                          },
-                          "id": {
-                              "type": "string",
-                              "description": "The role's ID."
-                          },
-                          "displayName": {
-                              "type": "string",
-                              "description": "The role's display name."
-                          }
-                      }
-                  }
-              }
-          }
-      }
 order: 4000

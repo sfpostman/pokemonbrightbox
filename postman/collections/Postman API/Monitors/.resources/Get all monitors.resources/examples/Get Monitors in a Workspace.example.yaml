@@ -27,48 +27,4 @@ response:
               "limit": 25
           }
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "monitors": {
-                  "type": "array",
-                  "description": "A list of monitors.",
-                  "items": {
-                      "type": "object",
-                      "description": "Information about the monitor.",
-                      "properties": {
-                          "id": {
-                              "type": "string",
-                              "description": "The monitor's ID."
-                          },
-                          "name": {
-                              "type": "string",
-                              "description": "The monitor's name."
-                          },
-                          "active": {
-                              "type": "boolean",
-                              "description": "Whether the monitor is active (`true`) or inactive (`false`)."
-                          },
-                          "uid": {
-                              "type": "string",
-                              "description": "The monitor's unique ID."
-                          },
-                          "owner": {
-                              "type": "integer",
-                              "description": "The ID of the user that created the monitor."
-                          },
-                          "collectionUid": {
-                              "type": "string",
-                              "description": "The unique ID of the monitor's associated collection."
-                          },
-                          "environmentUid": {
-                              "type": "string",
-                              "description": "The unique ID of the monitor's associated environment."
-                          }
-                      }
-                  }
-              }
-          }
-      }
 order: 2000

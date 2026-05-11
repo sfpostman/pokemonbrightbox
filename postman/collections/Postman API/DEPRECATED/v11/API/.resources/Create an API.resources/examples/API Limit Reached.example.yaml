@@ -30,27 +30,4 @@ response:
               "message": "You can create up to 3 APIs on your current plan."
           }
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "type": {
-                  "type": "string",
-                  "description": "The type of error."
-              },
-              "title": {
-                  "type": "string",
-                  "description": "A short summary of the problem."
-              },
-              "message": {
-                  "type": "string",
-                  "description": "The error message."
-
-              },
-              "detail": {
-                  "type": "object",
-                  "description": "Information about the error."
-              }
-          }
-      }
 order: 5000

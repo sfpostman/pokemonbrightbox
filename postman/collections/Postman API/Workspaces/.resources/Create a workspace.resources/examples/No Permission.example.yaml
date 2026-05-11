@@ -28,35 +28,4 @@ response:
               "instance": ""
           }
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "error": {
-                  "type": "object",
-                  "properties": {
-                      "status": {
-                          "type": "integer",
-                          "description": "The error's HTTP status code."
-                      },
-                      "name": {
-                          "type": "string",
-                          "description": "The error name."
-                      },
-                      "message": {
-                          "type": "string",
-                          "description": "The error message."
-                      },
-                      "detail": {
-                          "type": "string",
-                          "description": "Information about the error."
-                      },
-                      "instance": {
-                          "type": "string",
-                          "description": "The URI reference that identifies the specific occurrence of the problem."
-                      }
-                  }
-              }
-          }
-      }
 order: 11000

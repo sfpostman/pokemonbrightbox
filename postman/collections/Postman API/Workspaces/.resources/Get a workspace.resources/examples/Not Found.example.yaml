@@ -17,27 +17,4 @@ response:
               "statusCode": 404
           }
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "error": {
-                  "type": "object",
-                  "properties": {
-                      "name": {
-                          "type": "string",
-                          "description": "The error name."
-                      },
-                      "message": {
-                          "type": "string",
-                          "description": "The error message."
-                      },
-                      "statusCode": {
-                          "type": "integer",
-                          "description": "The error's HTTP status code."
-                      }
-                  }
-              }
-          }
-      }
 order: 7000

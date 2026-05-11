@@ -6,19 +6,5 @@ pathVariables:
   - key: taskId
     value: ""
     description: The task's ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "uniqueItems": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 examples: ./.resources/Get async collection update status.resources/examples
 order: 19000

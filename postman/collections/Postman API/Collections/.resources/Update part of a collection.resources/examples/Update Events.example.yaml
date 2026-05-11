@@ -48,27 +48,4 @@ response:
               "description": "This is a sample collection that makes a request to the Postman Echo service. It returns a list of request headers sent by an HTTP client."
           }
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "collection": {
-                  "type": "object",
-                  "properties": {
-                      "id": {
-                          "type": "string",
-                          "description": "The collection's ID."
-                      },
-                      "name": {
-                          "type": "string",
-                          "description": "The collection's name."
-                      },
-                      "description": {
-                          "type": "string",
-                          "description": "The collection's description."
-                      }
-                  }
-              }
-          }
-      }
 order: 3000

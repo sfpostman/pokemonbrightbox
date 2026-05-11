@@ -40,33 +40,4 @@ response:
               }
           ]
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "roles": {
-                  "type": "array",
-                  "items": {
-                      "type": "object",
-                      "properties": {
-                          "id": {
-                              "type": "string",
-                              "description": "The role's ID."
-                          },
-                          "displayName": {
-                              "type": "string",
-                              "description": "The role's display name."
-                          },
-                          "user": {
-                              "type": "array",
-                              "items": {
-                                  "type": "string",
-                                  "description": "The user group's ID or SCIM ID."
-                              }
-                          }
-                      }
-                  }
-              }
-          }
-      }
 order: 2000

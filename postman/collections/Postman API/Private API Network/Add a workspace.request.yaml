@@ -10,24 +10,5 @@ body:
             "id": "{{workspaceId}}"
         }
     }
-  $type: |-
-    {
-        "type": "object",
-        "properties": {
-            "required": ["workspace"],
-            "workspace": {
-                "type": "object",
-                "required": [
-                    "id"
-                ],
-                "properties": {
-                    "id": {
-                        "type": "string",
-                        "description": "The workspace's ID."
-                    }
-                }
-            }
-        }
-    }
 examples: ./.resources/Add a workspace.resources/examples
 order: 3000

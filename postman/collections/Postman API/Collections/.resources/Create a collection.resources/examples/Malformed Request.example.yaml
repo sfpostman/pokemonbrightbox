@@ -53,30 +53,4 @@ response:
               ]
           }
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "error": {
-                  "type": "object",
-                  "properties": {
-                      "name": {
-                          "type": "string",
-                          "description": "The error name."
-                      },
-                      "message": {
-                          "type": "string",
-                          "description": "The error message."
-                      },
-                      "details": {
-                          "type": "array",
-                          "description": "Details about the occurrence of the error.",
-                          "items": {
-                              "type": "string"
-                          }
-                      }
-                  }
-              }
-          }
-      }
 order: 3000

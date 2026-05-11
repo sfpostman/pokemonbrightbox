@@ -20,105 +20,21 @@ headers:
   - key: Accept
     value: application/vnd.api.v10+json
     description: The request header required to use the endpoint.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "enum": [
-              "application/vnd.api.v10+json"
-            ],
-            "uniqueItems": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 pathVariables:
   - key: apiId
     value: "{{apiId}}"
     description: The API's ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "uniqueItems": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
   - key: schemaId
     value: "{{schemaId}}"
     description: The API schema's ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "uniqueItems": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
   - key: filePath
     value: "{{filePath}}"
     description: The path to the schema file.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "uniqueItems": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 body:
   type: json
   content: |-
     {
         "content": "{{fileContent}}"
-    }
-  $type: |-
-    {
-        "type": "object",
-        "required": ["content"],
-        "properties": {
-            "name": {
-                "type": "string",
-                "description": "The schema file's name."
-            },
-            "root": {
-                "type": "object",
-                "description": "Information about the schema's root file.",
-                "properties": {
-                    "enabled": {
-                        "type": "boolean",
-                        "description": "If true, tag the file as the root file. You can only update the root tag for protobuf specifications."
-                    }
-                }
-            },
-            "content": {
-                "type": "string",
-                "description": "The schema file's stringified contents."
-            }
-        }
     }
 examples: ./.resources/Create or update a schema file.resources/examples
 order: 2000

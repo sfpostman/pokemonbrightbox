@@ -7,16 +7,5 @@ queryParams:
     value: ""
     disabled: true
     description: Return only results found in the given workspace ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "uniqueItems": false
-          }
-        }
-      }
 examples: ./.resources/Get all environments.resources/examples
 order: 7000

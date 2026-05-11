@@ -6,54 +6,15 @@ queryParams:
   - key: workspace
     value: ""
     description: The workspace ID in which to fork the environment.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "uniqueItems": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 pathVariables:
   - key: environmentUid
     value: ""
     description: The environment's unique ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "uniqueItems": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 body:
   type: json
   content: |-
     {
         "forkName": "{{forkLabel}}"
-    }
-  $type: |-
-    {
-        "type": "object",
-        "required": ["forkName"],
-        "properties": {
-            "forkName": {
-                "type": "string",
-                "description": "The forked environment's label."
-            }
-        }
     }
 examples: ./.resources/Create a fork.resources/examples
 order: 2000

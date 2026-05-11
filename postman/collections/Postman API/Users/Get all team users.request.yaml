@@ -7,16 +7,5 @@ queryParams:
     value: ""
     disabled: true
     description: Filter results by the given group ID. To get group IDs, use the GET `/groups` endpoint.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "integer",
-            "deprecated": false,
-            "uniqueItems": false
-          }
-        }
-      }
 examples: ./.resources/Get all team users.resources/examples
 order: 2000

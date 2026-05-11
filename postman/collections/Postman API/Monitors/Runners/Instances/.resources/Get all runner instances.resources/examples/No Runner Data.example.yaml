@@ -20,32 +20,4 @@ response:
           },
           "data": []
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "meta": {
-                  "type": "object",
-                  "properties": {
-                      "model": {
-                          "type": "string",
-                          "description": "The `runnerInstance` value."
-                      },
-                      "action": {
-                          "type": "string",
-                          "description": "The `find` value."
-                      },
-                      "url": {
-                          "type": "string",
-                          "format": "uri",
-                          "description": "The reference URL to the resource."
-                      }
-                  }
-              },
-              "data": {
-                  "type": "array",
-                  "description": "A list of all runner instances."
-              }
-          }
-      }
 order: 3000

@@ -22,37 +22,9 @@ pathVariables:
   - key: apiId
     value: "{{apiId}}"
     description: The API's ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "uniqueItems": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
   - key: commentId
     value: "{{commentId}}"
     description: The comment's ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "integer",
-            "deprecated": false,
-            "uniqueItems": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 body:
   type: json
   content: |-
@@ -62,38 +34,6 @@ body:
             "{{userName}}": {
                 "type": "user",
                 "id": "{{userId}}"
-            }
-        }
-    }
-  $type: |-
-    {
-        "type": "object",
-        "required": ["body"],
-        "properties": {
-            "body": {
-                "type": "string",
-                "description": "The contents of the comment."
-            },
-            "tags": {
-                "type": "object",
-                "description": "Information about users tagged in the `body` comment.",
-                "properties": {
-                    "{{userName}}": {
-                        "type": "object",
-                        "description": "An object that contains information about the tagged user. The object's name is the user's Postman username. For example, `@user-postman`.",
-                        "properties": {
-                            "type": {
-                                "type": "string",
-                                "description": "The `user` value.",
-                                "enum": ["user"]
-                            },
-                            "id": {
-                                "type": "string",
-                                "description": "The user's ID."
-                            }
-                        }
-                    }
-                }
             }
         }
     }

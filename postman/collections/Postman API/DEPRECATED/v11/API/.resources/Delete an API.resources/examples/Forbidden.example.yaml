@@ -20,22 +20,4 @@ response:
           "title": "You are not permitted to perform the action.",
           "detail": "You do not have access to perform this operation."
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "type": {
-                  "type": "string",
-                  "description": "The type of error."
-              },
-              "title": {
-                  "type": "string",
-                  "description": "A short summary of the problem."
-              },
-              "detail": {
-                  "type": "string",
-                  "description": "Information about the error."
-              }
-          }
-      }
 order: 3000

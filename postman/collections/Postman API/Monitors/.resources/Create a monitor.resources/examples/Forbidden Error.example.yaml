@@ -28,23 +28,4 @@ response:
               "message": "You need read access to this collection in order to perform this action."
           }
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "error": {
-                  "type": "object",
-                  "properties": {
-                      "name": {
-                          "type": "string",
-                          "description": "The error name."
-                      },
-                      "message": {
-                          "type": "string",
-                          "description": "The error message."
-                      }
-                  }
-              }
-          }
-      }
 order: 8000

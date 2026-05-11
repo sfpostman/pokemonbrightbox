@@ -25,24 +25,4 @@ response:
               "name": "Private Workspace"
           }
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "workspace": {
-                  "type": "object",
-                  "description": "Information about the created workspace.",
-                  "properties": {
-                      "id": {
-                          "type": "string",
-                          "description": "The workspace's ID."
-                      },
-                      "name": {
-                          "type": "string",
-                          "description": "The workspace's name."
-                      }
-                  }
-              }
-          }
-      }
 order: 3000

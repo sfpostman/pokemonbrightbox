@@ -6,18 +6,5 @@ pathVariables:
   - key: serviceId
     value: ""
     description: The discovered service's ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 examples: ./.resources/Get a discovered service's information.resources/examples
 order: 2000

@@ -11,34 +11,11 @@ pathVariables:
   - key: specId
     value: ""
     description: The specification's ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 body:
   type: json
   content: |-
     {
         "name": "{{versionTagName}}"
-    }
-  $type: |-
-    {
-        "type": "object",
-        "required": ["name"],
-        "properties": {
-            "name": {
-                "type": "string",
-                "description": "The version tag's name."
-            }
-        }
     }
 examples: ./.resources/Create a version tag.resources/examples
 order: 1000

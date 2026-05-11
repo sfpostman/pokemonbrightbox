@@ -29,24 +29,6 @@ queryParams:
       * `private`
       * `public`
       * `partner`
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "enum": [
-              "personal",
-              "team",
-              "private",
-              "public",
-              "partner"
-            ],
-            "uniqueItems": false
-          }
-        }
-      }
   - key: include
     value: ""
     disabled: true
@@ -54,46 +36,18 @@ queryParams:
       Include the following information in the endpoint's response:
       - `mocks:deactivated` — Include all deactivated mock servers in the response.
       - `scim` — Return the SCIM user IDs of the workspace creator and who last modified it.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "enum": [
-              "mocks:deactivated",
-              "scim"
-            ],
-            "uniqueItems": false
-          }
-        }
-      }
   - key: createdBy
     value: ""
     disabled: true
     description: Return only workspaces created by a specific user ID. For multiple users, pass this value as a comma-separated list of user IDs. The response only returns workspaces that you have access to.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "integer",
-            "deprecated": false,
-            "uniqueItems": false
-          }
-        }
-      }
   - key: elementType
     value: ""
     disabled: true
     description: Filter results to return the workspace where the given element type is located. If you pass this query parameter, you must also pass the `elementId` query parameter.
-    $type: string
   - key: elementId
     value: ""
     disabled: true
     description: Filter results to return the workspace where the given element's ID is located. When filtering by collection, you must use the collection's unique ID (`userId`-`collection`). If you pass this query parameter, you must also pass the `elementType` query parameter.
-    $type: string
   - key: limit
     value: ""
     disabled: true

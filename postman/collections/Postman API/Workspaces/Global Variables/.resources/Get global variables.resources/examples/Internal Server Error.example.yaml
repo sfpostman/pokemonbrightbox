@@ -15,23 +15,4 @@ response:
           "title": "Internal server error",
           "detail": "Details about the error"
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "type": {
-                  "type": "string",
-                  "format": "uri",
-                  "description": "The [URI reference](https://www.rfc-editor.org/rfc/rfc3986) that identifies the type of problem."
-              },
-              "title": {
-                  "type": "string",
-                  "description": "A short summary of the problem."
-              },
-              "detail": {
-                  "type": "string",
-                  "description": "Information about the error."
-              }
-          }
-      }
 order: 2000

@@ -14,20 +14,6 @@ queryParams:
       A workspace ID in which to create the webhook.
 
       If you do not include this parameter, the system creates the webhook in the oldest personal Internal workspace you own.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "uniqueItems": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 body:
   type: json
   content: |-
@@ -36,30 +22,6 @@ body:
             "name": "{{webhookName}}",
             "collection": "{{collectionUid}}",
             "environment": "{{environmentUid}}"
-        }
-    }
-  $type: |-
-    {
-        "type": "object",
-        "properties": {
-            "webhook": {
-                "type": "object",
-                "required": ["name", "collection"],
-                "properties": {
-                    "name": {
-                        "type": "string",
-                        "description": "The webhook's name. On success, the system creates a new monitor with this name in the **Monitors** tab."
-                    },
-                    "collection": {
-                        "type": "string",
-                        "description": "The unique ID of the collection to trigger when calling this webhook."
-                    },
-                    "environment": {
-                        "type": "string",
-                        "description": "The unique ID of the environment to trigger when calling this webhook."
-                    }
-                }
-            }
         }
     }
 examples: ./.resources/Create a webhook.resources/examples

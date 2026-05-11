@@ -9,19 +9,5 @@ pathVariables:
   - key: keyId
     value: ""
     description: The collection access key's ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "uniqueItems": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 examples: ./.resources/Delete a collection access key.resources/examples
 order: 2000

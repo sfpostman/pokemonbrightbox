@@ -14,31 +14,9 @@ queryParams:
     value: ""
     disabled: true
     description: Filter the results by a collection's unique ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "uniqueItems": false
-          }
-        }
-      }
   - key: cursor
     value: ""
     disabled: true
     description: The pointer to the first record of the set of paginated results. To view the next response, use the `nextCursor` value for this parameter.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "uniqueItems": false
-          }
-        }
-      }
 examples: ./.resources/Get collection access keys.resources/examples
 order: 1000

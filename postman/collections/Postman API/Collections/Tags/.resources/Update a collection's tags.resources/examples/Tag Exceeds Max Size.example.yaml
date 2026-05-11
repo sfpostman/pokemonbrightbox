@@ -25,22 +25,4 @@ response:
           "detail": "body/tags/0/slug must NOT have more than 64 characters",
           "status": 400
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "title": {
-                  "type": "string",
-                  "description": "A short summary of the problem."
-              },
-              "detail": {
-                  "type": "string",
-                  "description": "Information about the error."
-              },
-              "status": {
-                  "type": "integer",
-                  "description": "The error's HTTP status code."
-              }
-          }
-      }
 order: 2000

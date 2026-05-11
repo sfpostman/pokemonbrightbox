@@ -938,28 +938,4 @@ response:
               }
           ]
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "data": {
-                  "type": "array",
-                  "description": "A list of audit log event actions.",
-                  "items": {
-                      "type": "object",
-                      "description": "Information about the audit log event action.",
-                      "properties": {
-                          "code": {
-                              "type": "string",
-                              "description": "The audit log event action."
-                          },
-                          "name": {
-                              "type": "string",
-                              "description": "The audit log event's display name as it appears in Postman's Audit Logs dashboard."
-                          }
-                      }
-                  }
-              }
-          }
-      }
 order: 1000

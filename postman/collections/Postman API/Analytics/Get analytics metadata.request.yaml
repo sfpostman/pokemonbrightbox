@@ -10,12 +10,10 @@ queryParams:
       A comma-separated list of the additional information to include in the response. Accepts the `parameters` and `response` values.
 
       When you pass this query parameter and its values, the response provides detailed information, including parameters and response schemas for the given metrics.
-    $type: string
   - key: resources
     value: user,workspace,team
     disabled: true
     description: A comma-separated list of resource types to filter the metrics by. Accepts the `user`, `workspace`, and `team` values.
-    $type: string
   - key: metrics
     value: ""
     disabled: true
@@ -23,6 +21,5 @@ queryParams:
       A comma-separated list of metrics values to use to filter the response.
 
       If you don't pass this query parameter, then the response returns all metadata for all available metrics.
-    $type: string
 examples: ./.resources/Get analytics metadata.resources/examples
 order: 2000

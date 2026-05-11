@@ -32,41 +32,4 @@ response:
           "updatedBy": 12345678,
           "id": "b4fc1bdc-6587-4f9b-95c9-f768146089b4"
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "name": {
-                  "type": "string",
-                  "description": "The API specification's name."
-              },
-              "type": {
-                  "type": "string",
-                  "enum": ["OPENAPI:2.0", "OPENAPI:3.0", "OPENAPI:3.1", "ASYNCAPI:2.0", "PROTOBUF:2", "PROTOBUF:3", "GRAPHQL"],
-                  "description": "The API specification's type."
-              },
-              "updatedAt": {
-                  "type": "string",
-                  "format": "date-time",
-                  "description": "The date and time at which the file was last updated."
-              },
-              "createdAt": {
-                  "type": "string",
-                  "format": "date-time",
-                  "description": "The date and time at which the specification file was created."
-              },
-              "createdBy": {
-                  "type": "integer",
-                  "description": "The user ID of the user that created the file."
-              },
-              "updatedBy": {
-                  "type": "integer",
-                  "description": "The user ID of the user that last updated the specification file."
-              },
-              "id": {
-                  "type": "string",
-                  "description": "The specification's ID."
-              }
-          }
-      }
 order: 6000

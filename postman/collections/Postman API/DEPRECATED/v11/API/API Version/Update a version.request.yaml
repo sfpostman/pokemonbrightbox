@@ -15,79 +15,19 @@ headers:
   - key: Accept
     value: application/vnd.api.v10+json
     description: The request header required to use the endpoint.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "enum": [
-              "application/vnd.api.v10+json"
-            ],
-            "uniqueItems": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 pathVariables:
   - key: apiId
     value: "{{apiId}}"
     description: The API's ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "uniqueItems": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
   - key: versionId
     value: "{{versionId}}"
     description: The API's version ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "uniqueItems": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 body:
   type: json
   content: |-
     {
         "name": "{{apiVersionName}}",
         "releaseNotes": "{{releaseNotes}}"
-    }
-  $type: |-
-    {
-        "type": "object",
-        "required": ["name"],
-        "properties": {
-            "name": {
-                "type": "string",
-                "description": "The version's name."
-            },
-            "releaseNotes": {
-                "type": "string",
-                "description": "The version's Markdown-supported release notes."
-            }
-        }
     }
 examples: ./.resources/Update a version.resources/examples
 order: 4000

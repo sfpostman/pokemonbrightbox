@@ -44,47 +44,4 @@ response:
               }
           ]
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "targetEntity": {
-                  "type": "string",
-                  "description": "The target entity."
-              },
-              "targetEntityId": {
-                  "type": "string",
-                  "description": "The target entity's ID."
-              },
-              "action": {
-                  "type": "string",
-                  "description": "The action peformed."
-              },
-              "results": {
-                  "type": "array",
-                  "description": "A list of the action results.",
-                  "items": {
-                      "type": "object",
-                      "properties": {
-                          "userId": {
-                              "type": "string",
-                              "description": "The user ID."
-                          },
-                          "status": {
-                              "type": "string",
-                              "description": "The removal status:\n- `REMOVED` — The partner was successfully removed.\n- `FAILED` — The partner's removal failed."
-                          },
-                          "message": {
-                              "type": "string",
-                              "description": "A response message."
-                          },
-                          "error": {
-                              "type": "string",
-                              "description": "If the endpoint returns the `FAILED` status, the error message detailing the error."
-                          }
-                      }
-                  }
-              }
-          }
-      }
 order: 5000

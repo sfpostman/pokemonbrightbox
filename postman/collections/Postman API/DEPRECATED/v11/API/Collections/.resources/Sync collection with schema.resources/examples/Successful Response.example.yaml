@@ -18,14 +18,4 @@ response:
       {
           "taskId": "66ae9950-0869-4e65-96b0-1e0e47e771af"
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "taskId": {
-                  "type": "string",
-                  "description": "The created task ID. You can use this ID to track the status of syncing an API collection with an API schema."
-              }
-          }
-      }
 order: 1000

@@ -19,47 +19,6 @@ body:
       "sp_def": "<integer>",
       "speed": "<integer>"
     }
-  $type: |-
-    {
-      "type": "object",
-      "properties": {
-        "number": {
-          "type": "string"
-        },
-        "name": {
-          "type": "string"
-        },
-        "type": {
-          "type": "string"
-        },
-        "total": {
-          "type": "integer"
-        },
-        "hp": {
-          "type": "integer"
-        },
-        "attack": {
-          "type": "integer"
-        },
-        "defense": {
-          "type": "integer"
-        },
-        "sp_atk": {
-          "type": "integer"
-        },
-        "sp_def": {
-          "type": "integer"
-        },
-        "speed": {
-          "type": "integer"
-        }
-      },
-      "required": [
-        "number",
-        "name",
-        "type"
-      ]
-    }
 scripts:
   - type: afterResponse
     code: |-
@@ -68,4 +27,4 @@ scripts:
       });
     language: text/javascript
 examples: ./.resources/Create a new Pokemon.resources/examples
-order: 2000
+order: 3000

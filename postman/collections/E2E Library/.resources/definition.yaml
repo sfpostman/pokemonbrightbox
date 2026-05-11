@@ -4,7 +4,7 @@ variables:
   bookId: ""
   tempBookTitle: ""
 auth:
-  - id: 3ec3598b-7f6d-41c3-9a06-3654550efb67
+  - id: 4dc39d54-6116-490d-97ca-f47aaef2f248
     type: apikey
     name: apikey auth
     credentials:

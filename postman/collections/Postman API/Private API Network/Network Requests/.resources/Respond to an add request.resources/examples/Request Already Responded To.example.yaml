@@ -20,18 +20,4 @@ response:
           "name": "requestAlreadyResponded",
           "message": "This request is already responded."
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "name": {
-                  "type": "string",
-                  "description": "The error name."
-              },
-              "message": {
-                  "type": "string",
-                  "description": "The error message."   
-              }
-          }
-      }
 order: 6000

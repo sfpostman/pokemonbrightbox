@@ -6,19 +6,5 @@ pathVariables:
   - key: userId
     value: ""
     description: The user's ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "integer",
-            "deprecated": false,
-            "uniqueItems": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 examples: ./.resources/Get a team user.resources/examples
 order: 3000

@@ -33,37 +33,5 @@ body:
             "agentFramework": "{{agentFramework}}" // openai, mistral, gemini, anthropic, langchain, or autogen (Python only)
         }
     }
-  $type: |-
-    {
-        "type": "object",
-        "required": ["collectionId", "requestId", "config"],
-        "properties": {
-            "collectionId": {
-                "type": "string",
-                "description": "The Public API Network collection's unique ID."
-            },
-            "requestId": {
-                "type": "string",
-                "description": "The public collection's request ID."
-            },
-            "config": {
-                "type": "object",
-                "description": "Information about the request.",
-                "required": ["language", "agentFramework"],
-                "properties": {
-                    "language": {
-                        "type": "string",
-                        "description": "The programming language to use.",
-                        "enum": ["javascript", "typescript", "python"]
-                    },
-                    "agentFramework": {
-                        "type": "string",
-                        "description": "The AI agent framework to use. Note that the `autogen` framework only supports the `python` language.",
-                        "enum": ["openai", "mistral", "gemini", "anthropic", "langchain", "autogen"]
-                    }
-                }
-            }
-        }
-    }
 examples: ./.resources/Generate a tool.resources/examples
 order: 1000

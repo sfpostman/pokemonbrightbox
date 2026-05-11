@@ -16,24 +16,4 @@ response:
               "sourceId": "12345678-45499451-e894-41b8-8c66-8191ab64932a"
           }
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "collection": {
-                  "type": "object",
-                  "description": "Information about the updated collection fork.",
-                  "properties": {
-                      "destinationId": {
-                          "type": "string",
-                          "description": "The ID of the forked collection the changes were pulled into."
-                      },
-                      "sourceId": {
-                          "type": "string",
-                          "description": "The ID of the source collection the changes were pulled from."
-                      }
-                  }
-              }
-          }
-      }
 order: 1000

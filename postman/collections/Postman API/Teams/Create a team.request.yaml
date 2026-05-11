@@ -7,39 +7,12 @@ headers:
     value: scim
     disabled: true
     description: Use SCIM user and group IDs instead of Postman user IDs.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "enum": [
-              "scim"
-            ]
-          }
-        }
-      }
 body:
   type: json
   content: |-
     {
         "name": "{{name}}",
         "description": "{{description}}"
-    }
-  $type: |-
-    {
-        "type": "object",
-        "required": ["name"],
-        "properties": {
-            "name": {
-                "type": "string",
-                "description": "The team's name. Accepts only alphanumeric characters and spaces."
-            },
-            "description": {
-                "type": ["string", "null"],
-                "description": "The team's description."
-            }
-        }
     }
 examples: ./.resources/Create a team.resources/examples
 order: 4000

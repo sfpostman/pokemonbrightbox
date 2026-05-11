@@ -6,19 +6,6 @@ pathVariables:
   - key: teamId
     value: ""
     description: The team's ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "integer",
-            "deprecated": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 body:
   type: json
   content: ""

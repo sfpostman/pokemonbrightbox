@@ -13,13 +13,4 @@ response:
       {
           "collections": []
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "collections": {
-                  "type": "array"
-              }
-          }
-      }
 order: 4000

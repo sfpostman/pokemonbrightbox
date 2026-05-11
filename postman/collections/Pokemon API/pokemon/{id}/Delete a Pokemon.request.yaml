@@ -7,19 +7,6 @@ pathVariables:
   - key: id
     value: <string>
     description: Pokédex number (zero-padded, e.g. 0006)
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "default": "<string>"
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 body:
   type: text
   content: ""

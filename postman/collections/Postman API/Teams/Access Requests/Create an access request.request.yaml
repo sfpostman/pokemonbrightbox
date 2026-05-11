@@ -12,35 +12,10 @@ headers:
     value: scim
     disabled: true
     description: Use SCIM user and group IDs instead of Postman user IDs.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "enum": [
-              "scim"
-            ]
-          }
-        }
-      }
 pathVariables:
   - key: teamId
     value: ""
     description: The team's ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "integer",
-            "deprecated": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 body:
   type: json
   content: |-
@@ -54,73 +29,6 @@ body:
         "role": "{{entityRole}}",
         "reason": "{{reason}}",
         "requestType": "{{reasonType}}"
-    }
-  $type: |-
-    {
-        "type": "object",
-        "required": [
-            "entityList",
-            "role",
-            "reason",
-            "requestType"
-        ],
-        "properties": {
-            "entityList": {
-                "type": "array",
-                "description": "A list of the entities for which to create access requests.",
-                "items": {
-                    "type": "object",
-                    "required": [
-                        "entityType",
-                        "entityId"
-                    ],
-                    "properties": {
-                        "entityType": {
-                            "type": "string",
-                            "enum": [
-                                "user",
-                                "team",
-                                "group",
-                                "organization"
-                            ],
-                            "description": "The entity type."
-                        },
-                        "entityId": {
-                            "type": "string",
-                            "description": "The entity's ID."
-                        }
-                    }
-                }
-            },
-            "role": {
-                "type": "string",
-                "description": "The team role to request.",
-                "enum": [
-                    "TEAM_MANAGER",
-                    "TEAM_DEVELOPER",
-                    "TEAM_GUEST_DEVELOPER",
-                    "TEAM_GUEST_VIEWER",
-                    "TEAM_PARTNER_MANAGER",
-                    "TEAM_PARTNER_LEAD",
-                    "TEAM_GUEST",
-                    "TEAM_PARTNER",
-                    "TEAM_COMMUNITY_MANAGER"
-                ]
-            },
-            "reason": {
-                "type": "string",
-                "description": "The reason for the access request."
-            },
-            "requestType": {
-                "type": "string",
-                "description": "The type of access request.",
-                "enum": [
-                    "REQUEST_TO_ADD_MEMBERS",
-                    "REQUEST_TO_JOIN",
-                    "UPGRADE_ROLE"
-                ]
-            }
-        }
     }
 examples: ./.resources/Create an access request.resources/examples
 order: 1000

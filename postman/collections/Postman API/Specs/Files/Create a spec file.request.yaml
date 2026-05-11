@@ -17,41 +17,12 @@ pathVariables:
   - key: specId
     value: ""
     description: The spec's ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "uniqueItems": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 body:
   type: json
   content: |-
     {
         "path": "{{filePath}}",
         "content": "{{fileContent}}"
-    }
-  $type: |-
-    {
-        "type": "object",
-        "required": ["path", "content"],
-        "properties": {
-            "path": {
-                "type": "string",
-                "description": "The file's path. Accepts JSON or YAML files."
-            },
-            "content": {
-                "type": "string",
-                "description": "The file's stringified contents."
-            }
-        }
     }
 examples: ./.resources/Create a spec file.resources/examples
 order: 3000

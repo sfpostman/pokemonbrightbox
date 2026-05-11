@@ -11,19 +11,6 @@ pathVariables:
   - key: teamId
     value: ""
     description: The team's ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "integer",
-            "deprecated": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 body:
   type: json
   content: |-
@@ -34,30 +21,6 @@ body:
                 "entityId": "{{entityId}}"
             }
         ]
-    }
-  $type: |-
-    {
-        "type": "object",
-        "properties": {
-            "entities": {
-                "type": "array",
-                "description": "A list of entities to remove.",
-                "items": {
-                    "type": "object",
-                    "properties": {
-                        "entityType": {
-                            "type": "string",
-                            "enum": ["user", "team", "group", "organization"],
-                            "description": "The entity type."
-                        },
-                        "entityId": {
-                            "type": "string",
-                            "description": "The entity's ID."
-                        }
-                    }
-                }
-            }
-        }
     }
 examples: ./.resources/Remove team members.resources/examples
 order: 7000

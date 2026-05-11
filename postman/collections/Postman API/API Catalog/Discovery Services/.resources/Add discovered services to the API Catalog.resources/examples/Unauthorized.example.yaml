@@ -24,27 +24,4 @@ response:
           "title": "Unauthorized",
           "detail": "Authentication required"
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "type": {
-                  "type": "string",
-                  "format": "uri",
-                  "description": "The type of error."
-              },
-              "status": {
-                  "type": "integer",
-                  "description": "The error's HTTP status code."
-              },
-              "title": {
-                  "type": "string",
-                  "description": "A short summary of the problem."
-              },
-              "detail": {
-                  "type": "string",
-                  "description": "Information about the error."
-              }
-          }
-      }
 order: 8000

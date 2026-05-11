@@ -11,19 +11,5 @@ pathVariables:
   - key: groupId
     value: ""
     description: The group's ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "uniqueItems": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 examples: ./.resources/Delete a group.resources/examples
 order: 5000

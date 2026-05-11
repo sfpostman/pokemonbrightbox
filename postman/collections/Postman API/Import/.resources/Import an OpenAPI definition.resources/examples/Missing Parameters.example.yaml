@@ -23,32 +23,4 @@ response:
               }
           }
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "error": {
-                  "type": "object",
-                  "properties": {
-                      "name": {
-                          "type": "string",
-                          "description": "The error name."
-                      },
-                      "message": {
-                          "type": "string",
-                          "description": "The error message."
-                      },
-                      "details": {
-                          "type": "object",
-                          "description": "Information about the error.",
-                          "properties": {
-                              "param": {
-                                  "type": "string"
-                              }
-                          }
-                      }
-                  }
-              }
-          }
-      }
 order: 8000

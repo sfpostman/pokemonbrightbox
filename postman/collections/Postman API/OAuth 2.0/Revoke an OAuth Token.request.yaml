@@ -13,16 +13,6 @@ body:
     {
         "token": "{{accessToken}}"
     }
-  $type: |-
-    {
-        "type": "object",
-        "properties": {
-            "token": {
-                "type": "string",
-                "description": "The Postman OAuth 2.0 access token to revoke."
-            }
-        }
-    }
 auth:
   type: noauth
 examples: ./.resources/Revoke an OAuth Token.resources/examples

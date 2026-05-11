@@ -35,35 +35,4 @@ response:
               }
           ]
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "meta": {
-                  "type": "object",
-                  "properties": {
-                      "total": {
-                          "type": "integer"
-                      }
-                  }
-              },
-              "data": {
-                  "type": "array",
-                  "items": {
-                      "type": "object",
-                      "properties": {
-                          "name": {
-                              "type": "string"
-                          },
-                          "id": {
-                              "type": "string"
-                          },
-                          "type": {
-                              "type": "string"
-                          }
-                      }
-                  }
-              }
-          }
-      }
 order: 1000

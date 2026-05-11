@@ -25,24 +25,4 @@ response:
               "name": "Test Workspace"
           }
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "workspace": {
-                  "type": "object",
-                  "description": "Information about the updated workspace.",
-                  "properties": {
-                      "id": {
-                          "type": "string",
-                          "description": "The workspace's ID."
-                      },
-                      "name": {
-                          "type": "string",
-                          "description": "The workspace's name."
-                      }
-                  }
-              }
-          }
-      }
 order: 2000

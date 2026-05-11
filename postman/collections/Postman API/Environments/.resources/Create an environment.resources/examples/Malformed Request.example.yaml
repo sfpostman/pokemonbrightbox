@@ -38,31 +38,4 @@ response:
               ]
           }
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "error": {
-                  "type": "object",
-                  "properties": {
-                      "name": {
-                          "type": "string",
-                          "description": "The error name."
-
-                      },
-                      "message": {
-                          "type": "string",
-                          "description": "The error message."
-                      },
-                      "details": {
-                          "type": "array",
-                          "description": "Information about the error.",
-                          "items": {
-                              "type": "string"
-                          }
-                      }
-                  }
-              }
-          }
-      }
 order: 2000

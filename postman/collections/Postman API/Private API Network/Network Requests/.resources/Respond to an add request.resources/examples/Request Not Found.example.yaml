@@ -20,18 +20,4 @@ response:
           "name": "RequestNotFound",
           "message": "No request found for the corresponding ID"
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "name": {
-                  "type": "string",
-                  "description": "The error name."
-              },
-              "message": {
-                  "type": "string",
-                  "description": "The error message."   
-              }
-          }
-      }
 order: 3000

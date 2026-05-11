@@ -6,89 +6,30 @@ queryParams:
   - key: systemEnvironmentId
     value: ""
     description: The system environment's ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
   - key: collectionId
     value: ""
     disabled: true
     description: Filter results to only the given collection ID's runs.
-    $type: string
   - key: sort
     value: ""
     disabled: true
     description: Sort the results in field:direction order format. Accepts the `timestamp`, `duration`, and `failedAssertions` fields. Supports the `asc` and `desc` directions.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "pattern": "^(timestamp|duration|failedAssertions):(asc|desc)$"
-          }
-        }
-      }
   - key: environmentId
     value: ""
     disabled: true
     description: Filter results to only the given environment ID runs.
-    $type: string
   - key: status
     value: ""
     disabled: true
     description: Filter results by the given run status.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "enum": [
-              "passed",
-              "failed"
-            ]
-          }
-        }
-      }
   - key: limit
     value: ""
     disabled: true
     description: The maximum number of rows to return in the response.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "integer",
-            "default": "20",
-            "minimum": "1",
-            "maximum": "100"
-          }
-        }
-      }
   - key: cursor
     value: ""
     disabled: true
     description: The pointer to the first record of the set of paginated results. To view the next response, use the `nextCursor` value for this parameter.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "pattern": "^[A-Za-z0-9+/=]+$"
-          }
-        }
-      }
 pathVariables:
   - key: serviceId
     value: ""

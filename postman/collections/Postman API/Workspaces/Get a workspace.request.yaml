@@ -25,38 +25,9 @@ queryParams:
       Include the following information in the endpoint's response:
       - `mocks:deactivated` — Include all deactivated mock servers in the response.
       - `scim` — Return the SCIM user IDs of the workspace creator and who last modified it.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "enum": [
-              "mocks:deactivated",
-              "scim"
-            ],
-            "uniqueItems": false
-          }
-        }
-      }
 pathVariables:
   - key: workspaceId
     value: ""
     description: The workspace's ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "uniqueItems": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 examples: ./.resources/Get a workspace.resources/examples
 order: 8000

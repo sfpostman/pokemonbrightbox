@@ -11,20 +11,6 @@ pathVariables:
   - key: groupId
     value: ""
     description: The group's ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "uniqueItems": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 body:
   type: json
   content: |-
@@ -41,49 +27,6 @@ body:
                 }
             }
         ]
-    }
-  $type: |-
-    {
-        "type": "object",
-        "properties": {
-            "schemas": {
-                "type": "array",
-                "description": "The [SCIM schema URI](https://www.iana.org/assignments/scim/scim.xhtml).",
-                "items": {
-                    "type": "string",
-                    "format": "uri",
-                    "enum": ["urn:ietf:params:scim:api:messages:2.0:PutOp"]
-                }
-            },
-            "Operations": {
-                "type": "array",
-                "description": "Information about the group update operation.",
-                "items": {
-                    "type": "object",
-                    "properties": {
-                        "op": {
-                            "type": "string",
-                            "description": "The operation to perform.",
-                            "enum": ["replace", "add", "remove"]
-                        },
-                        "value": {
-                            "type": "object",
-                            "description": "The performed operation's value.",
-                            "properties": {
-                                "id": {
-                                    "type": "string",
-                                    "description": "The group's ID."
-                                },
-                                "displayName": {
-                                    "type": "string",
-                                    "description": "The group's name."
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
     }
 examples: ./.resources/Update a group.resources/examples
 order: 2000

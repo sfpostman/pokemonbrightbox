@@ -28,35 +28,4 @@ response:
               "uid": "12345678-1f0df51a-8658-4ee8-a2a1-d2567dfa09a9"
           }
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "webhook": {
-                  "type": "object",
-                  "properties": {
-                      "id": {
-                          "type": "string",
-                          "description": "The webhook's ID."
-                      },
-                      "name": {
-                          "type": "string",
-                          "description": "The webhook's name."
-                      },
-                      "collection": {
-                          "type": "string",
-                          "description": "The unique ID of the collection that triggers when calling this webhook."
-                      },
-                      "webhookUrl": {
-                          "type": "string",
-                          "description": "The webhook's URL."
-                      },
-                      "uid": {
-                          "type": "string",
-                          "description": "The webhook's unique ID."
-                      }
-                  }
-              }
-          }
-      }
 order: 1000

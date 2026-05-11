@@ -6,19 +6,5 @@ pathVariables:
   - key: groupId
     value: ""
     description: The group's ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "integer",
-            "deprecated": false,
-            "uniqueItems": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 examples: ./.resources/Get a group.resources/examples
 order: 2000

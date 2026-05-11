@@ -262,27 +262,4 @@ response:
               "uid": "12345678-12ece9e1-2abf-4edc-8e34-de66e74114d2"
           }
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "collection": {
-                  "type": "object",
-                  "properties": {
-                      "id": {
-                          "type": "string",
-                          "description": "The collection's ID."
-                      },
-                      "name": {
-                          "type": "string",
-                          "description": "The collection's name."
-                      },
-                      "uid": {
-                          "type": "string",
-                          "description": "The collection's unique ID."
-                      }
-                  }
-              }
-          }
-      }
 order: 1000

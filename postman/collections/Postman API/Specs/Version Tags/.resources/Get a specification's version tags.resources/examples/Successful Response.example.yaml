@@ -25,37 +25,4 @@ response:
               }
           ]
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "meta": {
-                  "type": "object",
-                  "properties": {
-                      "nextCursor": {
-                          "type": ["string", "null"],
-                          "description": "The pagination cursor that points to the next record in the results set."
-                      }
-                  }
-              },
-              "data": {
-                  "type": "array",
-                  "description": "A list of the specification's version tags.",
-                  "items": {
-                      "type": "object",
-                      "description": "Information about the version tag.",
-                      "properties": {
-                          "id": {
-                              "type": "string",
-                              "description": "The version tag's ID."
-                          },
-                          "name": {
-                              "type": "string",
-                              "description": "The version tag's name."
-                          }
-                      }
-                  }
-              }
-          }
-      }
 order: 1000

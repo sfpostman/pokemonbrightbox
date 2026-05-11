@@ -1,0 +1,81 @@
+openapi: 3.1.0
+info:
+  title: E2E Library
+  version: 1.0.0
+  description: ''
+servers:
+  - url: https://library-api.postmanlabs.com
+paths:
+  /books:
+    get:
+      summary: Fetch a list of books
+      parameters:
+        - name: x-mock-response-code
+          in: header
+          required: false
+          schema:
+            type: integer
+          example: 500
+      responses: {}
+    post:
+      summary: Create a new book
+      parameters:
+        - name: x-mock-response-code
+          in: header
+          schema:
+            type: integer
+          example: 201
+        - name: x-mock-response-name
+          in: header
+          schema:
+            type: string
+          example: Dynamic Variables Mock Demo
+      responses: {}
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+            example: |-
+              {
+                "title": "",
+                "author": ""{{$randomFirstName}}" "{{$randomLastName}}"",
+                "genre": "fiction",
+                "yearPublished": "1967"
+              }
+  /books/{id}:
+    get:
+      summary: Verify the book exists
+      parameters:
+        - name: x-mock-response-code
+          in: header
+          schema:
+            type: integer
+          example: 200
+      responses: {}
+    parameters:
+      - name: id
+        in: path
+        required: true
+        deprecated: false
+        schema: {}
+        example: '{{bookId}}'
+    patch:
+      summary: Checkout new book
+      parameters:
+        - name: x-mock-response-code
+          in: header
+          schema:
+            type: integer
+          example: 200
+      responses: {}
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                checkedOut:
+                  type: boolean
+            example:
+              checkedOut: true

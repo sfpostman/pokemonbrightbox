@@ -15,20 +15,4 @@ response:
               "id": "12345678-e3d951bf-873f-49ac-a658-b2dcb91d3289"
           }
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "mock": {
-                  "type": "object",
-                  "description": "Information about the mock server.",
-                  "properties": {
-                      "id": {
-                          "type": "string",
-                          "description": "The mock server's ID."
-                      }
-                  }
-              }
-          }
-      }
 order: 1000

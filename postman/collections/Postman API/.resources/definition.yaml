@@ -105,7 +105,7 @@ variables:
   euUrl: https://api.eu.postman.com
   SCIM-apiKey: ""
 auth:
-  - id: 7957e48e-3cdf-430b-9688-201eaff9cbb4
+  - id: ef6b375d-99f6-4017-a9d6-3ab554f4c91e
     type: apikey
     name: apikey auth
     credentials:

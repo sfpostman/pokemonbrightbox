@@ -6,33 +6,9 @@ queryParams:
   - key: systemEnvironmentId
     value: ""
     description: The system environment's ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 pathVariables:
   - key: serviceId
     value: ""
     description: The service's ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 examples: ./.resources/Get a service by ID.resources/examples
 order: 2000

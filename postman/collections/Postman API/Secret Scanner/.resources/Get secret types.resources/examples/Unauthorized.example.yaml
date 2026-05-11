@@ -14,22 +14,4 @@ response:
           "title": "Unauthorized. Please try again with valid credentials.",
           "type": "UNAUTHORIZED"
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "instance": {
-                  "type": "string"
-              },
-              "status": {
-                  "type": "integer"
-              },
-              "title": {
-                  "type": "string"
-              },
-              "type": {
-                  "type": "string"
-              }
-          }
-      }
 order: 2000

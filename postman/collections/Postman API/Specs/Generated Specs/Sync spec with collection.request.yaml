@@ -13,35 +13,9 @@ queryParams:
   - key: collectionUid
     value: ""
     description: The collection's unique ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 pathVariables:
   - key: specId
     value: ""
     description: The spec's ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 examples: ./.resources/Sync spec with collection.resources/examples
 order: 3000

@@ -15,22 +15,4 @@ response:
           "message": "params/slug must match pattern \"^[a-z][a-z0-9-]*[a-z0-9]+$\"",
           "statusCode": 400
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "error": {
-                  "type": "string",
-                  "description": "A short summary of the problem."
-              },
-              "message": {
-                  "type": "string",
-                  "description": "The error message."
-              },
-              "statusCode": {
-                  "type": "integer",
-                  "description": "The error's HTTP status code."
-              }
-          }
-      }
 order: 3000

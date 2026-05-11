@@ -26,33 +26,4 @@ response:
               }
           }
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "workspace": {
-                  "type": "object",
-                  "properties": {
-                      "transfer": {
-                          "type": "object",
-                          "description": "Information about the workspace transfer.",
-                          "properties": {
-                              "id": {
-                                  "type": "string",
-                                  "description": "The ID of the transferred workspace."
-                              },
-                              "source": {
-                                  "type": "string",
-                                  "description": "The ID of the team the workspace was transferred away from."
-                              },
-                              "destination": {
-                                  "type": "string",
-                                  "description": "The ID of the team that the workspace was transferred to."
-                              }
-                          }
-                      }
-                  }
-              }
-          }
-      }
 order: 1000

@@ -14,22 +14,4 @@ response:
           "title": "An error occurred",
           "type": "SERVER_ERROR"
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "instance": {
-                  "type": "string"
-              },
-              "status": {
-                  "type": "integer"
-              },
-              "title": {
-                  "type": "string"
-              },
-              "type": {
-                  "type": "string"
-              }
-          }
-      }
 order: 7000

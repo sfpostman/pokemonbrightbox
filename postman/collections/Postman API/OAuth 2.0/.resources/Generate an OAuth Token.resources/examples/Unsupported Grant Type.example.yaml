@@ -27,18 +27,4 @@ response:
           "error": "invalid_request",
           "error_description": "Unsupported grant type"
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "error": {
-                  "type": "string",
-                  "description": "The error type."
-              },
-              "error_description": {
-                  "type": "string",
-                  "description": "Information about the error."
-              }
-          }
-      }
 order: 2000

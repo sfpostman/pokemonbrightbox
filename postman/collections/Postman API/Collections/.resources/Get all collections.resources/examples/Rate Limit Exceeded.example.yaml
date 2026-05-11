@@ -18,18 +18,4 @@ response:
           "error": "rateLimited",
           "message": "Rate limit exceeded. Please retry after 1669048687"
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "error": {
-                  "type": "string",
-                  "description": "A short summary of the problem."
-              },
-              "message": {
-                  "type": "string",
-                  "description": "Information about the error."
-              }
-          }
-      }
 order: 5000

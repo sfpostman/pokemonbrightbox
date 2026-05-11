@@ -21,22 +21,4 @@ response:
           "title": "Forbidden",
           "detail": "You do not have permission to perform this action"
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "type": {
-                  "type": "string",
-                  "description": "The type of error."
-              },
-              "title": {
-                  "type": "string",
-                  "description": "A short summary of the problem."
-              },
-              "detail": {
-                  "type": "string",
-                  "description": "Information about the error."
-              }
-          }
-      }
 order: 4000

@@ -35,45 +35,4 @@ response:
               }
           ]
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "meta": {
-                  "type": "object",
-                  "description": "The response's meta information for paginated results.",
-                  "properties": {
-                      "deleted": {
-                          "type": "integer",
-                          "description": "The number of associations successfully removed."
-                      },
-                      "notFound": {
-                          "type": "integer",
-                          "description": "The number of environment IDs with no existing association to remove."
-                      }
-                  },
-                  "required": ["deleted", "notFound"]
-              },
-              "data": {
-                  "type": "array",
-                  "items": {
-                      "type": "object",
-                      "description": "Information about the associated workspace environment.",
-                      "properties": {
-                          "workspaceEnvironmentId": {
-                              "type": "string",
-                              "description": "The workspace's environment ID."
-                          },
-                          "status": {
-                              "type": "string",
-                              "enum": ["deleted", "notFound"],
-                              "description": "The status of the operation:\n- `deleted` — The association was successfully removed.\n- `notFound` — The association could not be removed."
-                          }
-                      },
-                      "required": ["workspaceEnvironmentId", "status"]
-                  }
-              }
-          },
-          "required": ["meta", "data"]
-      }
 order: 1000

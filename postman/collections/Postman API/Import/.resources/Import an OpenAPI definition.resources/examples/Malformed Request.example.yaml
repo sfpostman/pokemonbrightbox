@@ -21,18 +21,4 @@ response:
               "message": "Specification must contain a semantic version number of the OAS specification"
           }
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "name": {
-                  "type": "string",
-                  "description": "The error name."
-              },
-              "message": {
-                  "type": "string",
-                  "description": "The error message."
-              }
-          }
-      }
 order: 10000

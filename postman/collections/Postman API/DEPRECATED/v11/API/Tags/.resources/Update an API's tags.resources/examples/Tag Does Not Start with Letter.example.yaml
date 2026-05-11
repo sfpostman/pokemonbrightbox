@@ -27,22 +27,4 @@ response:
           "detail": "body/tags/0/slug must match pattern \"^[a-z][a-z0-9-]*[a-z0-9]+$\"",
           "status": 400
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "detail": {
-                  "type": "string",
-                  "description": "Information about the error."
-              },
-              "title": {
-                  "type": "string",
-                  "description": "A short summary of the problem."
-              },
-              "status": {
-                  "type": "integer",
-                  "description": "The error's HTTP status code."
-              }
-          }
-      }
 order: 6000

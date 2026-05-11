@@ -19,22 +19,4 @@ response:
           "title": "Action not allowed",
           "detail": "This action is not allowed for git linked APIs"
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "type": {
-                  "type": "string",
-                  "description": "The type of error."
-              },
-              "title": {
-                  "type": "string",
-                  "description": "A short summary of the problem."
-              },
-              "detail": {
-                  "type": "string",
-                  "description": "Information about the error."
-              }
-          }
-      }
 order: 9000

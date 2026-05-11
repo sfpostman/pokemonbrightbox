@@ -26,42 +26,4 @@ response:
           "status": "open",
           "updatedAt": "2024-02-21T08:19:09.000Z"
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "id": {
-                  "type": "string",
-                  "description": "The pull request's ID."
-              },
-              "reviewedBy": {
-                  "type": "object",
-                  "description": "Information about the user who reviewed the pull request review.",
-                  "properties": {
-                      "id": {
-                          "type": "integer",
-                          "description": "The user's ID."
-                      },
-                      "name": {
-                          "type": "string",
-                          "description": "The user's name."
-                      },
-                      "username": {
-                          "type": "string",
-                          "description": "The user's username."
-                      }
-                  }
-              },
-              "status": {
-                  "type": "string",
-                  "enum": ["open", "approved", "declined", "merged"],
-                  "description": "The pull request's current review status:\n- `open` — The pull request is still open.\n- `approved` — The pull request was approved by its reviewers.\n- `declined` — The pull request was not approved by its reviewers.\n- `merged` — The pull request was merged."
-              },
-              "updatedAt": {
-                  "type": "string",
-                  "format": "date-time",
-                  "description": "The date and time at which the pull request was updated."
-              }
-          }
-      }
 order: 4000

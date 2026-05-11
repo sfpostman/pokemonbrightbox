@@ -13,27 +13,5 @@ body:
         "source": "{{sourceCollectionUid}}",
         "destination": "{{destinationCollectionUid}}"
     }
-  $type: |-
-    {
-        "type": "object",
-        "required": ["strategy", "source", "destination"],
-        "properties": {
-            "strategy": {
-                "type": "string",
-                "description": "The fork's merge strategy:\n- `default` — Make no changes to the fork. You must have **Editor** access to the destination collection.\n- `updateSourceWithDestination` — Merge changes and apply any differences in the destination collection to the source. You must have **Editor** access to both the source and destination collection.\n- `deleteSource` — Merge the changes and delete the fork. You must have **Editor** access to both the source and destination collection.\n",
-                "enum": ["default", "updateSourceWithDestination", "deleteSource"]
-            },
-            "source": {
-                "type": "string",
-                "format": "uuid",
-                "description": "The source collection's unique ID."
-            },
-            "destination": {
-                "type": "string",
-                "format": "uuid",
-                "description": "The destination collection's unique ID."
-            }
-        }
-    }
 examples: ./.resources/Merge or pull changes into a collection fork.resources/examples
 order: 6000

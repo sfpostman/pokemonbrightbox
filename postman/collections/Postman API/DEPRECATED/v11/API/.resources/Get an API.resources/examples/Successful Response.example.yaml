@@ -22,42 +22,4 @@ response:
           "summary": "Test API.",
           "updatedAt": "2022-06-09T19:50:49.000Z"
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "description": {
-                  "type": "string",
-                  "description": "The API's description."
-              },
-              "id": {
-                  "type": "string",
-                  "description": "The API's ID."
-              },
-              "updatedBy": {
-                  "type": "string",
-                  "description": "The user ID of the user that updated the API."
-              },
-              "createdBy": {
-                  "type": "string",
-                  "description": "The user ID of the user that created the API."
-              },
-              "createdAt": {
-                  "type": "string",
-                  "description": "The date and time at which the API was created."
-              },
-              "name": {
-                  "type": "string",
-                  "description": "The API's name."
-              },
-              "summary": {
-                  "type": "string",
-                  "description": "The API's short summary."
-              },
-              "updatedAt": {
-                  "type": "string",
-                  "description": "The date and time at which the API was updated."
-              }
-          }
-      }
 order: 1000

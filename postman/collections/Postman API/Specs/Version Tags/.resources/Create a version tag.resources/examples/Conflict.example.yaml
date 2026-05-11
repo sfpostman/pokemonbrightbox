@@ -22,26 +22,4 @@ response:
           "detail": "A version tag already exists for the current changelog group. Make new changes to the spec to create a version tag.",
           "status": 409
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "type": {
-                  "type": "string",
-                  "description": "The [URI reference](https://www.rfc-editor.org/rfc/rfc3986) that identifies the type of problem."
-              },
-              "title": {
-                  "type": "string",
-                  "description": "A short summary of the problem."
-              },
-              "status": {
-                  "type": "integer",
-                  "description": "The error's HTTP status code."
-              },
-              "detail": {
-                  "type": "string",
-                  "description": "Information about the error."
-              }
-          }
-      }
 order: 6000

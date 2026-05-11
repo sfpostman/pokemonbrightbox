@@ -24,14 +24,4 @@ response:
       {
           "success": "true"
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "success": {
-                  "type": "string",
-                  "description": "The `true` value."
-              }
-          }
-      }
 order: 1000

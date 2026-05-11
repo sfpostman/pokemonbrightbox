@@ -28,7 +28,7 @@ description: |-
 
   If you reach the rate limit, the API will return an HTTP `429 Too Many Requests` response.
 auth:
-  - id: 751a0c6d-8bc7-48fd-b116-090e176997d9
+  - id: 6cc61361-717c-4cb7-9b07-39d64d3fa1c2
     type: apikey
     name: apikey auth
     credentials:

@@ -18,88 +18,21 @@ headers:
   - key: Accept
     value: application/vnd.api.v10+json
     description: The request header required to use the endpoint.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "enum": [
-              "application/vnd.api.v10+json"
-            ],
-            "uniqueItems": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 queryParams:
   - key: versionId
     value: ""
     disabled: true
     description: The API's version ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "uniqueItems": false
-          }
-        }
-      }
   - key: bundled
     value: "true"
     disabled: true
     description: If true, return the schema in a bundled format.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "boolean",
-            "deprecated": false,
-            "uniqueItems": false
-          }
-        }
-      }
 pathVariables:
   - key: apiId
     value: "{{apiId}}"
     description: The API's ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "uniqueItems": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
   - key: schemaId
     value: "{{schemaId}}"
     description: The API schema's ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "uniqueItems": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 examples: ./.resources/Get a schema.resources/examples
 order: 3000

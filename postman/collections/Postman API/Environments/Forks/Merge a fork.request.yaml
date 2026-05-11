@@ -6,42 +6,12 @@ pathVariables:
   - key: environmentUid
     value: ""
     description: The environment's unique ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "uniqueItems": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 body:
   type: json
   content: |-
     {
         "source": "{{environmentUid}}",
         "deleteSource": false
-    }
-  $type: |-
-    {
-        "type": "object",
-        "required": ["source"],
-        "properties": {
-            "source": {
-                "type": "string",
-                "description": "The source environment's unique ID to merge data from."
-            },
-            "deleteSource": {
-                "type": "boolean",
-                "default": false,
-                "description": "If true, the forked environment will be deleted."
-            }
-        }
     }
 examples: ./.resources/Merge a fork.resources/examples
 order: 4000

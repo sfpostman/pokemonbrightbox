@@ -35,42 +35,4 @@ response:
               }
           ]
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "result": {
-                  "type": "array",
-                  "items": {
-                      "type": "object",
-                      "properties": {
-                          "entityType": {
-                              "type": "string",
-                              "description": "The entity type."
-                          },
-                          "entityId": {
-                              "type": ["string", "integer"],
-                              "description": "The entity's ID."
-                          },
-                          "previousRole": {
-                              "type": ["string", "null"],
-                              "description": "The previously assigned role, if one existed."
-                          },
-                          "role": {
-                              "type": "string",
-                              "description": "The requested team role."
-                          },
-                          "status": {
-                              "type": "string",
-                              "description": "The access request's status."
-                          },
-                          "reason": {
-                              "type": "string",
-                              "description": "The reason the access request was created."
-                          }
-                      }
-                  }
-              }
-          }
-      }
 order: 2000

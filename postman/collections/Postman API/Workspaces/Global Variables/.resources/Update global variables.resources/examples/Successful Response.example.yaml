@@ -47,42 +47,4 @@ response:
               }
           ]
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "values": {
-                  "type": "array",
-                  "description": "A list of the workspace's global variables.",
-                  "items": {
-                      "type": "object",
-                      "description": "Information about the global variable.",
-                      "properties": {
-                          "value": {
-                              "type": "string",
-                              "description": "The variable's value."
-                          },
-                          "key": {
-                              "type": "string",
-                              "description": "The variable's name."
-                          },
-                          "enabled": {
-                              "type": "boolean",
-                              "description": "If true, the variable is enabled."
-                          },
-                          "type": {
-                              "type": "string",
-                              "description": "The [type](https://learning.postman.com/docs/sending-requests/variables/#variable-types) of variable.",
-                              "enum": ["default", "secret"]
-                          },
-                          "description": {
-                              "type": "string",
-                              "maxLength": 512,
-                              "description": "The variable's description."
-                          }
-                      }
-                  }
-              }
-          }
-      }
 order: 1000

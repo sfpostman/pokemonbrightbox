@@ -30,47 +30,4 @@ response:
           "nextCursor": "eyJpZCI6ODYsImVudGl0eVR5cGUiOiJhcGkifQ=="
         }
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "data": {
-                  "type": "object",
-                  "description": "An object containing the paginated elements.",
-                  "properties": {
-                      "entities": {
-                          "type": "array",
-                          "description": "A list of the Postman elements that contain the given tag.",
-                          "items": {
-                              "type": "object",
-                              "properties": {
-                                  "entityId": {
-                                      "type": "string",
-                                      "description": "The element's unique ID."
-                                  },
-                                  "entityType": {
-                                      "type": "string",
-                                      "description": "The type of Postman element."
-                                  }
-                              }
-                          }
-                      }
-                  }
-              },
-              "meta": {
-                  "type": "object",
-                  "description": "The response's pagination information.",
-                  "properties": {
-                      "count": {
-                          "type": "integer",
-                          "description": "The number of tagged elements returned in the response."
-                      },
-                      "nextCursor": {
-                          "type": "string",
-                          "description": "The pagination cursor that points to the next record in the results set."
-                      }
-                  }
-              }
-          }
-      }
 order: 2000

@@ -10,19 +10,5 @@ pathVariables:
   - key: collectionId
     value: ""
     description: The forked collection's ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "uniqueItems": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 examples: ./.resources/Pull source changes.resources/examples
 order: 4000

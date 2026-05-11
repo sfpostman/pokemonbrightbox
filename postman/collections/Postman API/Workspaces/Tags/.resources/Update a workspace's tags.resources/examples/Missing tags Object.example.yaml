@@ -18,22 +18,4 @@ response:
           "error": "Bad Request",
           "message": "body must have required property 'tags'"
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "title": {
-                  "type": "string",
-                  "description": "A short summary of the problem."
-              },
-              "detail": {
-                  "type": "string",
-                  "description": "Information about the error."
-              },
-              "statusCode": {
-                  "type": "integer",
-                  "description": "The error's HTTP status code."
-              }
-          }
-      }
 order: 5000

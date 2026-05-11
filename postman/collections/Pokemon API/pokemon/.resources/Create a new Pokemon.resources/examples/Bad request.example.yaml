@@ -31,13 +31,4 @@ response:
       {
         "error": "<string>"
       }
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "error": {
-            "type": "string"
-          }
-        }
-      }
 order: 2000

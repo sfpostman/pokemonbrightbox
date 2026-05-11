@@ -15,23 +15,4 @@ response:
           "queueDepth": 9,
           "oldestQueuedRunAgeSeconds": 10213
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "lastPingAt": {
-                  "type": "string",
-                  "format": "date-time",
-                  "description": "The last date and time the runner sent results to the Postman cloud."
-              },
-              "queueDepth": {
-                  "type": "integer",
-                  "description": "The number of pending Postman monitor runs in the runner's queue."
-              },
-              "oldestQueuedRunAgeSeconds": {
-                  "type": "integer",
-                  "description": "The age of the monitor, in seconds, that has been waiting the longest to run in the runner."
-              }
-          }
-      }
 order: 1000

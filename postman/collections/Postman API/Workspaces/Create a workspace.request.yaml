@@ -27,37 +27,5 @@ body:
             "teamId": "{{teamId}}" // Required if Postman Organizations is enabled.
         }
     }
-  $type: |-
-    {
-        "type": "object",
-        "properties": {
-            "workspace": {
-                "type": "object",
-                "properties": {
-                    "name": {
-                        "type": "string",
-                        "description": "The workspace's name."
-                    },
-                    "type": {
-                        "type": "string",
-                        "description": "The type of workspace.",
-                        "enum": ["personal", "private", "public", "team", "partner"]
-                    },
-                    "description": {
-                        "type": "string",
-                        "description": "The workspace's description."
-                    },
-                    "about": {
-                        "type": "string",
-                        "description": "A brief summary about the workspace."
-                    },
-                    "teamId": {
-                        "type": "string",
-                        "description": "The team ID to assign to the workspace. This property is required if Postman [Organizations](https://learning.postman.com/docs/administration/managing-your-team/overview) is enabled."
-                    }
-                }
-            }
-        }
-    }
 examples: ./.resources/Create a workspace.resources/examples
 order: 7000

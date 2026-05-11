@@ -19,31 +19,5 @@ body:
             "schema": "{{schemaBody}}"
         }
     }
-  $type: |-
-    {
-        "type": "object",
-        "properties": {
-            "schema": {
-                "type": "object",
-                "required": ["language", "schema", "type"],
-                "properties": {
-                    "type": {
-                        "type": "string",
-                        "description": "The definition type.",
-                        "enum": ["openapi3", "openapi2"]
-                    },
-                    "language": {
-                        "type": "string",
-                        "description": "The definition format.",
-                        "enum": ["json", "yaml"]
-                    },
-                    "schema": {
-                        "type": "string",
-                        "description": "The stringified API definition."
-                    }
-                }
-            }
-        }
-    }
 examples: ./.resources/API definition validation.resources/examples
 order: 1000

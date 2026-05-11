@@ -20,34 +20,4 @@ response:
           "itemsPerPage": 0,
           "Resources": []
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "schemas": {
-                  "type": "array",
-                  "description": "The [SCIM schema URI](https://www.iana.org/assignments/scim/scim.xhtml).",
-                  "items": {
-                      "type": "string",
-                      "format": "uri"
-                  }
-              },
-              "totalResults": {
-                  "type": "integer",
-                  "description": "The total number of results found."
-              },
-              "startIndex": {
-                  "type": "integer",
-                  "description": "The index entry by which the returned results begin."
-              },
-              "itemsPerPage": {
-                  "type": "integer",
-                  "description": "The number of items per response page."
-              },
-              "Resources": {
-                  "type": "array",
-                  "description": "A list of group resources."
-              }
-          }
-      }
 order: 3000

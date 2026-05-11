@@ -33,30 +33,4 @@ response:
               "/values/1/value: must be a string"
           ]
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "type": {
-                  "type": "string",
-                  "format": "uri",
-                  "description": "The [URI reference](https://www.rfc-editor.org/rfc/rfc3986) that identifies the type of problem."
-              },
-              "status": {
-                  "type": "integer",
-                  "description": "The error's HTTP status code."
-              },
-              "title": {
-                  "type": "string",
-                  "description": "A short summary of the problem."
-              },
-              "detail": {
-                  "type": "array",
-                  "description": "Information about the error.",
-                  "items": {
-                      "type": "string"
-                  }
-              }
-          }
-      }
 order: 11000

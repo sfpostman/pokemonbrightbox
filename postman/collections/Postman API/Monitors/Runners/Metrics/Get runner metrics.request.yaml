@@ -11,18 +11,5 @@ pathVariables:
   - key: runnerId
     value: ""
     description: The runner's ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 examples: ./.resources/Get runner metrics.resources/examples
 order: 1000

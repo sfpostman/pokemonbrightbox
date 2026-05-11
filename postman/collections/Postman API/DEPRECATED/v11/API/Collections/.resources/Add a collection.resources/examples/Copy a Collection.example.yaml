@@ -24,14 +24,4 @@ response:
       {
           "id": "12345678-bca9870a-dda0-4e8a-abda-f07b1b868ba0"
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "id": {
-                  "type": "string",
-                  "description": "The collection's ID."
-              }
-          }
-      }
 order: 1000

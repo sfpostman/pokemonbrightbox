@@ -26,41 +26,4 @@ response:
           "updatedBy": 12345678,
           "type": "ROOT"
       }
-    $type: |-
-      {
-          "type": "object",
-          "description": "Information about the API specification file.",
-          "properties": {
-              "createdAt": {
-                  "type": "string",
-                  "format": "date-time",
-                  "description": "The date and time at which the file was created."
-              },
-              "createdBy": {
-                  "type": "integer",
-                  "description": "The user ID of the user that created the file."
-              },
-              "id": {
-                  "type": "string",
-                  "description": "The file's ID."
-              },
-              "path": {
-                  "type": "string",
-                  "description": "The file's path."
-              },
-              "updatedAt": {
-                  "type": "string",
-                  "format": "date-time",
-                  "description": "The date and time at which the file was updated."
-              },
-              "updatedBy": {
-                  "type": "integer",
-                  "description": "The ID of the user who updated the file."
-              },
-              "type": {
-                  "type": "string",
-                  "description": "The type of file:\n- `ROOT` — A file containing the full OpenAPI structure and references other (DEFAULT) spec files.\n- `DEFAULT` — A file referenced by the `ROOT` file."
-              }
-          }
-      }
 order: 4000

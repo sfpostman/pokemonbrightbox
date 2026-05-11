@@ -6,174 +6,53 @@ queryParams:
   - key: systemEnvironmentId
     value: ""
     description: The system environment's ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
   - key: collectionId
     value: ""
     disabled: true
     description: Filter results to only the given collection ID's runs.
-    $type: string
   - key: environmentId
     value: ""
     disabled: true
     description: Filter results to only the given environment ID runs.
-    $type: string
   - key: status
     value: ""
     disabled: true
     description: Filter results by run status.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "enum": [
-              "passed",
-              "failed"
-            ]
-          }
-        }
-      }
   - key: branch
     value: ""
     disabled: true
     description: Filter results by the given Git branch name.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "maxLength": "255"
-          }
-        }
-      }
   - key: workflowName
     value: ""
     disabled: true
     description: Filter results by the given CI workflow name.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "maxLength": "255"
-          }
-        }
-      }
   - key: actor
     value: ""
     disabled: true
     description: Filter results by the given CI user that triggered the run.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "maxLength": "100"
-          }
-        }
-      }
   - key: repoName
     value: ""
     disabled: true
     description: Filter results by the given repository name.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "maxLength": "255"
-          }
-        }
-      }
   - key: repoOwner
     value: ""
     disabled: true
     description: Filter results by the given repository owner.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "maxLength": "100"
-          }
-        }
-      }
   - key: sort
     value: ""
     disabled: true
     description: Sort the results in field:direction order format. Accepts the `timestamp` and `duration` fields. Supports the `asc` and `desc` directions.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "pattern": "^(timestamp|duration):(asc|desc)$"
-          }
-        }
-      }
   - key: limit
     value: ""
     disabled: true
     description: The maximum number of rows to return in the response.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "integer",
-            "default": "20",
-            "minimum": "1",
-            "maximum": "100"
-          }
-        }
-      }
   - key: cursor
     value: ""
     disabled: true
     description: The pointer to the first record of the set of paginated results. To view the next response, use the `nextCursor` value for this parameter.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "pattern": "^[A-Za-z0-9+/=]+$"
-          }
-        }
-      }
 pathVariables:
   - key: serviceId
     value: ""
     description: The service's ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 examples: ./.resources/Get a service's CI runs.resources/examples
 order: 6000

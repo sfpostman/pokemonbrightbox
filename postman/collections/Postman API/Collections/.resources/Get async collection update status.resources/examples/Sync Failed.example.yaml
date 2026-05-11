@@ -14,19 +14,4 @@ response:
           "id": "66ae9950-0869-4e65-96b0-1e0e47e771af",
           "status": "failed"
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "id": {
-                  "type": "string",
-                  "description": "The task's ID."
-              },
-              "status": {
-                  "type": "string",
-                  "description": "The task's current status.",
-                  "enum": ["successful", "failed", "in-progress"]
-              }
-          }
-      }
 order: 2000

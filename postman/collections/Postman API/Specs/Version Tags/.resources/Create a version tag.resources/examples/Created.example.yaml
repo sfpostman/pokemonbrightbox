@@ -22,24 +22,4 @@ response:
               "name": "1.0.0"
           }
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "data": {
-                  "type": "object",
-                  "description": "Information about the created version tag.",
-                  "properties": {
-                      "id": {
-                          "type": "string",
-                          "description": "The version tag's ID."
-                      },
-                      "name": {
-                          "type": "string",
-                          "description": "The version tag's name."
-                      }
-                  }
-              }
-          }
-      }
 order: 1000

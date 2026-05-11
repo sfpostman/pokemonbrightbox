@@ -25,26 +25,4 @@ response:
           "detail": "Only Postman teams on the Enterprise plan can use SCIM provisioning. Upgrade your plan.",
           "status": "400"
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "schemas": {
-                  "type": "array",
-                  "description": "The [SCIM schema URI](https://www.iana.org/assignments/scim/scim.xhtml).",
-                  "items": {
-                      "type": "string",
-                      "format": "uri"
-                  }
-              },
-              "detail": {
-                  "type": "string",
-                  "description": "Information about the error."
-              },
-              "status": {
-                  "type": "string",
-                  "description": "The HTTP status code."
-              }
-          }
-      }
 order: 5000

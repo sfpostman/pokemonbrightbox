@@ -14,4 +14,4 @@ scripts:
       });
     language: text/javascript
 examples: ./.resources/List all types.resources/examples
-order: 1000
+order: 2000

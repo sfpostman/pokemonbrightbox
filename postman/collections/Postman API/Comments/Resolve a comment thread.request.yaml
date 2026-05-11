@@ -9,19 +9,5 @@ pathVariables:
   - key: threadId
     value: ""
     description: The comment's thread ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "integer",
-            "deprecated": false,
-            "uniqueItems": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 examples: ./.resources/Resolve a comment thread.resources/examples
 order: 1000

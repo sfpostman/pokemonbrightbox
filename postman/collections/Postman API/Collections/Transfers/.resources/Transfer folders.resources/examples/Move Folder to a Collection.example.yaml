@@ -31,17 +31,4 @@ response:
               "12345678-bcb5648b-eecb-4468-ade7-4efb38431bd1"
           ]
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "ids": {
-                  "type": "array",
-                  "description": "A list of the transferred collection response UIDs.",
-                  "items": {
-                      "type": "string"
-                  }
-              }
-          }
-      }
 order: 2000

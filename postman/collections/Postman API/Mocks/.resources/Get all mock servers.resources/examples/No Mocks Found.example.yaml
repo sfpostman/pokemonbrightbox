@@ -13,14 +13,4 @@ response:
       {
           "mocks": []
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "mocks": {
-                  "type": "array",
-                  "description": "A list of mock servers."
-              }
-          }
-      }
 order: 4000

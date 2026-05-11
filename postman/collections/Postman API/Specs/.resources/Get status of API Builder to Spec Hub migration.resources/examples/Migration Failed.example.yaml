@@ -16,24 +16,4 @@ response:
               "reason": "Moving to Spec Hub failed. Please try again or contact support."
           }
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "status": {
-                  "type": "string",
-                  "description": "The status of the migration."
-              },
-              "details": {
-                  "type": "object",
-                  "description": "Information about the API migration.",
-                  "properties": {
-                      "reason": {
-                          "type": "string",
-                          "description": "The reason the migration failed."
-                      }
-                  }
-              }
-          }
-      }
 order: 2000

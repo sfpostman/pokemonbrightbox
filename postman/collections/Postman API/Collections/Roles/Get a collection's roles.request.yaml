@@ -6,19 +6,5 @@ pathVariables:
   - key: collectionId
     value: ""
     description: The collection's ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "uniqueItems": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 examples: ./.resources/Get a collection's roles.resources/examples
 order: 1000

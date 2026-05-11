@@ -13,13 +13,4 @@ response:
       {
           "environments": []
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "environments": {
-                  "type": "array"
-              }
-          }
-      }
 order: 3000

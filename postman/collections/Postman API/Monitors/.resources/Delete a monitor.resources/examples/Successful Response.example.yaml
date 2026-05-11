@@ -16,24 +16,4 @@ response:
               "uid": "1e6b6cc1-c760-48e0-968f-4bfaeeae9af1"
           }
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "monitor": {
-                  "type": "object",
-                  "description": "Information about the monitor.",
-                  "properties": {
-                      "id": {
-                          "type": "string",
-                          "description": "The monitor's ID."
-                      },
-                      "uid": {
-                          "type": "string",
-                          "description": "The monitor's unique ID."
-                      }
-                  }
-              }
-          }
-      }
 order: 1000

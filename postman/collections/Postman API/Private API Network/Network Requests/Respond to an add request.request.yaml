@@ -6,20 +6,6 @@ pathVariables:
   - key: requestId
     value: ""
     description: The request's ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "integer",
-            "deprecated": false,
-            "uniqueItems": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 body:
   type: json
   content: |-
@@ -27,31 +13,6 @@ body:
         "status": "{{responseStatus}}",
         "response": {
             "message": "{{responderMessage}}"
-        }
-    }
-  $type: |-
-    {
-        "type": "object",
-        "required": ["status"],
-        "properties": {
-            "response": {
-                "type": "object",
-                "description": "If the request is denied, the response to the user's request.",
-                "properties": {
-                    "message": {
-                        "type": "string",
-                        "description": "A message that details why the user's request was denied."
-                    }
-                }
-            },
-            "status": {
-                "type": "string",
-                "description": "The request's approval status.",
-                "enum": [
-                    "denied",
-                    "approved"
-                ]
-            }
         }
     }
 examples: ./.resources/Respond to an add request.resources/examples

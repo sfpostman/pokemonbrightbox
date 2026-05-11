@@ -7,33 +7,10 @@ queryParams:
     value: ""
     disabled: true
     description: If false, the system only adds associations when there are no status errors. If true, the system skips any ineligible associations and adds eligible associations.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "boolean",
-            "default": "false"
-          }
-        }
-      }
 pathVariables:
   - key: systemEnvironmentId
     value: ""
     description: The system environment's ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 body:
   type: json
   content: |-
@@ -41,25 +18,6 @@ body:
         "workspaceEnvironmentIds": [
             "{{workspaceEnvironmentId}}"
         ]
-    }
-  $type: |-
-    {
-      "type": "object",
-      "properties": {
-        "workspaceEnvironmentIds": {
-          "type": "array",
-          "description": "A list of workspace environment IDs to remove. Accepts both the environment ID or the environment's unique ID (`userId`-`environmentId`).",
-          "items": {
-            "type": "string",
-            "description": "A workspace environment ID.",
-            "pattern": "^([0-9]+-)?[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
-          },
-          "minItems": 1,
-          "maxItems": 25
-        }
-      },
-      "required": ["workspaceEnvironmentIds"],
-      "additionalProperties": false
     }
 examples: ./.resources/Add system environment associations.resources/examples
 order: 6000

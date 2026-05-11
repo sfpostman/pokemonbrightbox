@@ -6,36 +6,11 @@ pathVariables:
   - key: environmentUid
     value: ""
     description: The destination environment's unique ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "uniqueItems": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 body:
   type: json
   content: |-
     {
         "source": "{{environmentUid}}"
-    }
-  $type: |-
-    {
-        "type": "object",
-        "required": ["source"],
-        "properties": {
-            "source": {
-                "type": "string",
-                "description": "The source environment's unique ID to pull data from."
-            }
-        }
     }
 examples: ./.resources/Pull source changes.resources/examples
 order: 3000

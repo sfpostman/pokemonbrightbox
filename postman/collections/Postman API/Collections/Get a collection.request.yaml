@@ -7,52 +7,13 @@ queryParams:
     value: ""
     disabled: true
     description: A collection's read-only access key. Using this query parameter does not require an API key to call the endpoint.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "uniqueItems": false
-          }
-        }
-      }
   - key: model
     value: minimal
     disabled: true
     description: Return a list of only the collection's root-level request (`rootLevelRequests`) and folder (`rootLevelFolders`) IDs instead of the full collection element data.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "enum": [
-              "minimal"
-            ],
-            "uniqueItems": false
-          }
-        }
-      }
 pathVariables:
   - key: collectionId
     value: ""
     description: The collection's ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "uniqueItems": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 examples: ./.resources/Get a collection.resources/examples
 order: 12000

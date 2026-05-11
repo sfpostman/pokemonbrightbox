@@ -25,28 +25,4 @@ response:
               "name": "Testing Environment"
           }
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "environment": {
-                  "type": "object",
-                  "description": "Information about the forked environment.",
-                  "properties": {
-                      "forkName": {
-                          "type": "string",
-                          "description": "The forked environment's label."
-                      },
-                      "uid": {
-                          "type": "string",
-                          "description": "The forked environment's ID."
-                      },
-                      "name": {
-                          "type": "string",
-                          "description": "The name of the forked environment."
-                      }
-                  }
-              }
-          }
-      }
 order: 1000

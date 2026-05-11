@@ -23,49 +23,4 @@ response:
               }
           ]
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "collections": {
-                  "type": "array",
-                  "items": {
-                      "type": "object",
-                      "description": "Information about the collection.",
-                      "properties": {
-                          "id": {
-                              "type": "string",
-                              "description": "The collection's ID."
-                          },
-                          "name": {
-                              "type": "string",
-                              "description": "The collection's name."
-                          },
-                          "owner": {
-                              "type": "string",
-                              "description": "The owner of the collection."
-                          },
-                          "createdAt": {
-                              "type": "string",
-                              "format": "date-time",
-                              "description": "The collection's creation date and time."
-                          },
-                          "updatedAt": {
-                              "type": "string",
-                              "format": "date-time",
-                              "description": "The date and time at which the collection was last updated."
-                          },
-                          "uid": {
-                              "type": "string",
-                              "description": "The collection's unique ID."
-                          },
-                          "isPublic": {
-                              "type": "boolean",
-                              "description": "If true, the collection is public and visible to all users."
-                          }
-                      }
-                  }
-              }
-          }
-      }
 order: 3000

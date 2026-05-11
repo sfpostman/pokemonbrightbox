@@ -20,43 +20,5 @@ body:
             }
         ]
     }
-  $type: |-
-    {
-        "type": "object",
-        "properties": {
-            "values": {
-                "type": "array",
-                "description": "A list of the workspace's global variables.",
-                "items": {
-                    "type": "object",
-                    "description": "Information about the global variable.",
-                    "properties": {
-                        "key": {
-                            "type": "string",
-                            "description": "The variable's name."
-                        },
-                        "type": {
-                            "type": "string",
-                            "description": "The [type](https://learning.postman.com/docs/sending-requests/variables/#variable-types) of variable.",
-                            "enum": ["default", "secret"]
-                        },
-                        "value": {
-                            "type": "string",
-                            "description": "The variable's value."
-                        },
-                        "enabled": {
-                            "type": "boolean",
-                            "description": "If true, the variable is enabled."
-                        },
-                        "description": {
-                            "type": "string",
-                            "maxLength": 512,
-                            "description": "The variable's description."
-                        }
-                    }
-                }
-            }
-        }
-    }
 examples: ./.resources/Update global variables.resources/examples
 order: 2000

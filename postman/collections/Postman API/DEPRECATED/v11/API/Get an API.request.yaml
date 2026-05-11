@@ -12,23 +12,6 @@ headers:
   - key: Accept
     value: application/vnd.api.v10+json
     description: The request header required to use the endpoint.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "enum": [
-              "application/vnd.api.v10+json"
-            ],
-            "uniqueItems": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 queryParams:
   - key: include
     value: ""
@@ -49,34 +32,9 @@ queryParams:
       API viewers can only use the `versions` option.
 
       \        "
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "uniqueItems": false
-          }
-        }
-      }
 pathVariables:
   - key: apiId
     value: "{{apiId}}"
     description: The API's ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "uniqueItems": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 examples: ./.resources/Get an API.resources/examples
 order: 7000

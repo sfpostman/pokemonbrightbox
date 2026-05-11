@@ -27,21 +27,4 @@ response:
               }
           ]
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "tags": {
-                  "type": "array",
-                  "items": {
-                      "type": "object",
-                      "properties": {
-                          "slug": {
-                              "type": "string"
-                          }
-                      }
-                  }
-              }
-          }
-      }
 order: 1000

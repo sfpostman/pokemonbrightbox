@@ -13,6 +13,13 @@ workflows:
       collection: ../postman/collections/Pokemon API
       options:
         syncExamples: true
+    - spec: ../index.yaml
+      collection: ../postman/collections/E2E Library
+      options:
+        syncExamples: false
+        folderStrategy: Tags
+        includeWebhooks: true
+        nestedFolderHierarchy: true
   syncCollectionToSpec:
     - spec: ../postman/specs/pokemon-api.yaml
       collection: ../postman/collections/Pokemon API
@@ -22,3 +29,10 @@ workflows:
       collection: ../postman/collections/E2E Library
       options:
         syncExamples: false
+    - spec: ../index.yaml
+      collection: ../postman/collections/E2E Library
+      options:
+        syncExamples: false
+        folderStrategy: Tags
+        includeWebhooks: true
+        nestedFolderHierarchy: true

@@ -21,35 +21,5 @@ body:
         "type": "{{elementType}}",
         "to": "{{workspaceId}}"
     }
-  $type: |-
-    {
-        "type": "object",
-        "required": ["id", "type", "to"],
-        "properties": {
-            "id": {
-                "anyOf": [
-                    {
-                        "type": "string",
-                        "format": "uuid",
-                        "title": "Element Unique ID"
-                    },
-                    {
-                        "type": "string",
-                        "title": "Element ID"
-                    }
-                ],
-                "description": "The workspace element's ID."
-            },
-            "type": {
-                "type": "string",
-                "description": "The type of element to transfer.",
-                "enum": ["collection", "api", "environment", "flow", "mock", "monitor"]
-            },
-            "to": {
-                "type": "string",
-                "description": "The workspace ID to transfer the element into."
-            }
-        }
-    }
 examples: ./.resources/Transfer element to a workspace.resources/examples
 order: 1000

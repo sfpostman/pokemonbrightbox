@@ -31,17 +31,4 @@ response:
               "12345678-3a2069a1-aeb6-462c-ada0-8629858199ba"
           ]
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "ids": {
-                  "type": "array",
-                  "description": "A list of the transferred collection response UIDs.",
-                  "items": {
-                      "type": "string"
-                  }
-              }
-          }
-      }
 order: 2000

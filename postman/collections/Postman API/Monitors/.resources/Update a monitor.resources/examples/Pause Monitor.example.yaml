@@ -26,31 +26,4 @@ response:
               "uid": "12345678-1e6b6cc1-c760-48e0-968f-4bfaeeae9af1"
           }
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "monitor": {
-                  "type": "object",
-                  "properties": {
-                      "id": {
-                          "type": "string",
-                          "description": "The monitor's ID."
-                      },
-                      "name": {
-                          "type": "string",
-                          "description": "The monitor's name."
-                      },
-                      "active": {
-                          "type": "boolean",
-                          "description": "If true, the monitor is active and makes calls to the specified URL."
-                      },
-                      "uid": {
-                          "type": "string",
-                          "description": "The monitor's unique ID."
-                      }
-                  }
-              }
-          }
-      }
 order: 2000

@@ -16,21 +16,4 @@ response:
               "message": "The specified mock does not exist."
           }
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "error": {
-                  "type": "object",
-                  "properties": {
-                      "name": {
-                          "type": "string"
-                      },
-                      "message": {
-                          "type": "string"
-                      }
-                  }
-              }
-          }
-      }
 order: 3000

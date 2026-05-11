@@ -19,20 +19,6 @@ pathVariables:
   - key: workspaceId
     value: ""
     description: The workspace's ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "uniqueItems": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 body:
   type: json
   content: |-
@@ -42,34 +28,6 @@ body:
             "type": "{{workspaceType}}",
             "description": "{{workspaceDescription}}",
             "about": "{{workspaceSummary}}"
-        }
-    }
-  $type: |-
-    {
-        "type": "object",
-        "properties": {
-            "workspace": {
-                "type": "object",
-                "properties": {
-                    "name": {
-                        "type": "string",
-                        "description": "The workspace's name."
-                    },
-                    "type": {
-                        "type": "string",
-                        "description": "The type of workspace.",
-                        "enum": ["personal", "private", "public", "team", "partner"]
-                    },
-                    "description": {
-                        "type": "string",
-                        "description": "The workspace's description."
-                    },
-                    "about": {
-                        "type": "string",
-                        "description": "A brief summary about the workspace."
-                    }
-                }
-            }
         }
     }
 examples: ./.resources/Update a workspace.resources/examples

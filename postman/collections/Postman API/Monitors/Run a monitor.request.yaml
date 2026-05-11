@@ -14,35 +14,9 @@ queryParams:
     value: "true"
     disabled: true
     description: If true, runs the monitor asynchronously from the created monitor run task. By default, the server will not respond until the task finishes (`false`).
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "boolean",
-            "deprecated": false,
-            "default": "false",
-            "uniqueItems": false
-          }
-        }
-      }
 pathVariables:
   - key: monitorId
     value: ""
     description: The monitor's ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "uniqueItems": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 examples: ./.resources/Run a monitor.resources/examples
 order: 3000

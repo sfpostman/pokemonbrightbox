@@ -29,27 +29,4 @@ response:
           "detail": "Missing properties in request body - should have \"action\", \"targetEntity\", \"targetEntityId\", \"roleId\", \"target\"",
           "status": 400
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "detail": {
-                  "type": "string",
-                  "description": "Information about the error."
-              },
-              "type": {
-                  "type": "string",
-                  "format": "uri",
-                  "description": "The [URI reference](https://www.rfc-editor.org/rfc/rfc3986) that identifies the type of problem."
-              },
-              "title": {
-                  "type": "string",
-                  "description": "A short summary of the problem."
-              },
-              "status": {
-                  "type": "integer",
-                  "description": "The error's HTTP status code."
-              }
-          }
-      }
 order: 9000

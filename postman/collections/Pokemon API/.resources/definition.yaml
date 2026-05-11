@@ -1,5 +1,4 @@
 $kind: collection
-name: Pokemon API
 description: |-
   A RESTful API for retrieving and managing Pokémon data sourced from the Pokédex.
 

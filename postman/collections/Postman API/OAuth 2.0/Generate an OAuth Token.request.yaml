@@ -15,26 +15,6 @@ body:
         "grant_type": "client_credentials",
         "jwt": "{{jwtToken}}"
     }
-  $type: |-
-    {
-        "type": "object",
-        "required": ["installationAuthId", "grant_type", "jwt"],
-        "properties": {
-            "installationAuthId": {
-                "type": "string",
-                "description": "The client's installation authentication ID."
-            },
-            "grant_type": {
-                "type": "string",
-                "enum": ["client_credentials"],
-                "description": "The `client_credentials` OAuth grant type."
-            },
-            "jwt": {
-                "type": "string",
-                "description": "A signed JWT token. The token must include `iss` (issuer), `aud` (audience), `iat` (issued at), `exp` (expiration timestamp), and `jti` (JWT ID)."
-            }
-        }
-    }
 auth:
   type: basic
   credentials:

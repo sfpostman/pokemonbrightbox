@@ -25,18 +25,4 @@ response:
           "message": "Moving to Spec Hub started successfully",
           "success": true
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "message": {
-                  "type": "string",
-                  "description": "The operation's message."
-              },
-              "success": {
-                  "type": "boolean",
-                  "description": "If true, the migration succeeded."
-              }
-          }
-      }
 order: 3000

@@ -6,19 +6,5 @@ pathVariables:
   - key: monitorId
     value: ""
     description: The monitor's ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "uniqueItems": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 examples: ./.resources/Delete a monitor.resources/examples
 order: 4000

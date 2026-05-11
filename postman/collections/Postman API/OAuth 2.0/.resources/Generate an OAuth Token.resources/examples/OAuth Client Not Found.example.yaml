@@ -27,18 +27,4 @@ response:
           "error": "invalid_client",
           "error_description": "OAuth client not found"
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "error": {
-                  "type": "string",
-                  "description": "The error type."
-              },
-              "error_description": {
-                  "type": "string",
-                  "description": "Information about the error."
-              }
-          }
-      }
 order: 4000

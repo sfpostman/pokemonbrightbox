@@ -22,35 +22,4 @@ response:
               }
           }
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "error": {
-                  "type": "object",
-                  "properties": {
-                      "name": {
-                          "type": "string"
-                      },
-                      "message": {
-                          "type": "string"
-                      },
-                      "details": {
-                          "type": "object",
-                          "properties": {
-                              "model": {
-                                  "type": "string"
-                              },
-                              "model_id": {
-                                  "type": "string"
-                              },
-                              "owner": {
-                                  "type": "string"
-                              }
-                          }
-                      }
-                  }
-              }
-          }
-      }
 order: 7000

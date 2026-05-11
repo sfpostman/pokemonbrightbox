@@ -24,23 +24,4 @@ response:
               "message": "This API contains an unsupported definition type wsdl:1.0. Spec Hub supports: OAS3, OAS3.1, OAS2.0, AsyncAPI2.0, graphQl, gRPC."
           }
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "error": {
-                  "type": "object",
-                  "properties": {
-                      "title": {
-                          "type": "string",
-                          "description": "A short summary of the problem."
-                      },
-                      "message": {
-                          "type": "string",
-                          "description": "The error message."
-                      }
-                  }
-              }
-          }
-      }
 order: 5000

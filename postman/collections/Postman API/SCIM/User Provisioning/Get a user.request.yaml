@@ -6,19 +6,5 @@ pathVariables:
   - key: userId
     value: ""
     description: The user's SCIM ID.
-    $type: |-
-      {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "deprecated": false,
-            "uniqueItems": false
-          }
-        },
-        "required": [
-          "value"
-        ]
-      }
 examples: ./.resources/Get a user.resources/examples
 order: 1000

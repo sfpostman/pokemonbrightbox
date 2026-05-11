@@ -36,55 +36,5 @@ body:
     //        "path": "{{gitPath}}"
     //    }
     //}
-  $type: |-
-    {
-        "anyOf": [
-            {
-                "title": "Migrate to Existing Workspace",
-                "type": "object",
-                "required": [
-                    "workspaceId"
-                ],
-                "properties": {
-                    "workspaceId": {
-                        "type": "string",
-                        "description": "The ID of an existing workspace to migrate the definition to."
-                    }
-                }
-            },
-            {
-                "title": "Migrate Git-Connected API to New Workspace",
-                "required": [
-                    "workspaceInfo"
-                ],
-                "properties": {
-                    "workspaceInfo": {
-                        "type": "object",
-                        "required": [
-                            "name"
-                        ],
-                        "description": "Information about the new workspace.",
-                        "properties": {
-                            "name": {
-                                "type": "string",
-                                "description": "The name of the workspace to create and migrate the definition to."
-                            }
-                        }
-                    },
-                    "gitInfo": {
-                        "type": "object",
-                        "description": "Information about the connected remote Git repository.",
-                        "required": ["path"],
-                        "properties": {
-                            "path": {
-                                "type": "string",
-                                "description": "The directory path in the remote repository containing the API's collections and definitions. This property expects an absolute path and only contains alphanumeric characters, slashes, hyphens, underscores, and periods. It cannot contain  path traversal sequences (\\..\\)."
-                            }
-                        }
-                    }
-                }
-            }
-        ]
-    }
 examples: ./.resources/Migrate API Builder API to Spec Hub.resources/examples
 order: 13000

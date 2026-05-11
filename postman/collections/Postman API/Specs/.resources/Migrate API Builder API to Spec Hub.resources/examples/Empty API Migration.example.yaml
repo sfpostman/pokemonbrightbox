@@ -26,18 +26,4 @@ response:
           "message": "This API doesn't have any API Definition or Collection",
           "success": true
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "message": {
-                  "type": "string",
-                  "description": "The operation's message."
-              },
-              "success": {
-                  "type": "boolean",
-                  "description": "If true, the migration succeeded."
-              }
-          }
-      }
 order: 4000

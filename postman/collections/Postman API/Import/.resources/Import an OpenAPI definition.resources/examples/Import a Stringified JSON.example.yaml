@@ -24,30 +24,4 @@ response:
               }
           ]
       }
-    $type: |-
-      {
-          "type": "object",
-          "properties": {
-              "collections": {
-                  "type": "array",
-                  "items": {
-                      "type": "object",
-                      "properties": {
-                          "id": {
-                              "type": "string",
-                              "description": "The collection's ID."
-                          },
-                          "name": {
-                              "type": "string",
-                              "description": "The collection's name."
-                          },
-                          "uid": {
-                              "type": "string",
-                              "description": "The collection's unique ID."
-                          }
-                      }
-                  }
-              }
-          }
-      }
 order: 4000
