@@ -10,7 +10,7 @@ cloudResources:
   collections:
     ../postman/collections/E2E Library: 54079851-e31013d8-2123-41e2-ae89-fbe2ef650858
     ../postman/collections/Postman API: 54079851-d220a5d9-b019-4a5a-ae1d-597b9cefb087
-    ../postman/collections/Pokemon API-1: 54079851-139d732e-106c-4015-abec-2e65bb79a4ab
+    ../postman/collections/Pokemon API: 54079851-a46fd036-87dd-4d34-857d-75a8391ee22c
   environments:
     ../postman/environments/Test.environment.yaml: 54079851-57ac11a4-8dca-46c1-92f0-bb7707ac2c9d
 
@@ -21,6 +21,6 @@ localResources:
   collections:
     - ../postman/collections/Postman API
     - ../postman/collections/E2E Library
-    - ../postman/collections/Pokemon API-1
+    - ../postman/collections/Pokemon API
   environments:
     - ../postman/environments/Test.environment.yaml
