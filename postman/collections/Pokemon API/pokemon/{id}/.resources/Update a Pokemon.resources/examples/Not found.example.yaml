@@ -1,0 +1,46 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/pokemon/:id"
+  method: PATCH
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    - key: id
+      value: <string>
+      description: Pokédex number (zero-padded, e.g. 0006)
+  body:
+    type: json
+    content: |-
+      {
+        "name": "<string>",
+        "type": "<string>",
+        "total": "<integer>",
+        "hp": "<integer>",
+        "attack": "<integer>",
+        "defense": "<integer>",
+        "sp_atk": "<integer>",
+        "sp_def": "<integer>",
+        "speed": "<integer>"
+      }
+response:
+  statusCode: 404
+  statusText: Not Found
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "error": "<string>"
+      }
+    $type: |-
+      {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string"
+          }
+        }
+      }
+order: 3000

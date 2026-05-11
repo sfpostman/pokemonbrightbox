@@ -1,0 +1,24 @@
+type: dataset
+name: "PokedexSQL"
+id: 24d0ed0f-86a0-4404-89a3-b960d7ecc86e
+data_dir: .resources
+sources:
+
+  - from: embedded_datasource
+    datasource:
+      name: pokemon
+      id: 0b80b353-2dff-4a43-8fad-1f22dd474f30
+      format: mysql
+      source_type: dynamic
+      location:
+        type: mysql
+        value: "root:@tcp(localhost:3306)/pokedex"
+        table: pokemon
+      slug: pokemon
+views:
+  - from: embedded_view
+    view:
+      name: 'Fire'
+      id: 1bf5ed2c-5e45-4910-97d7-5a0006583740
+      query: |-
+        SELECT * FROM pokemon WHERE "type" = 'fire';

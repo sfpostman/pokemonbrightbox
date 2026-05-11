@@ -1,0 +1,71 @@
+$kind: http-request
+url: "{{baseUrl}}/pokemon"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    {
+      "number": "<string>",
+      "name": "<string>",
+      "type": "<string>",
+      "total": "<integer>",
+      "hp": "<integer>",
+      "attack": "<integer>",
+      "defense": "<integer>",
+      "sp_atk": "<integer>",
+      "sp_def": "<integer>",
+      "speed": "<integer>"
+    }
+  $type: |-
+    {
+      "type": "object",
+      "properties": {
+        "number": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "total": {
+          "type": "integer"
+        },
+        "hp": {
+          "type": "integer"
+        },
+        "attack": {
+          "type": "integer"
+        },
+        "defense": {
+          "type": "integer"
+        },
+        "sp_atk": {
+          "type": "integer"
+        },
+        "sp_def": {
+          "type": "integer"
+        },
+        "speed": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "number",
+        "name",
+        "type"
+      ]
+    }
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test("Status code is 201", function () {
+          pm.response.to.have.status(201);
+      });
+    language: text/javascript
+examples: ./.resources/Create a new Pokemon.resources/examples
+order: 2000

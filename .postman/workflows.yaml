@@ -10,6 +10,15 @@ workflows:
       options:
         syncExamples: false
     - spec: ../postman/specs/pokemon-api.yaml
-      collection: ../postman/collections/Pokemon API-1
+      collection: ../postman/collections/Pokemon API
+      options:
+        syncExamples: true
+  syncCollectionToSpec:
+    - spec: ../postman/specs/pokemon-api.yaml
+      collection: ../postman/collections/Pokemon API
+      options:
+        syncExamples: true
+    - spec: ../postman/specs/index.yaml
+      collection: ../postman/collections/E2E Library
       options:
         syncExamples: false

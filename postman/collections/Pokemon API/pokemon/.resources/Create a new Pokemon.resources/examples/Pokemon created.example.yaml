@@ -1,0 +1,89 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/pokemon"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "number": "<string>",
+        "name": "<string>",
+        "type": "<string>",
+        "total": "<integer>",
+        "hp": "<integer>",
+        "attack": "<integer>",
+        "defense": "<integer>",
+        "sp_atk": "<integer>",
+        "sp_def": "<integer>",
+        "speed": "<integer>"
+      }
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "number": "<string>",
+        "name": "<string>",
+        "type": "<string>",
+        "total": "<integer>",
+        "hp": "<integer>",
+        "attack": "<integer>",
+        "defense": "<integer>",
+        "sp_atk": "<integer>",
+        "sp_def": "<integer>",
+        "speed": "<integer>"
+      }
+    $type: |-
+      {
+        "type": "object",
+        "properties": {
+          "number": {
+            "type": "string",
+            "example": "0006"
+          },
+          "name": {
+            "type": "string",
+            "example": "Charizard"
+          },
+          "type": {
+            "type": "string",
+            "example": "Fire/Flying"
+          },
+          "total": {
+            "type": "integer",
+            "example": 534
+          },
+          "hp": {
+            "type": "integer",
+            "example": 78
+          },
+          "attack": {
+            "type": "integer",
+            "example": 84
+          },
+          "defense": {
+            "type": "integer",
+            "example": 78
+          },
+          "sp_atk": {
+            "type": "integer",
+            "example": 109
+          },
+          "sp_def": {
+            "type": "integer",
+            "example": 85
+          },
+          "speed": {
+            "type": "integer",
+            "example": 100
+          }
+        }
+      }
+order: 1000

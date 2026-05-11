@@ -42,4 +42,4 @@ echo "================================"
 
 trap "brew services stop mysql; echo 'MySQL stopped.'" EXIT
 
-wait
+while true; do sleep 1; done

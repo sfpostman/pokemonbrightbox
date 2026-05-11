@@ -1,0 +1,17 @@
+$kind: http-request
+url: "{{baseUrl}}/types"
+method: GET
+headers:
+  Accept: application/json
+body:
+  type: text
+  content: ""
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test("Status code is 200", function () {
+          pm.response.to.have.status(200);
+      });
+    language: text/javascript
+examples: ./.resources/List all types.resources/examples
+order: 1000

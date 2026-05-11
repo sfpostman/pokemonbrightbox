@@ -1,0 +1,43 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/pokemon"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "number": "<string>",
+        "name": "<string>",
+        "type": "<string>",
+        "total": "<integer>",
+        "hp": "<integer>",
+        "attack": "<integer>",
+        "defense": "<integer>",
+        "sp_atk": "<integer>",
+        "sp_def": "<integer>",
+        "speed": "<integer>"
+      }
+response:
+  statusCode: 400
+  statusText: Bad Request
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "error": "<string>"
+      }
+    $type: |-
+      {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string"
+          }
+        }
+      }
+order: 2000
