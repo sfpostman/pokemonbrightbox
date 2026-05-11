@@ -20,4 +20,4 @@ jobs:
       - name: Login to Postman
         run: postman login --with-api-key ${{ secrets.POSTMAN_API_KEY }}
       - name: Publish changes to Cloud
-        run: postman workspace push -y --workspace fddc1109-f1ed-4c24-b501-e346d716cfa2
+        run: postman workspace push -y
