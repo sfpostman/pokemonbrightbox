@@ -1,4 +1,5 @@
 $kind: collection
+name: Pokemon API
 description: |-
   A RESTful API for retrieving and managing Pokémon data sourced from the Pokédex.
 
@@ -16,3 +17,5 @@ description: |-
   List endpoints support `limit` (default: 20) and `offset` (default: 0) query parameters.
 variables:
   baseUrl: http://localhost:3000
+auth:
+  type: apikey

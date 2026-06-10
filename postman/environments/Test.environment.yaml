@@ -1,12 +1,7 @@
-owner: "54079851"
-team: "13321872"
-lastUpdatedBy: "54079851"
-lastRevision: 1778525465000
 name: Test
-color: null
 values:
   - key: apikey
-    value: ""
-    enabled: true
-createdAt: 2026-05-01T15:47:39.000Z
-updatedAt: 2026-05-11T18:51:05.000Z
+    value: ''
+  - key: key
+    value: ''
+color: 0

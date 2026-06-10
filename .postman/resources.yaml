@@ -1,30 +1,27 @@
 workspace:
-  id: fddc1109-f1ed-4c24-b501-e346d716cfa2
+  id: ""
 
 # Each entry here maps a local resource to one or more corresponding objects in Postman Cloud
 
 cloudResources:
-  specs:
-    ../postman/specs/index.yaml: d115a41e-1f3b-412d-8c96-25022704215d
-    ../postman/specs/pokemon-api.yaml: 8d3f6476-af99-4e7f-aa11-904d0420b66d
-    ../index.yaml: 1ee2890a-719e-4d97-906f-006931c9978e
   collections:
-    ../postman/collections/E2E Library: 54079851-e31013d8-2123-41e2-ae89-fbe2ef650858
-    ../postman/collections/Postman API: 54079851-d220a5d9-b019-4a5a-ae1d-597b9cefb087
-    ../postman/collections/Pokemon API: 54079851-a46fd036-87dd-4d34-857d-75a8391ee22c
+    ../postman/collections/pokemon api: 54079851-061ac49e-d7e5-446a-82c2-11ce1ab46cfe
+    ../postman/collections/E2E Library: 54079851-aedec752-e35d-4e23-9768-08912580f693
+    ../postman/collections/Pokemon API: 54079851-18c61971-bb13-43c4-8539-8ac63a9035c0
+    ../postman/collections/Postman API: 54079851-47763210-0006-4e36-aac6-3443d696296f
+  specs:
+    ../pokemon-api.yaml: 0da8ae40-4c0f-4245-a7db-fb1d802592ad
+    ../postman/specs/index.yaml: 1ed086c6-58bd-4ac0-b32e-bd69d3c8f8a2
+    ../postman/specs/pokemon-api.yaml: cee5b789-724b-489a-831b-d78be65771a0
   environments:
-    ../postman/environments/Test.environment.yaml: 54079851-57ac11a4-8dca-46c1-92f0-bb7707ac2c9d
-    ../postman/environments/SQL.environment.yaml: 54079851-79492d57-5a14-4e81-a2b5-8bb05e0e44aa
+    ../postman/environments/SQL.environment.yaml: 54079851-df01f7f8-172c-4185-919d-333a8fa8bb8f
+    ../postman/environments/Test.environment.yaml: 54079851-9be17176-d089-40d5-9035-66a78f105ed7
 
 localResources:
   specs:
-    - ../postman/specs/index.yaml
-    - ../postman/specs/pokemon-api.yaml
-    - ../index.yaml
+    - ../pokemon-api.yaml
   collections:
-    - ../postman/collections/Postman API
-    - ../postman/collections/E2E Library
-    - ../postman/collections/Pokemon API
-  environments:
-    - ../postman/environments/Test.environment.yaml
-    - ../postman/environments/SQL.environment.yaml
+    - ../postman/collections/pokemon api
+  docs:
+    - ../k8s/README.md
+    - ../../GitDemo/k8s/README.md

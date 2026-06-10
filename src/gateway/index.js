@@ -6,7 +6,7 @@ const app = express();
 app.use('/pokemon', createProxyMiddleware({
   target: 'http://localhost:3001',
   changeOrigin: true,
-  pathRewrite: (path, req) => '/pokemon' + path,
+  pathRewrite: (path, req) => path,
 }));
 
 app.use('/types', createProxyMiddleware({
