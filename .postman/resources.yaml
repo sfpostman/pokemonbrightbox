@@ -1,14 +1,13 @@
 workspace:
   id: fddc1109-f1ed-4c24-b501-e346d716cfa2
-
-# Each entry here maps a local resource to one or more corresponding objects in Postman Cloud
-
 cloudResources:
   collections:
-    ../postman/collections/pokemon api: 54079851-061ac49e-d7e5-446a-82c2-11ce1ab46cfe
-    ../postman/collections/E2E Library: 54079851-aedec752-e35d-4e23-9768-08912580f693
-    ../postman/collections/Pokemon API: 54079851-18c61971-bb13-43c4-8539-8ac63a9035c0
+    ../postman/collections/pokemon api: 54079851-743e88e5-3eff-4549-8bba-969ec018ad48
+    ../postman/collections/E2E Library: 54079851-ddef61bf-291a-45a5-9bcd-6c1f4d1cdf6e
+    ../postman/collections/Pokemon API: 54079851-50e624fd-c07d-41e0-911f-95d5d1b844d2
     ../postman/collections/Postman API: 54079851-47763210-0006-4e36-aac6-3443d696296f
+    ../postman/collections/test2: 54079851-0ae0ee9f-c700-49bf-b9ed-ea71de7e91a8
+    ../postman/collections/Testcollection: 54079851-b94a18ba-e5e0-4faa-946b-48403d1e6feb
   specs:
     ../pokemon-api.yaml: 0da8ae40-4c0f-4245-a7db-fb1d802592ad
     ../postman/specs/index.yaml: 1ed086c6-58bd-4ac0-b32e-bd69d3c8f8a2
@@ -16,7 +15,6 @@ cloudResources:
   environments:
     ../postman/environments/SQL.environment.yaml: 54079851-df01f7f8-172c-4185-919d-333a8fa8bb8f
     ../postman/environments/Test.environment.yaml: 54079851-9be17176-d089-40d5-9035-66a78f105ed7
-
 localResources:
   specs:
     - ../pokemon-api.yaml

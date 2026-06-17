@@ -24,5 +24,14 @@ scripts:
               pm.expect(book).to.have.all.keys("id", "title", "author", "genre", "yearPublished", "checkedOut", "isPermanentCollection", "createdAt");
           });
       });
+
+      pm.test("Response includes 'To Kill a Mockingbird'", function () {
+          const books = pm.response.json();
+          const found = books.some(function (book) {
+              return book.title.toLowerCase() === "to kill a mockingbird";
+          });
+          pm.expect(found, "Expected 'To Kill a Mockingbird' to be in the list of books").to.be.true;
+      });
     language: text/javascript
+examples: .resources/Fetch a list of books.resources/examples
 order: 1000
